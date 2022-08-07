@@ -1,3 +1,4 @@
+from re import X
 import pandas as pd
 import numpy as np
 from tenacity import retry
@@ -8,7 +9,7 @@ from CCdefault.app_entity.config_entity import ModelEvaluationConfig
 from CCdefault.app_entity.artifacts_entity import DataIngestionArtifact, DataValidationArtifact, \
     ModelTrainerArtifact, ModelEvaluationArtifact
 from CCdefault.app_constants import *
-from CCdefault.app_util.util import write_yaml_file, read_yaml_file, load_object
+from CCdefault.app_util.util import write_yaml_file, read_yaml_file, load_object , reduce_mem_usage
 from CCdefault.app_entity.model_factory import evaluate_classification_model
 import os
 import sys
@@ -98,20 +99,22 @@ class ModelEvaluation:
             target_column_name = schema_content[TARGET_COLUMN_KEY]
             selected_columns = schema_content[COLUMNS_TO_CLUSTER_KEY]
             train_dataframe = pd.read_csv(train_file_path , usecols=selected_columns)
+            train_dataframe = reduce_mem_usage(train_dataframe)
                                                         
             test_dataframe = pd.read_csv(test_file_path , usecols=selected_columns)
+            test_dataframe = reduce_mem_usage(test_dataframe)
             # target_column
             logging.info("Converting target column into numpy array.")
-            y_train = np.array(train_dataframe[target_column_name])
-            y_test = np.array(test_dataframe[target_column_name])
+            y_train = train_dataframe[target_column_name]
+            y_test = test_dataframe[target_column_name]
             logging.info("Conversion completed target column into numpy array.")
 
             # dropping target column from the dataframe
             logging.info("Dropping target column from the dataframe.")
-            X_train= train_dataframe.drop(target_column_name, axis=1, inplace=True)
-            X_test=test_dataframe.drop(target_column_name, axis=1, inplace=True)
+            X_train= train_dataframe.drop(columns=[target_column_name], axis=1)
+            X_test= test_dataframe.drop(columns=[target_column_name], axis=1)
             logging.info("Dropping target column from the dataframe completed.")
-
+            logging.inf(f"train .shape {X_train.shape} test_shape {X_test.shape}")
             model = self.get_best_model()
 
             if model is None:
@@ -153,6 +156,7 @@ class ModelEvaluation:
                                                                     is_model_accepted=False)
             return model_evaluation_artifact
         except Exception as e:
+            logging.error(e)
             raise App_Exception(e, sys) from e
 
     def __del__(self):

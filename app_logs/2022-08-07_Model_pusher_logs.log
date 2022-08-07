@@ -2,3 +2,8 @@
 2022-08-07 21:20:23,097:	 INFO:	:Exporting model file: [/home/pk/Desktop/MachineLearning/project/Credit_card_default/saved_models/20220807212022/model.pkl]
 2022-08-07 21:20:23,099:	 INFO:	:Trained model: /home/pk/Desktop/MachineLearning/project/Credit_card_default/CCdefault/app_artifact/stage03_model_training/trained_model/20220807211041/model.pkl is copied in export dir:[/home/pk/Desktop/MachineLearning/project/Credit_card_default/saved_models/20220807212022/model.pkl]
 2022-08-07 21:20:23,100:	 INFO:	:Model pusher artifact: [ModelPusherArtifact(is_model_pusher=True, export_model_file_path='/home/pk/Desktop/MachineLearning/project/Credit_card_default/saved_models/20220807212022/model.pkl')]
+2022-08-07 23:04:46,252:	 INFO:	:>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>Model Pusher log completed.<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< 
+2022-08-07 23:45:37,115:	 INFO:	:>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>Model Pusher log started.<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< 
+2022-08-07 23:45:38,170:	 INFO:	:Exporting model file: [/home/pk/Desktop/MachineLearning/project/Credit_card_default/saved_models/20220807234536/model.pkl]
+2022-08-07 23:45:38,184:	 INFO:	:Trained model: /home/pk/Desktop/MachineLearning/project/Credit_card_default/CCdefault/app_artifact/stage03_model_training/trained_model/20220807232112/model.pkl is copied in export dir:[/home/pk/Desktop/MachineLearning/project/Credit_card_default/saved_models/20220807234536/model.pkl]
+2022-08-07 23:45:38,188:	 INFO:	:Model pusher artifact: [ModelPusherArtifact(is_model_pusher=True, export_model_file_path='/home/pk/Desktop/MachineLearning/project/Credit_card_default/saved_models/20220807234536/model.pkl')]

@@ -6,6 +6,7 @@ from sklearn.pipeline import Pipeline
 from sklearn.compose import ColumnTransformer
 from sklearn.impute import SimpleImputer
 from kneed import KneeLocator
+from sklearn.decomposition import PCA
 from sklearn.cluster import KMeans
 import matplotlib.pyplot as plt
 import pandas as pd
@@ -80,6 +81,7 @@ class DataTransformation:
             preprocessing = Pipeline(steps=[
                 ('imputer', SimpleImputer(strategy="median")),
                 ('scaler', StandardScaler()),
+                ("PCA" , PCA(n_components=14)),
                 ('feature_generator', FeatureGenerator())])
             return preprocessing
 

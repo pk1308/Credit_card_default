@@ -74,6 +74,7 @@ MODEL_TRAINER_MODEL_CONFIG_FILE_NAME_KEY = "model_config_file_name"
 MODEL_EVALUATION_CONFIG_KEY = 'model_evaluation_config'
 MODEL_EVALUATION_DIR_KEY = 'model_evaluation_dir'
 MODEL_EVALUATION_FILE_NAME_KEY = "model_evaluation_file_name"
+MODEL_EVALUATION_REPORT_DIR_NAME = "reports"
 
 
 # Model Pusher config key

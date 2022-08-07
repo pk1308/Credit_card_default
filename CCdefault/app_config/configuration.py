@@ -1,5 +1,6 @@
 
 
+from pyexpat import model
 import sys
 import  os
 import  json
@@ -185,8 +186,11 @@ class Configuration:
             artifact_dir = self.pipeline_config.artifact_dir
             model_evaluation_dir_name = model_evaluation_config[MODEL_EVALUATION_DIR_KEY]
             model_evaluation_file_name = model_evaluation_config[MODEL_EVALUATION_FILE_NAME_KEY]
-            model_evaluation_file_path = os.path.join(artifact_dir,model_evaluation_dir_name, model_evaluation_file_name)
+            model_evaluation_dir = os.path.join(artifact_dir, model_evaluation_dir_name)
+            model_evaluation_file_path = os.path.join(model_evaluation_dir, model_evaluation_file_name)
+            model_evaluation_report_dir = os.path.join(model_evaluation_dir, MODEL_EVALUATION_REPORT_DIR_NAME , self.time_stamp)
             response = ModelEvaluationConfig(model_evaluation_file_path=model_evaluation_file_path,
+                                             model_evaluation_report_dir = model_evaluation_report_dir,
                                             time_stamp=self.time_stamp)
             logging.info(f"Model Evaluation Config: {response}.")
             return response

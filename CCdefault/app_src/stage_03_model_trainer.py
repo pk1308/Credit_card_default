@@ -151,11 +151,11 @@ class ModelTrainer:
 
             model_trainer_artifact = ModelTrainerArtifact(is_trained=True, message="Model Trained successfully",
                                                           trained_model_file_path=trained_model_file_path,
-                                                          train_f1="None",
-                                                          test_f1="metric_info.test_f1",
-                                                          train_precision="metric_info.train_precision",
-                                                          test_precision="metric_info.test_precision",
-                                                          model_accuracy="metric_info.model_accuracy")
+                                                          train_f1=metric_info.test_f1,
+                                                          test_f1=metric_info.test_f1,
+                                                          train_precision=metric_info.train_precision,
+                                                          test_precision=metric_info.test_precision,
+                                                          model_accuracy=metric_info.model_accuracy)
 
             logging.info(f"Model Trainer Artifact: {model_trainer_artifact}")
             return model_trainer_artifact
