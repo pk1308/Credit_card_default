@@ -132,10 +132,10 @@ dmypy.json
 
 creditcard
 
-app_logs
-CCdefault/app_artifact
+
 CCdefault/app_notebook
 .github
 
 .vscode
-catboost_info/*
+catboost_info
+CCdefault/app_pipeline

@@ -1,0 +1,12 @@
+2022-08-07 21:20:22,473:	 INFO:	:>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>Model Evaluation log started.<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< 
+2022-08-07 21:20:22,781:	 INFO:	:Converting target column into numpy array.
+2022-08-07 21:20:22,783:	 INFO:	:Conversion completed target column into numpy array.
+2022-08-07 21:20:22,784:	 INFO:	:Dropping target column from the dataframe.
+2022-08-07 21:20:22,789:	 INFO:	:Dropping target column from the dataframe completed.
+2022-08-07 21:20:22,791:	 INFO:	:Not found any existing model. Hence accepting trained model
+2022-08-07 21:20:22,792:	 INFO:	:Previous eval result: {}
+2022-08-07 21:20:22,794:	 INFO:	:Updated eval result:{'best_model': {'model_path': '/home/pk/Desktop/MachineLearning/project/Credit_card_default/CCdefault/app_artifact/stage03_model_training/trained_model/20220807211041/model.pkl'}}
+2022-08-07 21:20:22,799:	 INFO:	:Model accepted. Model eval artifact ModelEvaluationArtifact(is_model_accepted=True, evaluated_model_path='/home/pk/Desktop/MachineLearning/project/Credit_card_default/CCdefault/app_artifact/stage03_model_training/trained_model/20220807211041/model.pkl') created
+2022-08-07 21:20:22,805:	 INFO:	:Previous eval result: {'best_model': {'model_path': '/home/pk/Desktop/MachineLearning/project/Credit_card_default/CCdefault/app_artifact/stage03_model_training/trained_model/20220807211041/model.pkl'}}
+2022-08-07 21:20:22,807:	 INFO:	:Updated eval result:{'best_model': {'model_path': '/home/pk/Desktop/MachineLearning/project/Credit_card_default/CCdefault/app_artifact/stage03_model_training/trained_model/20220807211041/model.pkl'}, 'history': {'20220807211041': {'model_path': '/home/pk/Desktop/MachineLearning/project/Credit_card_default/CCdefault/app_artifact/stage03_model_training/trained_model/20220807211041/model.pkl'}}}
+2022-08-07 21:20:22,814:	 INFO:	:Model accepted. Model eval artifact ModelEvaluationArtifact(is_model_accepted=True, evaluated_model_path='/home/pk/Desktop/MachineLearning/project/Credit_card_default/CCdefault/app_artifact/stage03_model_training/trained_model/20220807211041/model.pkl') created

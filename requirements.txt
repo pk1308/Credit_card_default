@@ -15,4 +15,6 @@ pymongo[srv]
 lightgbm
 seaborn
 kneed
+boto3
+csv_diff
 -e .

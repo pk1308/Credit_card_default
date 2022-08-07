@@ -1,0 +1,5 @@
+best_model:
+  model_path: /home/pk/Desktop/MachineLearning/project/Credit_card_default/CCdefault/app_artifact/stage03_model_training/trained_model/20220807211041/model.pkl
+history:
+  '20220807211041':
+    model_path: /home/pk/Desktop/MachineLearning/project/Credit_card_default/CCdefault/app_artifact/stage03_model_training/trained_model/20220807211041/model.pkl

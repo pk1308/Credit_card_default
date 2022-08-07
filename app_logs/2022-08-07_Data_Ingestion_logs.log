@@ -1,0 +1,36 @@
+2022-08-07 21:10:18,736:	 INFO:	:>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>Data Ingestion log completed.<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< 
+
+
+2022-08-07 21:10:18,916:	 INFO:	:>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>Data Ingestion started.<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+2022-08-07 21:10:18,926:	 INFO:	:Downloading dataset from kaggle
+2022-08-07 21:10:20,780:	 INFO:	:Dataset downloaded successfully file name : default-of-credit-card-clients-dataset.zip
+2022-08-07 21:10:20,789:	 INFO:	:Dataset moved to raw data folder : /home/pk/Desktop/MachineLearning/project/Credit_card_default/CCdefault/app_artifact/stage00_data_ingestion/raw_data/20220807205722/default-of-credit-card-clients-dataset.zip
+2022-08-07 21:10:20,933:	 INFO:	:Dataset unzipped successfully
+2022-08-07 21:10:20,941:	 INFO:	:>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>Data splitting.<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+2022-08-07 21:10:20,973:	 INFO:	:Last downloaded data : /home/pk/Desktop/MachineLearning/project/Credit_card_default/CCdefault/app_artifact/stage00_data_ingestion/raw_data/20220807205722/UCI_Credit_Card.csv
+2022-08-07 21:10:21,377:	 INFO:	:--------------------is_diff : Different --------------------
+2022-08-07 21:10:21,379:	 INFO:	:Data not ingested yet
+2022-08-07 21:10:21,379:	 INFO:	:Reading csv file: [/home/pk/Desktop/MachineLearning/project/Credit_card_default/CCdefault/app_artifact/stage00_data_ingestion/raw_data/20220807205722/UCI_Credit_Card.csv]
+2022-08-07 21:10:21,439:	 INFO:	:Splitting data into train and test
+2022-08-07 21:10:21,449:	 INFO:	:Exporting training dataset to file: [/home/pk/Desktop/MachineLearning/project/Credit_card_default/CCdefault/app_artifact/stage00_data_ingestion/ingested_data/20220807205722/Train.csv]
+2022-08-07 21:10:21,572:	 INFO:	:Exporting training dataset to MongoDB: [ingested_train]
+2022-08-07 21:10:42,686:	 INFO:	:>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>Data Ingestion started.<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+2022-08-07 21:10:42,688:	 INFO:	:Downloading dataset from kaggle
+2022-08-07 21:10:44,353:	 INFO:	:Dataset downloaded successfully file name : default-of-credit-card-clients-dataset.zip
+2022-08-07 21:10:44,358:	 INFO:	:Dataset moved to raw data folder : /home/pk/Desktop/MachineLearning/project/Credit_card_default/CCdefault/app_artifact/stage00_data_ingestion/raw_data/20220807211041/default-of-credit-card-clients-dataset.zip
+2022-08-07 21:10:44,483:	 INFO:	:Dataset unzipped successfully
+2022-08-07 21:10:44,485:	 INFO:	:>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>Data splitting.<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+2022-08-07 21:10:44,504:	 INFO:	:Last downloaded data : /home/pk/Desktop/MachineLearning/project/Credit_card_default/CCdefault/app_artifact/stage00_data_ingestion/raw_data/20220807211041/UCI_Credit_Card.csv
+2022-08-07 21:10:44,801:	 INFO:	:--------------------is_diff : Different --------------------
+2022-08-07 21:10:44,801:	 INFO:	:Data not ingested yet
+2022-08-07 21:10:44,801:	 INFO:	:Reading csv file: [/home/pk/Desktop/MachineLearning/project/Credit_card_default/CCdefault/app_artifact/stage00_data_ingestion/raw_data/20220807211041/UCI_Credit_Card.csv]
+2022-08-07 21:10:44,904:	 INFO:	:Splitting data into train and test
+2022-08-07 21:10:44,925:	 INFO:	:Exporting training dataset to file: [/home/pk/Desktop/MachineLearning/project/Credit_card_default/CCdefault/app_artifact/stage00_data_ingestion/ingested_data/20220807211041/Train.csv]
+2022-08-07 21:10:45,040:	 INFO:	:Exporting training dataset to MongoDB: [ingested_train]
+2022-08-07 21:10:54,589:	 INFO:	:Training dataset exported to MongoDB: [ingested_train]
+2022-08-07 21:10:54,593:	 INFO:	:Exporting test dataset to file: [/home/pk/Desktop/MachineLearning/project/Credit_card_default/CCdefault/app_artifact/stage00_data_ingestion/ingested_data/20220807211041/Test.csv]
+2022-08-07 21:10:57,683:	 INFO:	:Test dataset exported to MongoDB: [ingested_test]
+2022-08-07 21:10:57,687:	 INFO:	:Data Ingestion artifact:[DataIngestionArtifact(train_file_path='/home/pk/Desktop/MachineLearning/project/Credit_card_default/CCdefault/app_artifact/stage00_data_ingestion/ingested_data/20220807211041/Train.csv', test_file_path='/home/pk/Desktop/MachineLearning/project/Credit_card_default/CCdefault/app_artifact/stage00_data_ingestion/ingested_data/20220807211041/Test.csv', is_ingested=True, message='Data ingestion completed successfully.')]
+2022-08-07 21:10:57,693:	 INFO:	:>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>Data Ingestion artifact.<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+2022-08-07 21:10:57,696:	 INFO:	: Data Ingestion ArtifactDataIngestionArtifact(train_file_path='/home/pk/Desktop/MachineLearning/project/Credit_card_default/CCdefault/app_artifact/stage00_data_ingestion/ingested_data/20220807211041/Train.csv', test_file_path='/home/pk/Desktop/MachineLearning/project/Credit_card_default/CCdefault/app_artifact/stage00_data_ingestion/ingested_data/20220807211041/Test.csv', is_ingested=True, message='Data ingestion completed successfully.')
+2022-08-07 21:10:57,700:	 INFO:	:>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>Data Ingestion completed.<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<

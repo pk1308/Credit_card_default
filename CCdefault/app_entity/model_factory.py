@@ -17,7 +17,7 @@ from sklearn.metrics import precision_score , recall_score , f1_score , roc_curv
 logging = App_Logger("model_factory")
 
 
-sns.set('talk', 'whitegrid', 'dark', font_scale=1.5, font='Ricty',
+sns.set('talk', 'whitegrid', 'dark', font_scale=1.5, font='sans-serif',
         rc={"lines.linewidth": 2, 'grid.linestyle': '--'})
 GRID_SEARCH_KEY = 'grid_search'
 MODULE_KEY = 'module'
@@ -79,9 +79,12 @@ def plot_model_report(model_info_artifact: MetricInfoArtifact,
     data['test_accuracy'] = [model_info_artifact.test_accuracy]
     data['accuracy_diff'] = [model_info_artifact.accuracy_diff]
     model_name = model_info_artifact.model_name
-    fpr = false_positive_rate
-    tpr = true_positivity_rate
-    roc_auc = auc(fpr, tpr)
+    try:
+        fpr = false_positive_rate
+        tpr = true_positivity_rate
+        roc_auc = auc(fpr, tpr)
+    except TypeError as e:
+        logging.error(e)
     if model_report_dir is None:
         model_report_dir = os.path.join(os.getcwd(), 'model_report')
     model_report_file_name = f"{model_name}"
@@ -92,10 +95,13 @@ def plot_model_report(model_info_artifact: MetricInfoArtifact,
               fontweight='bold', pad=20, loc='center')
     bar = sns.barplot(data=data, ax=ax[0])
     bar.set_xticklabels(bar.get_xticklabels(), rotation=45)
-    logging.info(f"ROC AUC Score for {model_name} is {roc_auc}")
-    line = sns.lineplot(
-        x=fpr, y=tpr, ax=ax[1], color='darkorange', lw=2, label='ROC curve (AUC = %0.2f)' % roc_auc)
-    line.plot([0, 1], [0, 1], color='navy', lw=2, linestyle='--')
+    try:
+        logging.info(f"ROC AUC Score for {model_name} is {roc_auc}")
+        line = sns.lineplot(
+            x=fpr, y=tpr, ax=ax[1], color='darkorange', lw=2, label='ROC curve (AUC = %0.2f)' % roc_auc)
+        line.plot([0, 1], [0, 1], color='navy', lw=2, linestyle='--')
+    except Exception as e:
+        logging.error(e)
     os.makedirs(model_report_dir, exist_ok=True)
     plt.savefig(model_report_file_path)
     # plt.show()
@@ -144,10 +150,14 @@ def evaluate_classification_model(X_train: pd.DataFrame, y_train: pd.DataFrame,
             logging.info(f"predicting {model_name} model")
             y_train_pred = model.predict(X_train)
             y_test_pred = model.predict(X_test)
-            y_probs = model.predict_proba(X_test)
-            y_probs = y_probs[:, 1]
-            false_positivity_rate, true_positivity_rate,  _ = roc_curve(
-                y_test, y_probs)
+            try:
+                y_probs = model.predict_proba(X_test)
+                y_probs = y_probs[:, 1]
+                false_positivity_rate, true_positivity_rate,  _ = roc_curve(
+                    y_test, y_probs)
+            except AttributeError:
+                logging.info("AttributeError")
+                false_positivity_rate, true_positivity_rate= 1,1
             logging.info(f"{model_name} model report")
             model_info_artifact.model_name = model_name
             train_precision = precision_score(y_train, y_train_pred)

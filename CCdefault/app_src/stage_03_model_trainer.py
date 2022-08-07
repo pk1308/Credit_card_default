@@ -1,11 +1,12 @@
 
 from CCdefault.app_exception.exception import App_Exception
 from CCdefault.app_logger import App_Logger
-from CCdefault.app_entity.artifacts_entity import DataTransformationArtifact, ModelTrainerArtifact
+from CCdefault.app_entity.artifacts_entity import DataTransformationArtifact, ModelTrainerArtifact , DataIngestionArtifact
 from CCdefault.app_entity.config_entity import ModelTrainerConfig
 from CCdefault.app_entity.model_factory import MetricInfoArtifact, ModelFactory, GridSearchedBestModel, \
     evaluate_classification_model
-from CCdefault.app_util.util import load_numpy_array_data, save_object, load_object
+import pandas as pd 
+from CCdefault.app_util.util import load_numpy_array_data, save_object, load_object , reduce_mem_usage
 import os
 import sys
 from typing import List
@@ -20,7 +21,7 @@ class EstimatorModel:
         """
         TrainedModel constructor
         preprocessing_object: preprocessing_object
-        trained_model_dict:  {cluster : modelsavepath}
+        trained_model_dict:  {cluster : model saved path}
         """
         self.preprocessing_object = preprocessing_object
         self.trained_model_dict = trained_model_dict
@@ -62,11 +63,12 @@ class EstimatorModel:
 class ModelTrainer:
 
     def __init__(self, model_trainer_config: ModelTrainerConfig,
-                 data_transformation_artifact: DataTransformationArtifact):
+                 data_transformation_artifact: DataTransformationArtifact , data_ingestion_artifact:  DataIngestionArtifact):
         try:
             logging.info(f"{'>>' * 30}Model trainer log started.{'<<' * 30} ")
             self.model_trainer_config = model_trainer_config
             self.data_transformation_artifact = data_transformation_artifact
+            self.data_ingestion_artifact = data_ingestion_artifact
         except Exception as e:
             raise App_Exception(e, sys) from e
 
@@ -75,7 +77,7 @@ class ModelTrainer:
             logging.info("Loading transformed training dataset")
             transformed_train_file_path = self.data_transformation_artifact.transformed_train_file_path
             train_arr = load_numpy_array_data(transformed_train_file_path)
-            
+            test_arr = load_numpy_array_data(self.data_transformation_artifact.transformed_test_file_path)
             
             trained_model_file_path = self.model_trainer_config.trained_model_file_path
             model_report_dir = self.model_trainer_config.model_report_dir
@@ -116,7 +118,7 @@ class ModelTrainer:
                 logging.info(f"Metric info: {metric_info}")
         
                 model_file_name = f"{metric_info.model_name}.pkl"
-                model_file_path = os.path.join(report_dir, cluster_name, model_file_name)
+                model_file_path = os.path.join(report_dir, "Model", model_file_name)
                 model_object = metric_info.model_object
                 cluster_model_dict[cluster] = model_file_path
                 save_object(file_path=model_file_path, obj=model_object)
@@ -128,6 +130,22 @@ class ModelTrainer:
             model_dict = {cluster: model_file_path for cluster, model_file_path in cluster_model_dict.items()}
 
             prediction_model = EstimatorModel(preprocessing_object=preprocessing_obj, trained_model_dict=model_dict)
+            train_df = pd.read_csv(self.data_ingestion_artifact.train_file_path)
+            test_df = pd.read_csv(self.data_ingestion_artifact.test_file_path)
+            train_df = reduce_mem_usage(train_df)
+            test_df = reduce_mem_usage(test_df)
+            X_train = train_df.drop(columns=['default.payment.next.month', "ID"], axis=1)
+            y_train = train_df['default.payment.next.month']
+            X_test = test_df.drop(columns=['default.payment.next.month', "ID"], axis=1)
+            y_test = test_df['default.payment.next.month']
+            cluster_report_dir = os.path.join(model_report_dir, "cluster_custom_model")
+            base_accuracy = self.model_trainer_config.base_accuracy
+            clustered_model_list = [prediction_model]
+            metric_info = evaluate_classification_model(estimators=clustered_model_list, X_train=X_train,
+                                                                            y_train=y_train, X_test=X_test, 
+                                                                            y_test=y_test,base_accuracy=base_accuracy , 
+                                                                            report_dir=cluster_report_dir,
+                                                                            is_fitted=True)
             logging.info(f"Saving model at path: {trained_model_file_path}")
             save_object(file_path=trained_model_file_path, obj=prediction_model)
 
@@ -142,6 +160,7 @@ class ModelTrainer:
             logging.info(f"Model Trainer Artifact: {model_trainer_artifact}")
             return model_trainer_artifact
         except Exception as e:
+            logging.error(e)
             raise App_Exception(e, sys) from e
 
     def __del__(self):

@@ -5,7 +5,7 @@ import  os
 import  json
 
 from CCdefault.app_entity.config_entity import DataIngestionConfig, TrainingPipelineConfig, DataValidationConfig,\
-DataTransformationConfig, ModelTrainerConfig,ModelEvaluationConfig
+DataTransformationConfig, ModelTrainerConfig,ModelEvaluationConfig , ModelPusherConfig
 from CCdefault.app_exception.exception import App_Exception
 from CCdefault.app_logger import App_Logger
 from CCdefault.app_util.util import read_yaml_file
@@ -193,8 +193,15 @@ class Configuration:
         except Exception as e:
             raise App_Exception(e, sys) from e
 
-    # def get_model_pusher_config(self) -> ModelPusherConfig:
-    #     try:
-    #         pass 
-    #     except Exception as e:
-    #         raise App_Exception(e, sys) from e
+    def get_model_pusher_config(self) -> ModelPusherConfig:
+        try:
+            time_stamp = f"{datetime.now().strftime('%Y%m%d%H%M%S')}"
+            model_pusher_config_info = self.config_info[MODEL_PUSHER_CONFIG_KEY]
+            export_dir_path = os.path.join(ROOT_DIR, model_pusher_config_info[MODEL_PUSHER_MODEL_EXPORT_DIR_KEY],
+                                           time_stamp)
+
+            model_pusher_config = ModelPusherConfig(export_dir_path=export_dir_path)
+            logging.info(f"Model pusher config {model_pusher_config}")
+            return model_pusher_config
+        except Exception as e:
+            raise App_Exception(e, sys) from e
