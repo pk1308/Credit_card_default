@@ -1,0 +1,18 @@
+numpy
+Flask
+gunicorn
+sklearn
+pandas
+PyYAML
+evidently
+dill
+matplotlib
+kaggle
+xgboost
+catboost
+pymongo
+pymongo[srv]
+lightgbm
+seaborn
+kneed
+-e .
