@@ -15,6 +15,33 @@ from sklearn.model_selection import train_test_split
 
 logging = App_Logger("Model_trainer")
 
+class BaseModel:
+    """model estimator : Train the model and save the model to pickle """
+    def __init__(self, preprocessing_object, trained_model_object):
+        """
+        TrainedModel constructor
+        preprocessing_object: preprocessing_object
+        trained_model_dict:  {cluster : model saved path}
+        """
+        self.preprocessing_object = preprocessing_object
+        self.trained_model_object = trained_model_object
+       
+    def predict(self, X):
+        """
+        function accepts raw inputs and then transformed raw input using preprocessing_object
+        which guarantees that the inputs are in the same format as the training data
+        At last it perform prediction on transformed features
+        """
+        transformed_feature = self.preprocessing_object.transform(X)
+        prediction = self.trained_model_object.predict(transformed_feature[:, :-1])
+        return prediction
+
+    def __repr__(self):
+        return f"{type(self.trained_model_object).__name__}()"
+
+    def __str__(self):
+        return f"{type(self.trained_model_object).__name__}()"
+
 class EstimatorModel:
     """model estimator : Train the model and save the model to pickle """
     def __init__(self, preprocessing_object, trained_model_dict):
@@ -27,17 +54,6 @@ class EstimatorModel:
         self.trained_model_dict = trained_model_dict
         self.trained_model_object = {cluster : load_object(model) for cluster , model in trained_model_dict.items()}
 
-    def single_predict(self, X):
-        """
-        function accepts raw inputs and then transformed raw input using preprocessing_object
-        which guarantees that the inputs are in the same format as the training data
-        At last it perform prediction on transformed features
-        """
-        assert len(X) == 1, "single_predict function only accepts single input"
-        transformed_feature = self.preprocessing_object.transform(X)
-        cluster = transformed_feature["cluster"]
-        prediction = self.trained_model_object[cluster].predict(transformed_feature.drop("cluster", axis=1))
-        return prediction
     def predict(self, X):
         """
         function accepts raw inputs and then transformed raw input using preprocessing_object
@@ -76,14 +92,40 @@ class ModelTrainer:
         try:
             logging.info("Loading transformed training dataset")
             transformed_train_file_path = self.data_transformation_artifact.transformed_train_file_path
+            preprocessing_obj = load_object(file_path=self.data_transformation_artifact.preprocessed_object_file_path)
             train_arr = load_numpy_array_data(transformed_train_file_path)
             test_arr = load_numpy_array_data(self.data_transformation_artifact.transformed_test_file_path)
-            
+            logging.info(f"{'>>' * 30}Base Model.{'<<' * 30} ")
             trained_model_file_path = self.model_trainer_config.trained_model_file_path
             model_report_dir = self.model_trainer_config.model_report_dir
             cluster_model_dict = dict()
+            base_X = train_arr[:,:-2]
+            base_y = train_arr[:,-1]
+            base_accuracy = self.model_trainer_config.base_accuracy
+            logging.info(f"Expected accuracy: {base_accuracy}")
+            logging.info("Extracting model config file path")
+            model_config_file_path = self.model_trainer_config.model_config_file_path
+            base_x_train , base_x_test , base_y_train , base_y_test = train_test_split(base_X, base_y, test_size=0.2, random_state=1965)
+            base_model_factory = ModelFactory(model_config_path=model_config_file_path)
+            base_best_model =base_model_factory.get_best_model(X=base_x_train, y=base_y_train, base_accuracy=base_accuracy)
+            base_grid_searched_best_model_list: List[GridSearchedBestModel] = base_model_factory.grid_searched_best_model_list
+            base_model_list = [model.best_model for model in base_grid_searched_best_model_list]
+            base_report_dir = os.path.join(model_report_dir, "Base_model")
+            base_metric_info: MetricInfoArtifact = evaluate_classification_model(estimators=base_model_list, X_train=base_x_train,
+                                                                            y_train=base_y_train, X_test=base_x_test, y_test=base_y_test,
+                                                                            base_accuracy=base_accuracy , report_dir=base_report_dir,
+                                                                            is_fitted=True)
+            logging.info(f"{base_metric_info.__dict__}")
+            base_model_file_name = f"{base_metric_info.model_name}.pkl"
+            base_model_file_path = os.path.join(base_report_dir, "Model", base_model_file_name)
+            base_model_object = base_metric_info.model_object
+            base_predictor = BaseModel(preprocessing_object=preprocessing_obj , trained_model_object=base_model_object)
+            save_object(file_path=base_model_file_path, obj=base_predictor)
+            
+            logging.info(f"{'>>' * 30}Base model done{'<<' * 30} ")
+            
             for cluster in np.unique(train_arr[ : , -2]):
-                logging.info(f"Training model for cluster {cluster}")
+                logging.info(f"{'>>' * 30}Training model for cluster {cluster}{'>>' * 30}")
                 to_train_arr = train_arr[train_arr[ : , -2] == cluster]
                 to_train_features = to_train_arr[:, :-2]
                 to_train_labels = to_train_arr[:, -1]
@@ -125,7 +167,6 @@ class ModelTrainer:
                 
             logging.info("Best found model on both training and testing dataset.")
 
-            preprocessing_obj = load_object(file_path=self.data_transformation_artifact.preprocessed_object_file_path)
             
             model_dict = {cluster: model_file_path for cluster, model_file_path in cluster_model_dict.items()}
 
@@ -140,10 +181,9 @@ class ModelTrainer:
             y_test = test_df['default.payment.next.month']
             cluster_report_dir = os.path.join(model_report_dir, "cluster_custom_model")
             base_accuracy = self.model_trainer_config.base_accuracy
-            clustered_model_list = [prediction_model]
+            clustered_model_list = [prediction_model , base_predictor]
             metric_info = evaluate_classification_model(estimators=clustered_model_list, X_train=X_train,
-                                                                            y_train=y_train, X_test=X_test, 
-                                                                            y_test=y_test,base_accuracy=base_accuracy , 
+                                                                            y_train=y_train, X_test=X_test, y_test=y_test,base_accuracy=base_accuracy , 
                                                                             report_dir=cluster_report_dir,
                                                                             is_fitted=True)
             logging.info(f"Saving model at path: {trained_model_file_path}")

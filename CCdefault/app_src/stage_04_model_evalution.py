@@ -98,23 +98,15 @@ class ModelEvaluation:
             schema_content = read_yaml_file(file_path=schema_file_path)
             target_column_name = schema_content[TARGET_COLUMN_KEY]
             selected_columns = schema_content[COLUMNS_TO_CLUSTER_KEY]
-            train_dataframe = pd.read_csv(train_file_path , usecols=selected_columns)
-            train_dataframe = reduce_mem_usage(train_dataframe)
-                                                        
-            test_dataframe = pd.read_csv(test_file_path , usecols=selected_columns)
-            test_dataframe = reduce_mem_usage(test_dataframe)
-            # target_column
-            logging.info("Converting target column into numpy array.")
-            y_train = train_dataframe[target_column_name]
-            y_test = test_dataframe[target_column_name]
-            logging.info("Conversion completed target column into numpy array.")
-
-            # dropping target column from the dataframe
-            logging.info("Dropping target column from the dataframe.")
-            X_train= train_dataframe.drop(columns=[target_column_name], axis=1)
-            X_test= test_dataframe.drop(columns=[target_column_name], axis=1)
-            logging.info("Dropping target column from the dataframe completed.")
-            logging.inf(f"train .shape {X_train.shape} test_shape {X_test.shape}")
+            train_df = pd.read_csv(self.data_ingestion_artifact.train_file_path ,usecols=selected_columns)
+            test_df = pd.read_csv(self.data_ingestion_artifact.test_file_path , usecols=selected_columns)
+            train_df = reduce_mem_usage(train_df)
+            test_df = reduce_mem_usage(test_df)
+            X_train = train_df.drop(columns=[target_column_name], axis=1)
+            y_train = train_df[ target_column_name]
+            X_test = test_df.drop(columns=[ target_column_name], axis=1)
+            y_test = test_df[ target_column_name]
+            
             model = self.get_best_model()
 
             if model is None:

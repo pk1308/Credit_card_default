@@ -94,7 +94,7 @@ def plot_model_report(model_info_artifact: MetricInfoArtifact,
     plt.title(f"Model Report for {model_name}", fontsize=20,
               fontweight='bold', pad=20, loc='center')
     bar = sns.barplot(data=data, ax=ax[0])
-    bar.set_xticklabels(bar.get_xticklabels(), rotation=45)
+    bar.set_xticklabels(bar.get_xticklabels(), rotation=90)
     try:
         logging.info(f"ROC AUC Score for {model_name} is {roc_auc}")
         line = sns.lineplot(
@@ -192,10 +192,15 @@ def evaluate_classification_model(X_train: pd.DataFrame, y_train: pd.DataFrame,
             if model_accuracy >= base_accuracy and diff_test_train_acc < 0.10:
                 base_accuracy = model_accuracy
                 best_model = model_info_artifact
-                logging.info(f"Acceptable model found {model_info_artifact}. ")
+                logging.info(f"{'*' *10} Best model {model_name} {'*' *10}")
+                logging.info(f"Acceptable model score {model_info_artifact.model_accuracy}. ")
             index += 1
         if best_model is None:
             logging.info("No acceptable model found")
+        else:
+            logging.info(f"Acceptable model  name {best_model.model_name}. ")
+            logging.info(f"Acceptable model score {model_info_artifact.model_accuracy}. ")
+            logging.info(f"best model artifact {best_model}")
     except Exception as e:
         raise App_Exception(e, sys)
     return best_model
