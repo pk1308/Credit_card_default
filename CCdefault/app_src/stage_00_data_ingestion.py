@@ -42,7 +42,7 @@ class DataIngestion:
         try:
             self.data_ingestion_config = data_ingestion_config_info
             self.logger = App_Logger("Data_Ingestion")
-
+            self.logger.info(f"{'>>' * 20}Experiment : Smote {'<<' * 20}")
         except Exception as e:
             raise App_Exception(e, sys)
         
