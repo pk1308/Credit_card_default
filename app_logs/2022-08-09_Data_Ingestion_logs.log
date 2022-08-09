@@ -37,3 +37,19 @@
 2022-08-09 12:17:56,367:	 INFO:	:>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>Data Ingestion log completed.<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< 
 
 
+2022-08-09 13:16:15,609:	 INFO:	:>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>Experiment : PCA <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+2022-08-09 13:16:15,609:	 INFO:	:>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>Data Ingestion started.<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+2022-08-09 13:16:15,609:	 INFO:	:Downloading dataset from kaggle
+2022-08-09 13:16:18,727:	 INFO:	:Dataset downloaded successfully file name : default-of-credit-card-clients-dataset.zip
+2022-08-09 13:16:18,729:	 INFO:	:Dataset moved to raw data folder : /home/pk/Desktop/MachineLearning/project/Credit_card_default/CCdefault/app_artifact/stage00_data_ingestion/raw_data/20220809131614/default-of-credit-card-clients-dataset.zip
+2022-08-09 13:16:18,843:	 INFO:	:Dataset unzipped successfully
+2022-08-09 13:16:18,844:	 INFO:	:>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>Data splitting.<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+2022-08-09 13:16:18,847:	 INFO:	:Last downloaded data : /home/pk/Desktop/MachineLearning/project/Credit_card_default/CCdefault/app_artifact/stage00_data_ingestion/raw_data/20220809121752/UCI_Credit_Card.csv
+2022-08-09 13:16:19,173:	 INFO:	:--------------------is_diff : same --------------------
+2022-08-09 13:16:19,173:	 INFO:	:Data already ingested
+2022-08-09 13:16:19,173:	 INFO:	:>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>Data Ingestion artifact.<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+2022-08-09 13:16:19,173:	 INFO:	: Data Ingestion ArtifactDataIngestionArtifact(train_file_path='/home/pk/Desktop/MachineLearning/project/Credit_card_default/CCdefault/app_artifact/stage00_data_ingestion/ingested_data/20220809114247/Train.csv', test_file_path='/home/pk/Desktop/MachineLearning/project/Credit_card_default/CCdefault/app_artifact/stage00_data_ingestion/ingested_data/20220809114247/Test.csv', is_ingested=False, message='Data ingestion was done in last experiments.')
+2022-08-09 13:16:19,173:	 INFO:	:>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>Data Ingestion completed.<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+2022-08-09 13:16:19,173:	 INFO:	:>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>Data Ingestion log completed.<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< 
+
+

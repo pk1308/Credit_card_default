@@ -81,6 +81,7 @@ class DataTransformation:
             preprocessing = Pipeline(steps=[
                 ('imputer', SimpleImputer(strategy="median")),
                 ('scaler', StandardScaler()),
+                ("PCA" , PCA(n_components=14)),
                 ('feature_generator', FeatureGenerator())])
             return preprocessing
 
@@ -126,10 +127,10 @@ class DataTransformation:
 
             input_feature_test_df = test_df.drop(columns=[target_column_name], axis=1)
             target_feature_test_df = test_df[target_column_name]
-            over_sampled_trainX, over_sampled_trainY = self.over_sample_input(train_df , target_column_name)
+            
             
             self.logger.info("Applying preprocessing object on training dataframe and testing dataframe")
-            input_feature_train_arr = preprocessing_obj.fit_transform(over_sampled_trainX)
+            input_feature_train_arr = preprocessing_obj.fit_transform(input_feature_train_df)
             input_feature_test_arr= preprocessing_obj.transform(input_feature_test_df)
         
             transformed_train_dir = self.data_transformation_config.transformed_train_dir
@@ -140,7 +141,7 @@ class DataTransformation:
             
             transformed_train_file_path = os.path.join(transformed_train_dir, train_file_name)
             transformed_test_file_path = os.path.join(transformed_test_dir, test_file_name)
-            train_arr = np.c_[input_feature_train_arr, np.array(over_sampled_trainY)]
+            train_arr = np.c_[input_feature_train_arr, np.array(target_feature_train_df)]
             test_arr = np.c_[input_feature_test_arr, np.array(target_feature_test_df)]
             self.logger.info("Saving transformed training and testing array.")
             preprocessing_obj_file_path = self.data_transformation_config.preprocessed_object_file_path
