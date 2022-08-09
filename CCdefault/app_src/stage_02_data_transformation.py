@@ -81,7 +81,6 @@ class DataTransformation:
             preprocessing = Pipeline(steps=[
                 ('imputer', SimpleImputer(strategy="median")),
                 ('scaler', StandardScaler()),
-                ("PCA" , PCA(n_components=14)),
                 ('feature_generator', FeatureGenerator())])
             return preprocessing
 

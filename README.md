@@ -25,6 +25,10 @@ dvc init
 CONNECTION_STRING = os.getenv('MONGODB_CONNSTRING')
 MONGODB_CONNSTRING="mongodb+srv://USERNAME:PASSWORD@cluster0.wzb80.mongodb.net/myFirstDatabase?retryWrites=true&w=majority"
 
+**base Model**
+
+<img src="CCdefault/app_artifact/stage03_model_training/model_report/20220809140111/cluster_custom_model/model_report/2022-08-09-14-17-19/EstimatorModel.png" alt="Alt text" title="Pca with Smote Best Model">
+
 **Pca with Smote Best Model**
 
 <img src="CCdefault/app_artifact/stage03_model_training/model_report/20220809114247/Base_model/model_report/2022-08-09-11-55-48/SVC.png" alt="Alt text" title="Pca with Smote Best Model">

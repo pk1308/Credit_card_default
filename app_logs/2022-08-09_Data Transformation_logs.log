@@ -37,3 +37,23 @@
 2022-08-09 13:16:39,994:	 INFO:	:>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>Data Transformation log completed.<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< 
 
 
+2022-08-09 14:00:47,696:	 INFO:	:>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>Data Transformation log started.<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< 
+2022-08-09 14:00:47,696:	 INFO:	:Obtaining preprocessing object.
+2022-08-09 14:00:47,698:	 INFO:	:Target column name : default.payment.next.month
+2022-08-09 14:00:47,698:	 INFO:	:Obtaining training and test file path.
+2022-08-09 14:00:47,698:	 INFO:	:Loading training and test data as pandas dataframe.
+2022-08-09 14:00:47,747:	 INFO:	:Splitting input and target feature from training and testing dataframe.
+2022-08-09 14:00:47,749:	 INFO:	:Applying preprocessing object on training dataframe and testing dataframe
+2022-08-09 14:01:16,088:	 INFO:	:>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>Data Transformation log started.<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< 
+2022-08-09 14:01:16,088:	 INFO:	:Obtaining preprocessing object.
+2022-08-09 14:01:16,090:	 INFO:	:Target column name : default.payment.next.month
+2022-08-09 14:01:16,090:	 INFO:	:Obtaining training and test file path.
+2022-08-09 14:01:16,090:	 INFO:	:Loading training and test data as pandas dataframe.
+2022-08-09 14:01:16,139:	 INFO:	:Splitting input and target feature from training and testing dataframe.
+2022-08-09 14:01:16,140:	 INFO:	:Applying preprocessing object on training dataframe and testing dataframe
+2022-08-09 14:01:47,435:	 INFO:	:Saving transformed training and testing array.
+2022-08-09 14:01:47,439:	 INFO:	:Saving preprocessing object.
+2022-08-09 14:01:47,441:	 INFO:	:Data transformations artifact: DataTransformationArtifact(is_transformed=True, message='Data transformation successfully.', transformed_train_file_path='/home/pk/Desktop/MachineLearning/project/Credit_card_default/CCdefault/app_artifact/stage02_data_transformation/20220809140111/transformed_data/train/Train.npz', transformed_test_file_path='/home/pk/Desktop/MachineLearning/project/Credit_card_default/CCdefault/app_artifact/stage02_data_transformation/20220809140111/transformed_data/test/Test.npz', preprocessed_object_file_path='/home/pk/Desktop/MachineLearning/project/Credit_card_default/CCdefault/app_artifact/stage02_data_transformation/20220809140111/preprocessed/preprocessed.pkl')
+2022-08-09 14:01:47,441:	 INFO:	:>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>Data Transformation log completed.<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< 
+
+

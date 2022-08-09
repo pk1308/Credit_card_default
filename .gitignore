@@ -140,3 +140,4 @@ CCdefault/app_notebook
 catboost_info
 docs
 test.ipynb
+CCdefault/app_artifact/stage00_data_ingestion/raw_data/*

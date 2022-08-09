@@ -53,3 +53,35 @@
 2022-08-09 13:16:19,173:	 INFO:	:>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>Data Ingestion log completed.<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< 
 
 
+2022-08-09 14:00:43,847:	 INFO:	:>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>Experiment : base Model <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+2022-08-09 14:00:43,847:	 INFO:	:>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>Data Ingestion started.<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+2022-08-09 14:00:43,847:	 INFO:	:Downloading dataset from kaggle
+2022-08-09 14:00:46,950:	 INFO:	:Dataset downloaded successfully file name : default-of-credit-card-clients-dataset.zip
+2022-08-09 14:00:46,951:	 INFO:	:Dataset moved to raw data folder : /home/pk/Desktop/MachineLearning/project/Credit_card_default/CCdefault/app_artifact/stage00_data_ingestion/raw_data/20220809140042/default-of-credit-card-clients-dataset.zip
+2022-08-09 14:00:47,067:	 INFO:	:Dataset unzipped successfully
+2022-08-09 14:00:47,067:	 INFO:	:>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>Data splitting.<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+2022-08-09 14:00:47,071:	 INFO:	:Last downloaded data : /home/pk/Desktop/MachineLearning/project/Credit_card_default/CCdefault/app_artifact/stage00_data_ingestion/raw_data/20220809131614/UCI_Credit_Card.csv
+2022-08-09 14:00:47,359:	 INFO:	:--------------------is_diff : same --------------------
+2022-08-09 14:00:47,359:	 INFO:	:Data already ingested
+2022-08-09 14:00:47,359:	 INFO:	:>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>Data Ingestion artifact.<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+2022-08-09 14:00:47,359:	 INFO:	: Data Ingestion ArtifactDataIngestionArtifact(train_file_path='/home/pk/Desktop/MachineLearning/project/Credit_card_default/CCdefault/app_artifact/stage00_data_ingestion/ingested_data/20220809114247/Train.csv', test_file_path='/home/pk/Desktop/MachineLearning/project/Credit_card_default/CCdefault/app_artifact/stage00_data_ingestion/ingested_data/20220809114247/Test.csv', is_ingested=False, message='Data ingestion was done in last experiments.')
+2022-08-09 14:00:47,359:	 INFO:	:>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>Data Ingestion completed.<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+2022-08-09 14:00:47,359:	 INFO:	:>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>Data Ingestion log completed.<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< 
+
+
+2022-08-09 14:01:12,260:	 INFO:	:>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>Experiment : base Model <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+2022-08-09 14:01:12,260:	 INFO:	:>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>Data Ingestion started.<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+2022-08-09 14:01:12,260:	 INFO:	:Downloading dataset from kaggle
+2022-08-09 14:01:15,381:	 INFO:	:Dataset downloaded successfully file name : default-of-credit-card-clients-dataset.zip
+2022-08-09 14:01:15,383:	 INFO:	:Dataset moved to raw data folder : /home/pk/Desktop/MachineLearning/project/Credit_card_default/CCdefault/app_artifact/stage00_data_ingestion/raw_data/20220809140111/default-of-credit-card-clients-dataset.zip
+2022-08-09 14:01:15,494:	 INFO:	:Dataset unzipped successfully
+2022-08-09 14:01:15,494:	 INFO:	:>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>Data splitting.<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+2022-08-09 14:01:15,497:	 INFO:	:Last downloaded data : /home/pk/Desktop/MachineLearning/project/Credit_card_default/CCdefault/app_artifact/stage00_data_ingestion/raw_data/20220809140042/UCI_Credit_Card.csv
+2022-08-09 14:01:15,761:	 INFO:	:--------------------is_diff : same --------------------
+2022-08-09 14:01:15,761:	 INFO:	:Data already ingested
+2022-08-09 14:01:15,761:	 INFO:	:>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>Data Ingestion artifact.<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+2022-08-09 14:01:15,761:	 INFO:	: Data Ingestion ArtifactDataIngestionArtifact(train_file_path='/home/pk/Desktop/MachineLearning/project/Credit_card_default/CCdefault/app_artifact/stage00_data_ingestion/ingested_data/20220809114247/Train.csv', test_file_path='/home/pk/Desktop/MachineLearning/project/Credit_card_default/CCdefault/app_artifact/stage00_data_ingestion/ingested_data/20220809114247/Test.csv', is_ingested=False, message='Data ingestion was done in last experiments.')
+2022-08-09 14:01:15,761:	 INFO:	:>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>Data Ingestion completed.<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+2022-08-09 14:01:15,761:	 INFO:	:>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>Data Ingestion log completed.<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< 
+
+
