@@ -10,7 +10,7 @@ from sklearn.decomposition import PCA
 from sklearn.cluster import KMeans
 import matplotlib.pyplot as plt
 import pandas as pd
-
+from imblearn.over_sampling import SMOTE
 from CCdefault.app_entity.artifacts_entity import DataIngestionArtifact, DataValidationArtifact, \
     DataTransformationArtifact
 from CCdefault.app_entity.config_entity import DataTransformationConfig
@@ -81,12 +81,26 @@ class DataTransformation:
             preprocessing = Pipeline(steps=[
                 ('imputer', SimpleImputer(strategy="median")),
                 ('scaler', StandardScaler()),
+                ("PCA" , PCA(n_components=14)),
                 ('feature_generator', FeatureGenerator())])
             return preprocessing
 
         except Exception as e:
             raise App_Exception(e, sys) from e
-
+    def over_sample_input(self , df , target_columns ):
+        try :
+            features = df.drop(target_columns , axis=1)
+            target = df[target_columns]
+            scaler = StandardScaler()
+            scaler.fit(features)
+            features_scaled = pd.DataFrame(scaler.transform(features), columns=features.columns)
+            smote_model = SMOTE(sampling_strategy='minority', random_state=1965, k_neighbors=3)
+            over_sampled_trainX, over_sampled_trainY = smote_model.fit_resample(X=features_scaled, y=target)
+            features_over_sampled = pd.DataFrame(scaler.inverse_transform(over_sampled_trainX,) , columns=features.columns)
+            return features_over_sampled , over_sampled_trainY
+        except Exception as e:
+            raise App_Exception(e, sys) from e
+        
     def initiate_data_transformation(self) -> DataTransformationArtifact:
         try:
             self.logger.info("Obtaining preprocessing object.")
@@ -113,20 +127,21 @@ class DataTransformation:
 
             input_feature_test_df = test_df.drop(columns=[target_column_name], axis=1)
             target_feature_test_df = test_df[target_column_name]
-
+            over_sampled_trainX, over_sampled_trainY = self.over_sample_input(train_df , target_column_name)
+            
             self.logger.info("Applying preprocessing object on training dataframe and testing dataframe")
-            input_feature_train_arr = preprocessing_obj.fit_transform(input_feature_train_df)
+            input_feature_train_arr = preprocessing_obj.fit_transform(over_sampled_trainX)
             input_feature_test_arr= preprocessing_obj.transform(input_feature_test_df)
-
+        
             transformed_train_dir = self.data_transformation_config.transformed_train_dir
             transformed_test_dir = self.data_transformation_config.transformed_test_dir
 
             train_file_name = os.path.basename(train_file_path).replace(".csv",".npz")
             test_file_name = os.path.basename(test_file_path).replace(".csv",".npz")
-
+            
             transformed_train_file_path = os.path.join(transformed_train_dir, train_file_name)
             transformed_test_file_path = os.path.join(transformed_test_dir, test_file_name)
-            train_arr = np.c_[ input_feature_train_arr, np.array(target_feature_train_df)]
+            train_arr = np.c_[input_feature_train_arr, np.array(over_sampled_trainY)]
             test_arr = np.c_[input_feature_test_arr, np.array(target_feature_test_df)]
             self.logger.info("Saving transformed training and testing array.")
             preprocessing_obj_file_path = self.data_transformation_config.preprocessed_object_file_path

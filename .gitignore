@@ -138,3 +138,5 @@ CCdefault/app_notebook
 
 .vscode
 catboost_info
+docs
+test.ipynb

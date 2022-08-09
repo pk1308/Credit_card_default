@@ -1,0 +1,13 @@
+2022-08-09 11:43:35,891:	 INFO:	:>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>Data Transformation log started.<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< 
+2022-08-09 11:43:35,891:	 INFO:	:Obtaining preprocessing object.
+2022-08-09 11:43:35,901:	 INFO:	:Target column name : default.payment.next.month
+2022-08-09 11:43:35,902:	 INFO:	:Obtaining training and test file path.
+2022-08-09 11:43:35,902:	 INFO:	:Loading training and test data as pandas dataframe.
+2022-08-09 11:43:35,966:	 INFO:	:Splitting input and target feature from training and testing dataframe.
+2022-08-09 11:43:36,517:	 INFO:	:Applying preprocessing object on training dataframe and testing dataframe
+2022-08-09 11:43:58,573:	 INFO:	:Saving transformed training and testing array.
+2022-08-09 11:43:58,577:	 INFO:	:Saving preprocessing object.
+2022-08-09 11:43:58,579:	 INFO:	:Data transformations artifact: DataTransformationArtifact(is_transformed=True, message='Data transformation successfully.', transformed_train_file_path='/home/pk/Desktop/MachineLearning/project/Credit_card_default/CCdefault/app_artifact/stage02_data_transformation/20220809114247/transformed_data/train/Train.npz', transformed_test_file_path='/home/pk/Desktop/MachineLearning/project/Credit_card_default/CCdefault/app_artifact/stage02_data_transformation/20220809114247/transformed_data/test/Test.npz', preprocessed_object_file_path='/home/pk/Desktop/MachineLearning/project/Credit_card_default/CCdefault/app_artifact/stage02_data_transformation/20220809114247/preprocessed/preprocessed.pkl')
+2022-08-09 11:43:58,579:	 INFO:	:>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>Data Transformation log completed.<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< 
+
+

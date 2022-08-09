@@ -1,0 +1,26 @@
+2022-08-09 11:42:52,197:	 DEBUG:	:connection to mongo db successful
+2022-08-09 11:42:52,197:	 DEBUG:	:connection to mongo db successful
+2022-08-09 11:42:52,444:	 DEBUG:	:insert many data into mongo db
+2022-08-09 11:43:04,340:	 DEBUG:	:insert many data into mongo db successful
+2022-08-09 11:43:04,598:	 DEBUG:	:connection to mongo db successful
+2022-08-09 11:43:04,598:	 DEBUG:	:connection to mongo db successful
+2022-08-09 11:43:04,659:	 DEBUG:	:insert many data into mongo db
+2022-08-09 11:43:10,306:	 DEBUG:	:insert many data into mongo db successful
+2022-08-09 11:43:10,378:	 DEBUG:	:connection to mongo db successful
+2022-08-09 11:43:13,065:	 DEBUG:	:Collection:'data_validated_test' in Database:'' exists
+2022-08-09 11:43:13,065:	 DEBUG:	:drop collection found in DB
+2022-08-09 11:43:13,065:	 DEBUG:	:drop collectiondata_validated_testfrom mongo db
+2022-08-09 11:43:13,289:	 DEBUG:	:drop collection from mongo db successful
+2022-08-09 11:43:13,290:	 DEBUG:	:drop collection data_validated_testfrom mongo db successful
+2022-08-09 11:43:13,290:	 DEBUG:	:connection to mongo db successful
+2022-08-09 11:43:13,343:	 DEBUG:	:connection to mongo db successful
+2022-08-09 11:43:16,014:	 DEBUG:	:Collection:'data_validated_train' in Database:'' exists
+2022-08-09 11:43:16,015:	 DEBUG:	:drop collection found in DB
+2022-08-09 11:43:16,015:	 DEBUG:	:drop collectiondata_validated_trainfrom mongo db
+2022-08-09 11:43:16,238:	 DEBUG:	:drop collection from mongo db successful
+2022-08-09 11:43:16,238:	 DEBUG:	:drop collection data_validated_trainfrom mongo db successful
+2022-08-09 11:43:16,238:	 DEBUG:	:connection to mongo db successful
+2022-08-09 11:43:16,754:	 DEBUG:	:insert many data into mongo db
+2022-08-09 11:43:20,019:	 DEBUG:	:insert many data into mongo db successful
+2022-08-09 11:43:20,620:	 DEBUG:	:insert many data into mongo db
+2022-08-09 11:43:35,862:	 DEBUG:	:insert many data into mongo db successful

@@ -2,7 +2,7 @@ grid_search:
   module: sklearn.model_selection
   class: GridSearchCV
   params:
-    cv: 5
+    cv: 2
     verbose: 3
     n_jobs : -1
     scoring: roc_auc
@@ -16,7 +16,6 @@ model_selection:
       n_estimators :
         - 500
         - 600
-        - 700
       
       criterion :
         - gini
@@ -25,53 +24,18 @@ model_selection:
         - 6
         - 7
         - 8
-        - 9
-        - 10
-        - 11
-      min_samples_split:
-        - 2
-        - 3
-        - 4
-        - 5
-        - 6
-        - 7
-        - 8
-        - 9
-        - 10
-        - 11
-      min_samples_leaf:
-        - 2
-        - 3
-        - 4
-        - 5
-        - 6
-      min_weifght_fraction_leaf:
-        - 0.0
-        - 0.1
-        - 0.2
-        - 0.3
-        - 0.4
-        - 0.5
-        - 0.6
-        - 0.7
-        - 0.8
-        - 0.9
-        - 1.0
       max_features :
         - auto
         - log2
         - sqrt
-        - None
       random_state :
         - 1965
-        - 43
   model_2:
     module: xgboost
     class: XGBClassifier
     search_param_grid:
       n_estimators :
         - 500
-        - 600
         - 700
       max_depth:
         - 3
@@ -81,44 +45,21 @@ model_selection:
       learning_rate:
         - 0.01
         - 0.1
-        - 0.2
-        - 0.3
       eval_metric:
         - auc
-        - error
-        - logloss
-      objective :
-        - binary:logistic
-        - multi:softmax
-        - multi:softprob
-        - binary:logistic
-        - multi:softprob
       booster :
         - gbtree
         - gblinear
-        - dart
       gamma :
         - 0.0
         - 0.1
-        - 0.2
-        - 0.3
-        - 0.4
       random_state :
         - 1965
-        - 43
   model_3:
     module: sklearn.linear_model
     class: LogisticRegression
     search_param_grid:
       C :
-        - 0.1
-        - 0.2
-        - 0.3
-        - 0.4
-        - 0.5
-        - 0.6
-        - 0.7
-        - 0.8
         - 0.9
         - 1.0
       solver :
@@ -128,104 +69,58 @@ model_selection:
         - saga
       random_state :
         - 1965
-        - 43
   model_4:
-    module: sklearn.neighbors
-    class: KNeighborsClassifier
+    module: catboost
+    class: CatBoostClassifier
     search_param_grid:
-      algorithm :
-        - ball_tree
-        - kd_tree
-        - brute
-      n_neighbors :
-        - 1
-        - 2
+      n_estimators :
+        - 500
+        - 700
+      max_depth:
         - 3
-        - 4
         - 5
-        - 6
-      p :
-        - 1
-        - 2
-        - 3
-        - 4
-        - 10
-      metric :
-        - manhattan
-        - euclidean
-        - chebyshev
-        - minkowski
-      metric_params :
-        - p=3
-        - p=4
-        - p=5
-      
+        - 7
+        - 9
+      learning_rate:
+        - 0.01
+        - 0.1
+      eval_metric:
+        - AUC
       random_state :
         - 1965
-        - 43
+      
   model_5:
     module: sklearn.svm
     class: SVC
     search_param_grid:
       C :
-        - 0.1
-        - 0.2
-        - 0.3
         - 0.4
-        - 0.5
-        - 0.6
-        - 0.7
-        - 0.8
-        - 0.9
-        - 1.0
+        - 0.1  
       kernel :
-        - linear
-        - poly
         - rbf
         - sigmoid
-        - precomputed
-      degree :
-        - 1
-        - 2
-        - 3
-        - 4
-        - 5
-        - 6
-        - 7
-        - 8
-        - 9
-        - 10
       gamma :
-        - 0.0
-        - 0.1
-        - 0.2
-        - 0.3
-        - 0.4
-        - 0.5
-        - 0.6
-        - 0.7
-        - 0.8
-        - 0.9
         - 1.0
       coef0 :
         - 0.0
-        - 0.1
-        - 0.2
-        - 0.3
-        - 0.4
-        - 0.5
-        - 0.6
-        - 0.7
-        - 0.8
-        - 0.9
-        - 1.0
-      shrinking :
+        - 0.001
+      probability:
         - True
-        - False
-      probability :
-        - True
-        - False
       random_state :
         - 1965
-        - 43
+  model_6:
+    module: sklearn.naive_bayes
+    class: GaussianNB
+    search_param_grid:
+      var_smoothing :
+        - 1e-09
+        - 1e-08
+        - 1e-07
+        - 1e-06
+        - 1e-05
+        - 1e-04
+        - 1e-03
+        - 1e-02
+        - 1e-01
+        - 1.0
  
