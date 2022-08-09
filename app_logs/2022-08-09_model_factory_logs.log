@@ -5730,3 +5730,1783 @@
 2022-08-09 14:36:21,493:	 INFO:	:Acceptable model  name EstimatorModel. 
 2022-08-09 14:36:21,493:	 INFO:	:Acceptable model score 0.8282291666666666. 
 2022-08-09 14:36:21,493:	 INFO:	:best model artifact MetricInfoArtifact()
+2022-08-09 18:25:40,580:	 INFO:	:Started Initializing model from config file
+2022-08-09 18:25:40,580:	 INFO:	:Executing command: from <module 'sklearn.ensemble' from '/home/pk/Desktop/MachineLearning/project/Credit_card_default/venv/lib/python3.7/site-packages/sklearn/ensemble/__init__.py'> import RandomForestClassifier
+2022-08-09 18:25:40,597:	 INFO:	:Executing command: from <module 'xgboost' from '/home/pk/Desktop/MachineLearning/project/Credit_card_default/venv/lib/python3.7/site-packages/xgboost/__init__.py'> import XGBClassifier
+2022-08-09 18:25:40,597:	 INFO:	:Executing command: from <module 'sklearn.linear_model' from '/home/pk/Desktop/MachineLearning/project/Credit_card_default/venv/lib/python3.7/site-packages/sklearn/linear_model/__init__.py'> import LogisticRegression
+2022-08-09 18:25:40,604:	 INFO:	:Executing command: from <module 'catboost' from '/home/pk/Desktop/MachineLearning/project/Credit_card_default/venv/lib/python3.7/site-packages/catboost/__init__.py'> import CatBoostClassifier
+2022-08-09 18:25:40,604:	 INFO:	:Executing command: from <module 'sklearn.svm' from '/home/pk/Desktop/MachineLearning/project/Credit_card_default/venv/lib/python3.7/site-packages/sklearn/svm/__init__.py'> import SVC
+2022-08-09 18:25:40,605:	 INFO:	:Executing command: from <module 'sklearn.naive_bayes' from '/home/pk/Desktop/MachineLearning/project/Credit_card_default/venv/lib/python3.7/site-packages/sklearn/naive_bayes.py'> import GaussianNB
+2022-08-09 18:25:40,606:	 INFO:	:Initialized model: [InitializedModelDetail(model_serial_number='model_1', model=RandomForestClassifier(), param_grid_search={'n_estimators': [500, 600], 'criterion': ['gini', 'entropy'], 'max_depth': [6, 7, 8], 'max_features': ['auto', 'log2', 'sqrt'], 'random_state': [1965]}, model_name='sklearn.ensemble.RandomForestClassifier'), InitializedModelDetail(model_serial_number='model_2', model=XGBClassifier(base_score=None, booster=None, callbacks=None,
+              colsample_bylevel=None, colsample_bynode=None,
+              colsample_bytree=None, early_stopping_rounds=None,
+              enable_categorical=False, eval_metric=None, gamma=None,
+              gpu_id=None, grow_policy=None, importance_type=None,
+              interaction_constraints=None, learning_rate=None, max_bin=None,
+              max_cat_to_onehot=None, max_delta_step=None, max_depth=None,
+              max_leaves=None, min_child_weight=None, missing=nan,
+              monotone_constraints=None, n_estimators=100, n_jobs=None,
+              num_parallel_tree=None, predictor=None, random_state=None,
+              reg_alpha=None, reg_lambda=None, ...), param_grid_search={'n_estimators': [500, 700], 'max_depth': [3, 5, 7, 9], 'learning_rate': [0.01, 0.1], 'eval_metric': ['auc'], 'booster': ['gbtree', 'gblinear'], 'gamma': [0.0, 0.1], 'random_state': [1965]}, model_name='xgboost.XGBClassifier'), InitializedModelDetail(model_serial_number='model_3', model=LogisticRegression(), param_grid_search={'C': [0.9, 1.0], 'solver': ['liblinear', 'newton-cg', 'lbfgs', 'saga'], 'random_state': [1965]}, model_name='sklearn.linear_model.LogisticRegression'), InitializedModelDetail(model_serial_number='model_4', model=<catboost.core.CatBoostClassifier object at 0x7f536af2e358>, param_grid_search={'n_estimators': [500, 700], 'max_depth': [3, 5, 7, 9], 'learning_rate': [0.01, 0.1], 'eval_metric': ['AUC'], 'random_state': [1965]}, model_name='catboost.CatBoostClassifier'), InitializedModelDetail(model_serial_number='model_5', model=SVC(), param_grid_search={'C': [0.4, 0.1], 'kernel': ['rbf', 'sigmoid'], 'gamma': [1.0], 'coef0': [0.0, 0.001], 'probability': [True], 'random_state': [1965]}, model_name='sklearn.svm.SVC'), InitializedModelDetail(model_serial_number='model_6', model=GaussianNB(), param_grid_search={'var_smoothing': ['1e-09', '1e-08', '1e-07', '1e-06', '1e-05', '1e-04', '1e-03', '1e-02', '1e-01', 1.0]}, model_name='sklearn.naive_bayes.GaussianNB')]
+2022-08-09 18:25:40,606:	 INFO:	:Executing command: from <module 'sklearn.model_selection' from '/home/pk/Desktop/MachineLearning/project/Credit_card_default/venv/lib/python3.7/site-packages/sklearn/model_selection/__init__.py'> import GridSearchCV
+2022-08-09 18:25:40,606:	 INFO:	:Executing:$ GridSearchCV(estimator=RandomForestClassifier(),
+             param_grid={'criterion': ['gini', 'entropy'],
+                         'max_depth': [6, 7, 8],
+                         'max_features': ['auto', 'log2', 'sqrt'],
+                         'n_estimators': [500, 600], 'random_state': [1965]}).cv=2
+2022-08-09 18:25:40,606:	 INFO:	:Executing:$ GridSearchCV(cv=2, estimator=RandomForestClassifier(),
+             param_grid={'criterion': ['gini', 'entropy'],
+                         'max_depth': [6, 7, 8],
+                         'max_features': ['auto', 'log2', 'sqrt'],
+                         'n_estimators': [500, 600], 'random_state': [1965]}).verbose=3
+2022-08-09 18:25:40,607:	 INFO:	:Executing:$ GridSearchCV(cv=2, estimator=RandomForestClassifier(),
+             param_grid={'criterion': ['gini', 'entropy'],
+                         'max_depth': [6, 7, 8],
+                         'max_features': ['auto', 'log2', 'sqrt'],
+                         'n_estimators': [500, 600], 'random_state': [1965]},
+             verbose=3).n_jobs=-1
+2022-08-09 18:25:40,607:	 INFO:	:Executing:$ GridSearchCV(cv=2, estimator=RandomForestClassifier(), n_jobs=-1,
+             param_grid={'criterion': ['gini', 'entropy'],
+                         'max_depth': [6, 7, 8],
+                         'max_features': ['auto', 'log2', 'sqrt'],
+                         'n_estimators': [500, 600], 'random_state': [1965]},
+             verbose=3).scoring=roc_auc
+2022-08-09 18:25:40,607:	 INFO:	:>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> f"Training RandomForestClassifier Started." <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+2022-08-09 18:26:09,675:	 INFO:	:>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> f"Training RandomForestClassifier Finished" <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+2022-08-09 18:26:09,675:	 INFO:	:>>>>>>>>>>>>>>>>>>>> Best model: >>>>>>>>>>>>>>>>>>>>
+2022-08-09 18:26:09,675:	 INFO:	:RandomForestClassifier(criterion='entropy', max_depth=8, n_estimators=600,
+                       random_state=1965)
+2022-08-09 18:26:09,675:	 INFO:	:>>>>>>>>>>>>>>>>>>>> Best Score: >>>>>>>>>>>>>>>>>>>>
+2022-08-09 18:26:09,675:	 INFO:	:0.7715251544576616
+2022-08-09 18:26:09,675:	 INFO:	:>>>>>>>>>>>>>>>>>>>> Best Params: >>>>>>>>>>>>>>>>>>>>
+2022-08-09 18:26:09,675:	 INFO:	:{'criterion': 'entropy', 'max_depth': 8, 'max_features': 'auto', 'n_estimators': 600, 'random_state': 1965}
+2022-08-09 18:26:09,675:	 INFO:	:Executing command: from <module 'sklearn.model_selection' from '/home/pk/Desktop/MachineLearning/project/Credit_card_default/venv/lib/python3.7/site-packages/sklearn/model_selection/__init__.py'> import GridSearchCV
+2022-08-09 18:26:09,677:	 INFO:	:Executing:$ GridSearchCV(estimator=XGBClassifier(base_score=None, booster=None,
+                                     callbacks=None, colsample_bylevel=None,
+                                     colsample_bynode=None,
+                                     colsample_bytree=None,
+                                     early_stopping_rounds=None,
+                                     enable_categorical=False, eval_metric=None,
+                                     gamma=None, gpu_id=None, grow_policy=None,
+                                     importance_type=None,
+                                     interaction_constraints=None,
+                                     learning_rate=None, max_bin=None,
+                                     max_cat_to_...
+                                     max_leaves=None, min_child_weight=None,
+                                     missing=nan, monotone_constraints=None,
+                                     n_estimators=100, n_jobs=None,
+                                     num_parallel_tree=None, predictor=None,
+                                     random_state=None, reg_alpha=None,
+                                     reg_lambda=None, ...),
+             param_grid={'booster': ['gbtree', 'gblinear'],
+                         'eval_metric': ['auc'], 'gamma': [0.0, 0.1],
+                         'learning_rate': [0.01, 0.1],
+                         'max_depth': [3, 5, 7, 9], 'n_estimators': [500, 700],
+                         'random_state': [1965]}).cv=2
+2022-08-09 18:26:09,678:	 INFO:	:Executing:$ GridSearchCV(cv=2,
+             estimator=XGBClassifier(base_score=None, booster=None,
+                                     callbacks=None, colsample_bylevel=None,
+                                     colsample_bynode=None,
+                                     colsample_bytree=None,
+                                     early_stopping_rounds=None,
+                                     enable_categorical=False, eval_metric=None,
+                                     gamma=None, gpu_id=None, grow_policy=None,
+                                     importance_type=None,
+                                     interaction_constraints=None,
+                                     learning_rate=None, max_bin=None,
+                                     max_ca...
+                                     max_leaves=None, min_child_weight=None,
+                                     missing=nan, monotone_constraints=None,
+                                     n_estimators=100, n_jobs=None,
+                                     num_parallel_tree=None, predictor=None,
+                                     random_state=None, reg_alpha=None,
+                                     reg_lambda=None, ...),
+             param_grid={'booster': ['gbtree', 'gblinear'],
+                         'eval_metric': ['auc'], 'gamma': [0.0, 0.1],
+                         'learning_rate': [0.01, 0.1],
+                         'max_depth': [3, 5, 7, 9], 'n_estimators': [500, 700],
+                         'random_state': [1965]}).verbose=3
+2022-08-09 18:26:09,679:	 INFO:	:Executing:$ GridSearchCV(cv=2,
+             estimator=XGBClassifier(base_score=None, booster=None,
+                                     callbacks=None, colsample_bylevel=None,
+                                     colsample_bynode=None,
+                                     colsample_bytree=None,
+                                     early_stopping_rounds=None,
+                                     enable_categorical=False, eval_metric=None,
+                                     gamma=None, gpu_id=None, grow_policy=None,
+                                     importance_type=None,
+                                     interaction_constraints=None,
+                                     learning_rate=None, max_bin=None,
+                                     max_ca...
+                                     missing=nan, monotone_constraints=None,
+                                     n_estimators=100, n_jobs=None,
+                                     num_parallel_tree=None, predictor=None,
+                                     random_state=None, reg_alpha=None,
+                                     reg_lambda=None, ...),
+             param_grid={'booster': ['gbtree', 'gblinear'],
+                         'eval_metric': ['auc'], 'gamma': [0.0, 0.1],
+                         'learning_rate': [0.01, 0.1],
+                         'max_depth': [3, 5, 7, 9], 'n_estimators': [500, 700],
+                         'random_state': [1965]},
+             verbose=3).n_jobs=-1
+2022-08-09 18:26:09,680:	 INFO:	:Executing:$ GridSearchCV(cv=2,
+             estimator=XGBClassifier(base_score=None, booster=None,
+                                     callbacks=None, colsample_bylevel=None,
+                                     colsample_bynode=None,
+                                     colsample_bytree=None,
+                                     early_stopping_rounds=None,
+                                     enable_categorical=False, eval_metric=None,
+                                     gamma=None, gpu_id=None, grow_policy=None,
+                                     importance_type=None,
+                                     interaction_constraints=None,
+                                     learning_rate=None, max_bin=None,
+                                     max_ca...
+                                     missing=nan, monotone_constraints=None,
+                                     n_estimators=100, n_jobs=None,
+                                     num_parallel_tree=None, predictor=None,
+                                     random_state=None, reg_alpha=None,
+                                     reg_lambda=None, ...),
+             n_jobs=-1,
+             param_grid={'booster': ['gbtree', 'gblinear'],
+                         'eval_metric': ['auc'], 'gamma': [0.0, 0.1],
+                         'learning_rate': [0.01, 0.1],
+                         'max_depth': [3, 5, 7, 9], 'n_estimators': [500, 700],
+                         'random_state': [1965]},
+             verbose=3).scoring=roc_auc
+2022-08-09 18:26:09,680:	 INFO:	:>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> f"Training XGBClassifier Started." <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+2022-08-09 18:29:19,736:	 INFO:	:>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> f"Training XGBClassifier Finished" <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+2022-08-09 18:29:19,736:	 INFO:	:>>>>>>>>>>>>>>>>>>>> Best model: >>>>>>>>>>>>>>>>>>>>
+2022-08-09 18:29:19,736:	 INFO:	:XGBClassifier(base_score=0.5, booster='gbtree', callbacks=None,
+              colsample_bylevel=1, colsample_bynode=1, colsample_bytree=1,
+              early_stopping_rounds=None, enable_categorical=False,
+              eval_metric='auc', gamma=0.0, gpu_id=-1, grow_policy='depthwise',
+              importance_type=None, interaction_constraints='',
+              learning_rate=0.01, max_bin=256, max_cat_to_onehot=4,
+              max_delta_step=0, max_depth=5, max_leaves=0, min_child_weight=1,
+              missing=nan, monotone_constraints='()', n_estimators=700,
+              n_jobs=0, num_parallel_tree=1, predictor='auto',
+              random_state=1965, reg_alpha=0, reg_lambda=1, ...)
+2022-08-09 18:29:19,740:	 INFO:	:>>>>>>>>>>>>>>>>>>>> Best Score: >>>>>>>>>>>>>>>>>>>>
+2022-08-09 18:29:19,740:	 INFO:	:0.7740691688498786
+2022-08-09 18:29:19,740:	 INFO:	:>>>>>>>>>>>>>>>>>>>> Best Params: >>>>>>>>>>>>>>>>>>>>
+2022-08-09 18:29:19,740:	 INFO:	:{'booster': 'gbtree', 'eval_metric': 'auc', 'gamma': 0.0, 'learning_rate': 0.01, 'max_depth': 5, 'n_estimators': 700, 'random_state': 1965}
+2022-08-09 18:29:19,740:	 INFO:	:Executing command: from <module 'sklearn.model_selection' from '/home/pk/Desktop/MachineLearning/project/Credit_card_default/venv/lib/python3.7/site-packages/sklearn/model_selection/__init__.py'> import GridSearchCV
+2022-08-09 18:29:19,741:	 INFO:	:Executing:$ GridSearchCV(estimator=LogisticRegression(),
+             param_grid={'C': [0.9, 1.0], 'random_state': [1965],
+                         'solver': ['liblinear', 'newton-cg', 'lbfgs', 'saga']}).cv=2
+2022-08-09 18:29:19,741:	 INFO:	:Executing:$ GridSearchCV(cv=2, estimator=LogisticRegression(),
+             param_grid={'C': [0.9, 1.0], 'random_state': [1965],
+                         'solver': ['liblinear', 'newton-cg', 'lbfgs', 'saga']}).verbose=3
+2022-08-09 18:29:19,742:	 INFO:	:Executing:$ GridSearchCV(cv=2, estimator=LogisticRegression(),
+             param_grid={'C': [0.9, 1.0], 'random_state': [1965],
+                         'solver': ['liblinear', 'newton-cg', 'lbfgs', 'saga']},
+             verbose=3).n_jobs=-1
+2022-08-09 18:29:19,742:	 INFO:	:Executing:$ GridSearchCV(cv=2, estimator=LogisticRegression(), n_jobs=-1,
+             param_grid={'C': [0.9, 1.0], 'random_state': [1965],
+                         'solver': ['liblinear', 'newton-cg', 'lbfgs', 'saga']},
+             verbose=3).scoring=roc_auc
+2022-08-09 18:29:19,742:	 INFO:	:>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> f"Training LogisticRegression Started." <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+2022-08-09 18:29:21,344:	 INFO:	:>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> f"Training LogisticRegression Finished" <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+2022-08-09 18:29:21,344:	 INFO:	:>>>>>>>>>>>>>>>>>>>> Best model: >>>>>>>>>>>>>>>>>>>>
+2022-08-09 18:29:21,344:	 INFO:	:LogisticRegression(C=0.9, random_state=1965, solver='liblinear')
+2022-08-09 18:29:21,344:	 INFO:	:>>>>>>>>>>>>>>>>>>>> Best Score: >>>>>>>>>>>>>>>>>>>>
+2022-08-09 18:29:21,344:	 INFO:	:0.7684204361531171
+2022-08-09 18:29:21,344:	 INFO:	:>>>>>>>>>>>>>>>>>>>> Best Params: >>>>>>>>>>>>>>>>>>>>
+2022-08-09 18:29:21,344:	 INFO:	:{'C': 0.9, 'random_state': 1965, 'solver': 'liblinear'}
+2022-08-09 18:29:21,344:	 INFO:	:Executing command: from <module 'sklearn.model_selection' from '/home/pk/Desktop/MachineLearning/project/Credit_card_default/venv/lib/python3.7/site-packages/sklearn/model_selection/__init__.py'> import GridSearchCV
+2022-08-09 18:29:21,345:	 INFO:	:Executing:$ GridSearchCV(estimator=<catboost.core.CatBoostClassifier object at 0x7f536af2e358>,
+             param_grid={'eval_metric': ['AUC'], 'learning_rate': [0.01, 0.1],
+                         'max_depth': [3, 5, 7, 9], 'n_estimators': [500, 700],
+                         'random_state': [1965]}).cv=2
+2022-08-09 18:29:21,345:	 INFO:	:Executing:$ GridSearchCV(cv=2,
+             estimator=<catboost.core.CatBoostClassifier object at 0x7f536af2e358>,
+             param_grid={'eval_metric': ['AUC'], 'learning_rate': [0.01, 0.1],
+                         'max_depth': [3, 5, 7, 9], 'n_estimators': [500, 700],
+                         'random_state': [1965]}).verbose=3
+2022-08-09 18:29:21,345:	 INFO:	:Executing:$ GridSearchCV(cv=2,
+             estimator=<catboost.core.CatBoostClassifier object at 0x7f536af2e358>,
+             param_grid={'eval_metric': ['AUC'], 'learning_rate': [0.01, 0.1],
+                         'max_depth': [3, 5, 7, 9], 'n_estimators': [500, 700],
+                         'random_state': [1965]},
+             verbose=3).n_jobs=-1
+2022-08-09 18:29:21,345:	 INFO:	:Executing:$ GridSearchCV(cv=2,
+             estimator=<catboost.core.CatBoostClassifier object at 0x7f536af2e358>,
+             n_jobs=-1,
+             param_grid={'eval_metric': ['AUC'], 'learning_rate': [0.01, 0.1],
+                         'max_depth': [3, 5, 7, 9], 'n_estimators': [500, 700],
+                         'random_state': [1965]},
+             verbose=3).scoring=roc_auc
+2022-08-09 18:29:21,345:	 INFO:	:>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> f"Training CatBoostClassifier Started." <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+2022-08-09 18:30:27,720:	 INFO:	:>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> f"Training CatBoostClassifier Finished" <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+2022-08-09 18:30:27,720:	 INFO:	:>>>>>>>>>>>>>>>>>>>> Best model: >>>>>>>>>>>>>>>>>>>>
+2022-08-09 18:30:27,721:	 INFO:	:<catboost.core.CatBoostClassifier object at 0x7f53a81559e8>
+2022-08-09 18:30:27,721:	 INFO:	:>>>>>>>>>>>>>>>>>>>> Best Score: >>>>>>>>>>>>>>>>>>>>
+2022-08-09 18:30:27,721:	 INFO:	:0.7760755821199768
+2022-08-09 18:30:27,721:	 INFO:	:>>>>>>>>>>>>>>>>>>>> Best Params: >>>>>>>>>>>>>>>>>>>>
+2022-08-09 18:30:27,721:	 INFO:	:{'eval_metric': 'AUC', 'learning_rate': 0.01, 'max_depth': 9, 'n_estimators': 500, 'random_state': 1965}
+2022-08-09 18:30:27,722:	 INFO:	:Executing command: from <module 'sklearn.model_selection' from '/home/pk/Desktop/MachineLearning/project/Credit_card_default/venv/lib/python3.7/site-packages/sklearn/model_selection/__init__.py'> import GridSearchCV
+2022-08-09 18:30:27,725:	 INFO:	:Executing:$ GridSearchCV(estimator=SVC(),
+             param_grid={'C': [0.4, 0.1], 'coef0': [0.0, 0.001], 'gamma': [1.0],
+                         'kernel': ['rbf', 'sigmoid'], 'probability': [True],
+                         'random_state': [1965]}).cv=2
+2022-08-09 18:30:27,727:	 INFO:	:Executing:$ GridSearchCV(cv=2, estimator=SVC(),
+             param_grid={'C': [0.4, 0.1], 'coef0': [0.0, 0.001], 'gamma': [1.0],
+                         'kernel': ['rbf', 'sigmoid'], 'probability': [True],
+                         'random_state': [1965]}).verbose=3
+2022-08-09 18:30:27,730:	 INFO:	:Executing:$ GridSearchCV(cv=2, estimator=SVC(),
+             param_grid={'C': [0.4, 0.1], 'coef0': [0.0, 0.001], 'gamma': [1.0],
+                         'kernel': ['rbf', 'sigmoid'], 'probability': [True],
+                         'random_state': [1965]},
+             verbose=3).n_jobs=-1
+2022-08-09 18:30:27,732:	 INFO:	:Executing:$ GridSearchCV(cv=2, estimator=SVC(), n_jobs=-1,
+             param_grid={'C': [0.4, 0.1], 'coef0': [0.0, 0.001], 'gamma': [1.0],
+                         'kernel': ['rbf', 'sigmoid'], 'probability': [True],
+                         'random_state': [1965]},
+             verbose=3).scoring=roc_auc
+2022-08-09 18:30:27,732:	 INFO:	:>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> f"Training SVC Started." <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+2022-08-09 18:36:04,025:	 INFO:	:>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> f"Training SVC Finished" <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+2022-08-09 18:36:04,025:	 INFO:	:>>>>>>>>>>>>>>>>>>>> Best model: >>>>>>>>>>>>>>>>>>>>
+2022-08-09 18:36:04,025:	 INFO:	:SVC(C=0.4, gamma=1.0, probability=True, random_state=1965)
+2022-08-09 18:36:04,025:	 INFO:	:>>>>>>>>>>>>>>>>>>>> Best Score: >>>>>>>>>>>>>>>>>>>>
+2022-08-09 18:36:04,025:	 INFO:	:0.6754650124857486
+2022-08-09 18:36:04,025:	 INFO:	:>>>>>>>>>>>>>>>>>>>> Best Params: >>>>>>>>>>>>>>>>>>>>
+2022-08-09 18:36:04,025:	 INFO:	:{'C': 0.4, 'coef0': 0.0, 'gamma': 1.0, 'kernel': 'rbf', 'probability': True, 'random_state': 1965}
+2022-08-09 18:36:04,025:	 INFO:	:Executing command: from <module 'sklearn.model_selection' from '/home/pk/Desktop/MachineLearning/project/Credit_card_default/venv/lib/python3.7/site-packages/sklearn/model_selection/__init__.py'> import GridSearchCV
+2022-08-09 18:36:04,025:	 INFO:	:Executing:$ GridSearchCV(estimator=GaussianNB(),
+             param_grid={'var_smoothing': ['1e-09', '1e-08', '1e-07', '1e-06',
+                                           '1e-05', '1e-04', '1e-03', '1e-02',
+                                           '1e-01', 1.0]}).cv=2
+2022-08-09 18:36:04,026:	 INFO:	:Executing:$ GridSearchCV(cv=2, estimator=GaussianNB(),
+             param_grid={'var_smoothing': ['1e-09', '1e-08', '1e-07', '1e-06',
+                                           '1e-05', '1e-04', '1e-03', '1e-02',
+                                           '1e-01', 1.0]}).verbose=3
+2022-08-09 18:36:04,026:	 INFO:	:Executing:$ GridSearchCV(cv=2, estimator=GaussianNB(),
+             param_grid={'var_smoothing': ['1e-09', '1e-08', '1e-07', '1e-06',
+                                           '1e-05', '1e-04', '1e-03', '1e-02',
+                                           '1e-01', 1.0]},
+             verbose=3).n_jobs=-1
+2022-08-09 18:36:04,026:	 INFO:	:Executing:$ GridSearchCV(cv=2, estimator=GaussianNB(), n_jobs=-1,
+             param_grid={'var_smoothing': ['1e-09', '1e-08', '1e-07', '1e-06',
+                                           '1e-05', '1e-04', '1e-03', '1e-02',
+                                           '1e-01', 1.0]},
+             verbose=3).scoring=roc_auc
+2022-08-09 18:36:04,026:	 INFO:	:>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> f"Training GaussianNB Started." <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+2022-08-09 18:36:04,415:	 INFO:	:>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> f"Training GaussianNB Finished" <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+2022-08-09 18:36:04,415:	 INFO:	:>>>>>>>>>>>>>>>>>>>> Best model: >>>>>>>>>>>>>>>>>>>>
+2022-08-09 18:36:04,415:	 INFO:	:GaussianNB(var_smoothing=1.0)
+2022-08-09 18:36:04,416:	 INFO:	:>>>>>>>>>>>>>>>>>>>> Best Score: >>>>>>>>>>>>>>>>>>>>
+2022-08-09 18:36:04,416:	 INFO:	:0.7390146417956795
+2022-08-09 18:36:04,416:	 INFO:	:>>>>>>>>>>>>>>>>>>>> Best Params: >>>>>>>>>>>>>>>>>>>>
+2022-08-09 18:36:04,416:	 INFO:	:{'var_smoothing': 1.0}
+2022-08-09 18:36:04,416:	 INFO:	:Acceptable model found:GridSearchedBestModel(model_serial_number='model_1', model=RandomForestClassifier(), best_model=RandomForestClassifier(criterion='entropy', max_depth=8, n_estimators=600,
+                       random_state=1965), best_parameters={'criterion': 'entropy', 'max_depth': 8, 'max_features': 'auto', 'n_estimators': 600, 'random_state': 1965}, best_score=0.7715251544576616)
+2022-08-09 18:36:04,418:	 INFO:	:Acceptable model found:GridSearchedBestModel(model_serial_number='model_2', model=XGBClassifier(base_score=None, booster=None, callbacks=None,
+              colsample_bylevel=None, colsample_bynode=None,
+              colsample_bytree=None, early_stopping_rounds=None,
+              enable_categorical=False, eval_metric=None, gamma=None,
+              gpu_id=None, grow_policy=None, importance_type=None,
+              interaction_constraints=None, learning_rate=None, max_bin=None,
+              max_cat_to_onehot=None, max_delta_step=None, max_depth=None,
+              max_leaves=None, min_child_weight=None, missing=nan,
+              monotone_constraints=None, n_estimators=100, n_jobs=None,
+              num_parallel_tree=None, predictor=None, random_state=None,
+              reg_alpha=None, reg_lambda=None, ...), best_model=XGBClassifier(base_score=0.5, booster='gbtree', callbacks=None,
+              colsample_bylevel=1, colsample_bynode=1, colsample_bytree=1,
+              early_stopping_rounds=None, enable_categorical=False,
+              eval_metric='auc', gamma=0.0, gpu_id=-1, grow_policy='depthwise',
+              importance_type=None, interaction_constraints='',
+              learning_rate=0.01, max_bin=256, max_cat_to_onehot=4,
+              max_delta_step=0, max_depth=5, max_leaves=0, min_child_weight=1,
+              missing=nan, monotone_constraints='()', n_estimators=700,
+              n_jobs=0, num_parallel_tree=1, predictor='auto',
+              random_state=1965, reg_alpha=0, reg_lambda=1, ...), best_parameters={'booster': 'gbtree', 'eval_metric': 'auc', 'gamma': 0.0, 'learning_rate': 0.01, 'max_depth': 5, 'n_estimators': 700, 'random_state': 1965}, best_score=0.7740691688498786)
+2022-08-09 18:36:04,418:	 INFO:	:Acceptable model found:GridSearchedBestModel(model_serial_number='model_4', model=<catboost.core.CatBoostClassifier object at 0x7f536af2e358>, best_model=<catboost.core.CatBoostClassifier object at 0x7f53a81559e8>, best_parameters={'eval_metric': 'AUC', 'learning_rate': 0.01, 'max_depth': 9, 'n_estimators': 500, 'random_state': 1965}, best_score=0.7760755821199768)
+2022-08-09 18:36:04,418:	 INFO:	:Best model: GridSearchedBestModel(model_serial_number='model_4', model=<catboost.core.CatBoostClassifier object at 0x7f536af2e358>, best_model=<catboost.core.CatBoostClassifier object at 0x7f53a81559e8>, best_parameters={'eval_metric': 'AUC', 'learning_rate': 0.01, 'max_depth': 9, 'n_estimators': 500, 'random_state': 1965}, best_score=0.7760755821199768)
+2022-08-09 18:36:04,418:	 INFO:	:evaluating RandomForestClassifier model
+2022-08-09 18:36:04,418:	 INFO:	:predicting RandomForestClassifier model
+2022-08-09 18:36:05,280:	 INFO:	:RandomForestClassifier model report
+2022-08-09 18:36:05,301:	 INFO:	:Plotting RandomForestClassifier model report
+2022-08-09 18:36:05,301:	 INFO:	:{'experiment_id': None, 'model_name': 'RandomForestClassifier', 'model_object': RandomForestClassifier(criterion='entropy', max_depth=8, n_estimators=600,
+                       random_state=1965), 'train_precision': 0.7510183299389002, 'test_precision': 0.6875, 'train_recall': 0.3464881371858116, 'test_recall': 0.32414448669201523, 'train_f1': 0.47420028934254943, 'test_f1': 0.44056847545219646, 'train_accuracy': 0.8296354166666666, 'test_accuracy': 0.8195833333333333, 'accuracy_diff': 0.010052083333333295, 'model_accuracy': 0.824609375, 'model_index': 0}
+2022-08-09 18:36:05,301:	 INFO:	:Plotting the model report
+2022-08-09 18:36:05,825:	 INFO:	:ROC AUC Score for RandomForestClassifier is 0.777328897338403
+2022-08-09 18:36:09,459:	 INFO:	:Model report saved at /home/pk/Desktop/MachineLearning/project/Credit_card_default/CCdefault/app_artifact/stage03_model_training/model_report/20220809182513/Base_model/model_report/2022-08-09-18-36-04/RandomForestClassifier
+2022-08-09 18:36:09,459:	 INFO:	:********** Best model RandomForestClassifier **********
+2022-08-09 18:36:09,459:	 INFO:	:Acceptable model score 0.824609375. 
+2022-08-09 18:36:09,459:	 INFO:	:evaluating XGBClassifier model
+2022-08-09 18:36:09,459:	 INFO:	:predicting XGBClassifier model
+2022-08-09 18:36:09,498:	 INFO:	:XGBClassifier model report
+2022-08-09 18:36:09,522:	 INFO:	:Plotting XGBClassifier model report
+2022-08-09 18:36:09,523:	 INFO:	:{'experiment_id': None, 'model_name': 'XGBClassifier', 'model_object': XGBClassifier(base_score=0.5, booster='gbtree', callbacks=None,
+              colsample_bylevel=1, colsample_bynode=1, colsample_bytree=1,
+              early_stopping_rounds=None, enable_categorical=False,
+              eval_metric='auc', gamma=0.0, gpu_id=-1, grow_policy='depthwise',
+              importance_type=None, interaction_constraints='',
+              learning_rate=0.01, max_bin=256, max_cat_to_onehot=4,
+              max_delta_step=0, max_depth=5, max_leaves=0, min_child_weight=1,
+              missing=nan, monotone_constraints='()', n_estimators=700,
+              n_jobs=0, num_parallel_tree=1, predictor='auto',
+              random_state=1965, reg_alpha=0, reg_lambda=1, ...), 'train_precision': 0.7288990825688073, 'test_precision': 0.6637168141592921, 'train_recall': 0.37326755931407096, 'test_recall': 0.3564638783269962, 'train_f1': 0.49370824918440265, 'test_f1': 0.46382189239332106, 'train_accuracy': 0.8302604166666666, 'test_accuracy': 0.819375, 'accuracy_diff': 0.010885416666666647, 'model_accuracy': 0.8248177083333332, 'model_index': 1}
+2022-08-09 18:36:09,523:	 INFO:	:Plotting the model report
+2022-08-09 18:36:09,591:	 INFO:	:ROC AUC Score for XGBClassifier is 0.7815575150853585
+2022-08-09 18:36:12,733:	 INFO:	:Model report saved at /home/pk/Desktop/MachineLearning/project/Credit_card_default/CCdefault/app_artifact/stage03_model_training/model_report/20220809182513/Base_model/model_report/2022-08-09-18-36-04/XGBClassifier
+2022-08-09 18:36:12,734:	 INFO:	:********** Best model XGBClassifier **********
+2022-08-09 18:36:12,734:	 INFO:	:Acceptable model score 0.8248177083333332. 
+2022-08-09 18:36:12,734:	 INFO:	:evaluating LogisticRegression model
+2022-08-09 18:36:12,734:	 INFO:	:predicting LogisticRegression model
+2022-08-09 18:36:12,737:	 INFO:	:LogisticRegression model report
+2022-08-09 18:36:12,772:	 INFO:	:Plotting LogisticRegression model report
+2022-08-09 18:36:12,773:	 INFO:	:{'experiment_id': None, 'model_name': 'LogisticRegression', 'model_object': LogisticRegression(C=0.9, random_state=1965, solver='liblinear'), 'train_precision': 0.6900844819919965, 'test_precision': 0.6480541455160744, 'train_recall': 0.36457599248296924, 'test_recall': 0.36406844106463876, 'train_f1': 0.47709806332616045, 'test_f1': 0.46622032866707247, 'train_accuracy': 0.8228125, 'test_accuracy': 0.8172916666666666, 'accuracy_diff': 0.005520833333333308, 'model_accuracy': 0.8200520833333333, 'model_index': 2}
+2022-08-09 18:36:12,773:	 INFO:	:Plotting the model report
+2022-08-09 18:36:12,998:	 INFO:	:ROC AUC Score for LogisticRegression is 0.7714152237340269
+2022-08-09 18:36:16,571:	 INFO:	:Model report saved at /home/pk/Desktop/MachineLearning/project/Credit_card_default/CCdefault/app_artifact/stage03_model_training/model_report/20220809182513/Base_model/model_report/2022-08-09-18-36-04/LogisticRegression
+2022-08-09 18:36:16,571:	 INFO:	:evaluating CatBoostClassifier model
+2022-08-09 18:36:16,571:	 INFO:	:predicting CatBoostClassifier model
+2022-08-09 18:36:17,070:	 INFO:	:CatBoostClassifier model report
+2022-08-09 18:36:17,091:	 INFO:	:Plotting CatBoostClassifier model report
+2022-08-09 18:36:17,092:	 INFO:	:{'experiment_id': None, 'model_name': 'CatBoostClassifier', 'model_object': <catboost.core.CatBoostClassifier object at 0x7f53a81559e8>, 'train_precision': 0.7607334525939177, 'test_precision': 0.662608695652174, 'train_recall': 0.39957716701902746, 'test_recall': 0.36216730038022815, 'train_f1': 0.5239488680117048, 'test_f1': 0.46834665027658273, 'train_accuracy': 0.8390104166666666, 'test_accuracy': 0.8197916666666667, 'accuracy_diff': 0.01921874999999995, 'model_accuracy': 0.8294010416666666, 'model_index': 3}
+2022-08-09 18:36:17,092:	 INFO:	:Plotting the model report
+2022-08-09 18:36:17,467:	 INFO:	:ROC AUC Score for CatBoostClassifier is 0.7818385268087213
+2022-08-09 18:36:21,051:	 INFO:	:Model report saved at /home/pk/Desktop/MachineLearning/project/Credit_card_default/CCdefault/app_artifact/stage03_model_training/model_report/20220809182513/Base_model/model_report/2022-08-09-18-36-04/CatBoostClassifier
+2022-08-09 18:36:21,051:	 INFO:	:********** Best model CatBoostClassifier **********
+2022-08-09 18:36:21,051:	 INFO:	:Acceptable model score 0.8294010416666666. 
+2022-08-09 18:36:21,051:	 INFO:	:evaluating SVC model
+2022-08-09 18:36:21,051:	 INFO:	:predicting SVC model
+2022-08-09 18:36:42,558:	 INFO:	:SVC model report
+2022-08-09 18:36:42,578:	 INFO:	:Plotting SVC model report
+2022-08-09 18:36:42,578:	 INFO:	:{'experiment_id': None, 'model_name': 'SVC', 'model_object': SVC(C=0.4, gamma=1.0, probability=True, random_state=1965), 'train_precision': 0.9243243243243243, 'test_precision': 0.6363636363636364, 'train_recall': 0.080338266384778, 'test_recall': 0.03326996197718631, 'train_f1': 0.1478279662848498, 'test_f1': 0.06323396567299006, 'train_accuracy': 0.7946354166666667, 'test_accuracy': 0.7839583333333333, 'accuracy_diff': 0.010677083333333393, 'model_accuracy': 0.789296875, 'model_index': 4}
+2022-08-09 18:36:42,578:	 INFO:	:Plotting the model report
+2022-08-09 18:36:42,914:	 INFO:	:ROC AUC Score for SVC is 0.6798383726073425
+2022-08-09 18:36:46,853:	 INFO:	:Model report saved at /home/pk/Desktop/MachineLearning/project/Credit_card_default/CCdefault/app_artifact/stage03_model_training/model_report/20220809182513/Base_model/model_report/2022-08-09-18-36-04/SVC
+2022-08-09 18:36:46,853:	 INFO:	:evaluating GaussianNB model
+2022-08-09 18:36:46,853:	 INFO:	:predicting GaussianNB model
+2022-08-09 18:36:46,876:	 INFO:	:GaussianNB model report
+2022-08-09 18:36:46,897:	 INFO:	:Plotting GaussianNB model report
+2022-08-09 18:36:46,897:	 INFO:	:{'experiment_id': None, 'model_name': 'GaussianNB', 'model_object': GaussianNB(var_smoothing=1.0), 'train_precision': 0.5282608695652173, 'test_precision': 0.5226438188494492, 'train_recall': 0.39957716701902746, 'test_recall': 0.405893536121673, 'train_f1': 0.4549953189781998, 'test_f1': 0.45692883895131087, 'train_accuracy': 0.7877604166666666, 'test_accuracy': 0.7885416666666667, 'accuracy_diff': 0.0007812500000000666, 'model_accuracy': 0.7881510416666666, 'model_index': 5}
+2022-08-09 18:36:46,897:	 INFO:	:Plotting the model report
+2022-08-09 18:36:47,154:	 INFO:	:ROC AUC Score for GaussianNB is 0.7425717036411815
+2022-08-09 18:36:50,675:	 INFO:	:Model report saved at /home/pk/Desktop/MachineLearning/project/Credit_card_default/CCdefault/app_artifact/stage03_model_training/model_report/20220809182513/Base_model/model_report/2022-08-09-18-36-04/GaussianNB
+2022-08-09 18:36:50,675:	 INFO:	:Acceptable model  name CatBoostClassifier. 
+2022-08-09 18:36:50,675:	 INFO:	:Acceptable model score 0.7881510416666666. 
+2022-08-09 18:36:50,675:	 INFO:	:best model artifact MetricInfoArtifact()
+2022-08-09 18:36:50,689:	 INFO:	:Started Initializing model from config file
+2022-08-09 18:36:50,689:	 INFO:	:Executing command: from <module 'sklearn.ensemble' from '/home/pk/Desktop/MachineLearning/project/Credit_card_default/venv/lib/python3.7/site-packages/sklearn/ensemble/__init__.py'> import RandomForestClassifier
+2022-08-09 18:36:50,689:	 INFO:	:Executing command: from <module 'xgboost' from '/home/pk/Desktop/MachineLearning/project/Credit_card_default/venv/lib/python3.7/site-packages/xgboost/__init__.py'> import XGBClassifier
+2022-08-09 18:36:50,690:	 INFO:	:Executing command: from <module 'sklearn.linear_model' from '/home/pk/Desktop/MachineLearning/project/Credit_card_default/venv/lib/python3.7/site-packages/sklearn/linear_model/__init__.py'> import LogisticRegression
+2022-08-09 18:36:50,690:	 INFO:	:Executing command: from <module 'catboost' from '/home/pk/Desktop/MachineLearning/project/Credit_card_default/venv/lib/python3.7/site-packages/catboost/__init__.py'> import CatBoostClassifier
+2022-08-09 18:36:50,690:	 INFO:	:Executing command: from <module 'sklearn.svm' from '/home/pk/Desktop/MachineLearning/project/Credit_card_default/venv/lib/python3.7/site-packages/sklearn/svm/__init__.py'> import SVC
+2022-08-09 18:36:50,690:	 INFO:	:Executing command: from <module 'sklearn.naive_bayes' from '/home/pk/Desktop/MachineLearning/project/Credit_card_default/venv/lib/python3.7/site-packages/sklearn/naive_bayes.py'> import GaussianNB
+2022-08-09 18:36:50,690:	 INFO:	:Initialized model: [InitializedModelDetail(model_serial_number='model_1', model=RandomForestClassifier(), param_grid_search={'n_estimators': [500, 600], 'criterion': ['gini', 'entropy'], 'max_depth': [6, 7, 8], 'max_features': ['auto', 'log2', 'sqrt'], 'random_state': [1965]}, model_name='sklearn.ensemble.RandomForestClassifier'), InitializedModelDetail(model_serial_number='model_2', model=XGBClassifier(base_score=None, booster=None, callbacks=None,
+              colsample_bylevel=None, colsample_bynode=None,
+              colsample_bytree=None, early_stopping_rounds=None,
+              enable_categorical=False, eval_metric=None, gamma=None,
+              gpu_id=None, grow_policy=None, importance_type=None,
+              interaction_constraints=None, learning_rate=None, max_bin=None,
+              max_cat_to_onehot=None, max_delta_step=None, max_depth=None,
+              max_leaves=None, min_child_weight=None, missing=nan,
+              monotone_constraints=None, n_estimators=100, n_jobs=None,
+              num_parallel_tree=None, predictor=None, random_state=None,
+              reg_alpha=None, reg_lambda=None, ...), param_grid_search={'n_estimators': [500, 700], 'max_depth': [3, 5, 7, 9], 'learning_rate': [0.01, 0.1], 'eval_metric': ['auc'], 'booster': ['gbtree', 'gblinear'], 'gamma': [0.0, 0.1], 'random_state': [1965]}, model_name='xgboost.XGBClassifier'), InitializedModelDetail(model_serial_number='model_3', model=LogisticRegression(), param_grid_search={'C': [0.9, 1.0], 'solver': ['liblinear', 'newton-cg', 'lbfgs', 'saga'], 'random_state': [1965]}, model_name='sklearn.linear_model.LogisticRegression'), InitializedModelDetail(model_serial_number='model_4', model=<catboost.core.CatBoostClassifier object at 0x7f53a89d72b0>, param_grid_search={'n_estimators': [500, 700], 'max_depth': [3, 5, 7, 9], 'learning_rate': [0.01, 0.1], 'eval_metric': ['AUC'], 'random_state': [1965]}, model_name='catboost.CatBoostClassifier'), InitializedModelDetail(model_serial_number='model_5', model=SVC(), param_grid_search={'C': [0.4, 0.1], 'kernel': ['rbf', 'sigmoid'], 'gamma': [1.0], 'coef0': [0.0, 0.001], 'probability': [True], 'random_state': [1965]}, model_name='sklearn.svm.SVC'), InitializedModelDetail(model_serial_number='model_6', model=GaussianNB(), param_grid_search={'var_smoothing': ['1e-09', '1e-08', '1e-07', '1e-06', '1e-05', '1e-04', '1e-03', '1e-02', '1e-01', 1.0]}, model_name='sklearn.naive_bayes.GaussianNB')]
+2022-08-09 18:36:50,691:	 INFO:	:Executing command: from <module 'sklearn.model_selection' from '/home/pk/Desktop/MachineLearning/project/Credit_card_default/venv/lib/python3.7/site-packages/sklearn/model_selection/__init__.py'> import GridSearchCV
+2022-08-09 18:36:50,691:	 INFO:	:Executing:$ GridSearchCV(estimator=RandomForestClassifier(),
+             param_grid={'criterion': ['gini', 'entropy'],
+                         'max_depth': [6, 7, 8],
+                         'max_features': ['auto', 'log2', 'sqrt'],
+                         'n_estimators': [500, 600], 'random_state': [1965]}).cv=2
+2022-08-09 18:36:50,691:	 INFO:	:Executing:$ GridSearchCV(cv=2, estimator=RandomForestClassifier(),
+             param_grid={'criterion': ['gini', 'entropy'],
+                         'max_depth': [6, 7, 8],
+                         'max_features': ['auto', 'log2', 'sqrt'],
+                         'n_estimators': [500, 600], 'random_state': [1965]}).verbose=3
+2022-08-09 18:36:50,692:	 INFO:	:Executing:$ GridSearchCV(cv=2, estimator=RandomForestClassifier(),
+             param_grid={'criterion': ['gini', 'entropy'],
+                         'max_depth': [6, 7, 8],
+                         'max_features': ['auto', 'log2', 'sqrt'],
+                         'n_estimators': [500, 600], 'random_state': [1965]},
+             verbose=3).n_jobs=-1
+2022-08-09 18:36:50,692:	 INFO:	:Executing:$ GridSearchCV(cv=2, estimator=RandomForestClassifier(), n_jobs=-1,
+             param_grid={'criterion': ['gini', 'entropy'],
+                         'max_depth': [6, 7, 8],
+                         'max_features': ['auto', 'log2', 'sqrt'],
+                         'n_estimators': [500, 600], 'random_state': [1965]},
+             verbose=3).scoring=roc_auc
+2022-08-09 18:36:50,692:	 INFO:	:>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> f"Training RandomForestClassifier Started." <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+2022-08-09 18:36:57,648:	 INFO:	:>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> f"Training RandomForestClassifier Finished" <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+2022-08-09 18:36:57,649:	 INFO:	:>>>>>>>>>>>>>>>>>>>> Best model: >>>>>>>>>>>>>>>>>>>>
+2022-08-09 18:36:57,649:	 INFO:	:RandomForestClassifier(criterion='entropy', max_depth=8, max_features='log2',
+                       n_estimators=500, random_state=1965)
+2022-08-09 18:36:57,649:	 INFO:	:>>>>>>>>>>>>>>>>>>>> Best Score: >>>>>>>>>>>>>>>>>>>>
+2022-08-09 18:36:57,649:	 INFO:	:0.788871824033257
+2022-08-09 18:36:57,649:	 INFO:	:>>>>>>>>>>>>>>>>>>>> Best Params: >>>>>>>>>>>>>>>>>>>>
+2022-08-09 18:36:57,649:	 INFO:	:{'criterion': 'entropy', 'max_depth': 8, 'max_features': 'log2', 'n_estimators': 500, 'random_state': 1965}
+2022-08-09 18:36:57,649:	 INFO:	:Executing command: from <module 'sklearn.model_selection' from '/home/pk/Desktop/MachineLearning/project/Credit_card_default/venv/lib/python3.7/site-packages/sklearn/model_selection/__init__.py'> import GridSearchCV
+2022-08-09 18:36:57,651:	 INFO:	:Executing:$ GridSearchCV(estimator=XGBClassifier(base_score=None, booster=None,
+                                     callbacks=None, colsample_bylevel=None,
+                                     colsample_bynode=None,
+                                     colsample_bytree=None,
+                                     early_stopping_rounds=None,
+                                     enable_categorical=False, eval_metric=None,
+                                     gamma=None, gpu_id=None, grow_policy=None,
+                                     importance_type=None,
+                                     interaction_constraints=None,
+                                     learning_rate=None, max_bin=None,
+                                     max_cat_to_...
+                                     max_leaves=None, min_child_weight=None,
+                                     missing=nan, monotone_constraints=None,
+                                     n_estimators=100, n_jobs=None,
+                                     num_parallel_tree=None, predictor=None,
+                                     random_state=None, reg_alpha=None,
+                                     reg_lambda=None, ...),
+             param_grid={'booster': ['gbtree', 'gblinear'],
+                         'eval_metric': ['auc'], 'gamma': [0.0, 0.1],
+                         'learning_rate': [0.01, 0.1],
+                         'max_depth': [3, 5, 7, 9], 'n_estimators': [500, 700],
+                         'random_state': [1965]}).cv=2
+2022-08-09 18:36:57,652:	 INFO:	:Executing:$ GridSearchCV(cv=2,
+             estimator=XGBClassifier(base_score=None, booster=None,
+                                     callbacks=None, colsample_bylevel=None,
+                                     colsample_bynode=None,
+                                     colsample_bytree=None,
+                                     early_stopping_rounds=None,
+                                     enable_categorical=False, eval_metric=None,
+                                     gamma=None, gpu_id=None, grow_policy=None,
+                                     importance_type=None,
+                                     interaction_constraints=None,
+                                     learning_rate=None, max_bin=None,
+                                     max_ca...
+                                     max_leaves=None, min_child_weight=None,
+                                     missing=nan, monotone_constraints=None,
+                                     n_estimators=100, n_jobs=None,
+                                     num_parallel_tree=None, predictor=None,
+                                     random_state=None, reg_alpha=None,
+                                     reg_lambda=None, ...),
+             param_grid={'booster': ['gbtree', 'gblinear'],
+                         'eval_metric': ['auc'], 'gamma': [0.0, 0.1],
+                         'learning_rate': [0.01, 0.1],
+                         'max_depth': [3, 5, 7, 9], 'n_estimators': [500, 700],
+                         'random_state': [1965]}).verbose=3
+2022-08-09 18:36:57,653:	 INFO:	:Executing:$ GridSearchCV(cv=2,
+             estimator=XGBClassifier(base_score=None, booster=None,
+                                     callbacks=None, colsample_bylevel=None,
+                                     colsample_bynode=None,
+                                     colsample_bytree=None,
+                                     early_stopping_rounds=None,
+                                     enable_categorical=False, eval_metric=None,
+                                     gamma=None, gpu_id=None, grow_policy=None,
+                                     importance_type=None,
+                                     interaction_constraints=None,
+                                     learning_rate=None, max_bin=None,
+                                     max_ca...
+                                     missing=nan, monotone_constraints=None,
+                                     n_estimators=100, n_jobs=None,
+                                     num_parallel_tree=None, predictor=None,
+                                     random_state=None, reg_alpha=None,
+                                     reg_lambda=None, ...),
+             param_grid={'booster': ['gbtree', 'gblinear'],
+                         'eval_metric': ['auc'], 'gamma': [0.0, 0.1],
+                         'learning_rate': [0.01, 0.1],
+                         'max_depth': [3, 5, 7, 9], 'n_estimators': [500, 700],
+                         'random_state': [1965]},
+             verbose=3).n_jobs=-1
+2022-08-09 18:36:57,655:	 INFO:	:Executing:$ GridSearchCV(cv=2,
+             estimator=XGBClassifier(base_score=None, booster=None,
+                                     callbacks=None, colsample_bylevel=None,
+                                     colsample_bynode=None,
+                                     colsample_bytree=None,
+                                     early_stopping_rounds=None,
+                                     enable_categorical=False, eval_metric=None,
+                                     gamma=None, gpu_id=None, grow_policy=None,
+                                     importance_type=None,
+                                     interaction_constraints=None,
+                                     learning_rate=None, max_bin=None,
+                                     max_ca...
+                                     missing=nan, monotone_constraints=None,
+                                     n_estimators=100, n_jobs=None,
+                                     num_parallel_tree=None, predictor=None,
+                                     random_state=None, reg_alpha=None,
+                                     reg_lambda=None, ...),
+             n_jobs=-1,
+             param_grid={'booster': ['gbtree', 'gblinear'],
+                         'eval_metric': ['auc'], 'gamma': [0.0, 0.1],
+                         'learning_rate': [0.01, 0.1],
+                         'max_depth': [3, 5, 7, 9], 'n_estimators': [500, 700],
+                         'random_state': [1965]},
+             verbose=3).scoring=roc_auc
+2022-08-09 18:36:57,655:	 INFO:	:>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> f"Training XGBClassifier Started." <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+2022-08-09 18:37:32,348:	 INFO:	:>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> f"Training XGBClassifier Finished" <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+2022-08-09 18:37:32,348:	 INFO:	:>>>>>>>>>>>>>>>>>>>> Best model: >>>>>>>>>>>>>>>>>>>>
+2022-08-09 18:37:32,348:	 INFO:	:XGBClassifier(base_score=0.5, booster='gbtree', callbacks=None,
+              colsample_bylevel=1, colsample_bynode=1, colsample_bytree=1,
+              early_stopping_rounds=None, enable_categorical=False,
+              eval_metric='auc', gamma=0.1, gpu_id=-1, grow_policy='depthwise',
+              importance_type=None, interaction_constraints='',
+              learning_rate=0.01, max_bin=256, max_cat_to_onehot=4,
+              max_delta_step=0, max_depth=3, max_leaves=0, min_child_weight=1,
+              missing=nan, monotone_constraints='()', n_estimators=700,
+              n_jobs=0, num_parallel_tree=1, predictor='auto',
+              random_state=1965, reg_alpha=0, reg_lambda=1, ...)
+2022-08-09 18:37:32,352:	 INFO:	:>>>>>>>>>>>>>>>>>>>> Best Score: >>>>>>>>>>>>>>>>>>>>
+2022-08-09 18:37:32,352:	 INFO:	:0.7917802748629816
+2022-08-09 18:37:32,352:	 INFO:	:>>>>>>>>>>>>>>>>>>>> Best Params: >>>>>>>>>>>>>>>>>>>>
+2022-08-09 18:37:32,352:	 INFO:	:{'booster': 'gbtree', 'eval_metric': 'auc', 'gamma': 0.1, 'learning_rate': 0.01, 'max_depth': 3, 'n_estimators': 700, 'random_state': 1965}
+2022-08-09 18:37:32,352:	 INFO:	:Executing command: from <module 'sklearn.model_selection' from '/home/pk/Desktop/MachineLearning/project/Credit_card_default/venv/lib/python3.7/site-packages/sklearn/model_selection/__init__.py'> import GridSearchCV
+2022-08-09 18:37:32,353:	 INFO:	:Executing:$ GridSearchCV(estimator=LogisticRegression(),
+             param_grid={'C': [0.9, 1.0], 'random_state': [1965],
+                         'solver': ['liblinear', 'newton-cg', 'lbfgs', 'saga']}).cv=2
+2022-08-09 18:37:32,353:	 INFO:	:Executing:$ GridSearchCV(cv=2, estimator=LogisticRegression(),
+             param_grid={'C': [0.9, 1.0], 'random_state': [1965],
+                         'solver': ['liblinear', 'newton-cg', 'lbfgs', 'saga']}).verbose=3
+2022-08-09 18:37:32,354:	 INFO:	:Executing:$ GridSearchCV(cv=2, estimator=LogisticRegression(),
+             param_grid={'C': [0.9, 1.0], 'random_state': [1965],
+                         'solver': ['liblinear', 'newton-cg', 'lbfgs', 'saga']},
+             verbose=3).n_jobs=-1
+2022-08-09 18:37:32,354:	 INFO:	:Executing:$ GridSearchCV(cv=2, estimator=LogisticRegression(), n_jobs=-1,
+             param_grid={'C': [0.9, 1.0], 'random_state': [1965],
+                         'solver': ['liblinear', 'newton-cg', 'lbfgs', 'saga']},
+             verbose=3).scoring=roc_auc
+2022-08-09 18:37:32,354:	 INFO:	:>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> f"Training LogisticRegression Started." <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+2022-08-09 18:37:32,759:	 INFO:	:>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> f"Training LogisticRegression Finished" <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+2022-08-09 18:37:32,759:	 INFO:	:>>>>>>>>>>>>>>>>>>>> Best model: >>>>>>>>>>>>>>>>>>>>
+2022-08-09 18:37:32,759:	 INFO:	:LogisticRegression(C=0.9, random_state=1965, solver='liblinear')
+2022-08-09 18:37:32,762:	 INFO:	:>>>>>>>>>>>>>>>>>>>> Best Score: >>>>>>>>>>>>>>>>>>>>
+2022-08-09 18:37:32,762:	 INFO:	:0.7834939643873744
+2022-08-09 18:37:32,762:	 INFO:	:>>>>>>>>>>>>>>>>>>>> Best Params: >>>>>>>>>>>>>>>>>>>>
+2022-08-09 18:37:32,762:	 INFO:	:{'C': 0.9, 'random_state': 1965, 'solver': 'liblinear'}
+2022-08-09 18:37:32,762:	 INFO:	:Executing command: from <module 'sklearn.model_selection' from '/home/pk/Desktop/MachineLearning/project/Credit_card_default/venv/lib/python3.7/site-packages/sklearn/model_selection/__init__.py'> import GridSearchCV
+2022-08-09 18:37:32,765:	 INFO:	:Executing:$ GridSearchCV(estimator=<catboost.core.CatBoostClassifier object at 0x7f53a89d72b0>,
+             param_grid={'eval_metric': ['AUC'], 'learning_rate': [0.01, 0.1],
+                         'max_depth': [3, 5, 7, 9], 'n_estimators': [500, 700],
+                         'random_state': [1965]}).cv=2
+2022-08-09 18:37:32,767:	 INFO:	:Executing:$ GridSearchCV(cv=2,
+             estimator=<catboost.core.CatBoostClassifier object at 0x7f53a89d72b0>,
+             param_grid={'eval_metric': ['AUC'], 'learning_rate': [0.01, 0.1],
+                         'max_depth': [3, 5, 7, 9], 'n_estimators': [500, 700],
+                         'random_state': [1965]}).verbose=3
+2022-08-09 18:37:32,769:	 INFO:	:Executing:$ GridSearchCV(cv=2,
+             estimator=<catboost.core.CatBoostClassifier object at 0x7f53a89d72b0>,
+             param_grid={'eval_metric': ['AUC'], 'learning_rate': [0.01, 0.1],
+                         'max_depth': [3, 5, 7, 9], 'n_estimators': [500, 700],
+                         'random_state': [1965]},
+             verbose=3).n_jobs=-1
+2022-08-09 18:37:32,771:	 INFO:	:Executing:$ GridSearchCV(cv=2,
+             estimator=<catboost.core.CatBoostClassifier object at 0x7f53a89d72b0>,
+             n_jobs=-1,
+             param_grid={'eval_metric': ['AUC'], 'learning_rate': [0.01, 0.1],
+                         'max_depth': [3, 5, 7, 9], 'n_estimators': [500, 700],
+                         'random_state': [1965]},
+             verbose=3).scoring=roc_auc
+2022-08-09 18:37:32,771:	 INFO:	:>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> f"Training CatBoostClassifier Started." <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+2022-08-09 18:38:02,214:	 INFO:	:>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> f"Training CatBoostClassifier Finished" <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+2022-08-09 18:38:02,214:	 INFO:	:>>>>>>>>>>>>>>>>>>>> Best model: >>>>>>>>>>>>>>>>>>>>
+2022-08-09 18:38:02,214:	 INFO:	:<catboost.core.CatBoostClassifier object at 0x7f53a86ff8d0>
+2022-08-09 18:38:02,214:	 INFO:	:>>>>>>>>>>>>>>>>>>>> Best Score: >>>>>>>>>>>>>>>>>>>>
+2022-08-09 18:38:02,214:	 INFO:	:0.7941905507142129
+2022-08-09 18:38:02,214:	 INFO:	:>>>>>>>>>>>>>>>>>>>> Best Params: >>>>>>>>>>>>>>>>>>>>
+2022-08-09 18:38:02,214:	 INFO:	:{'eval_metric': 'AUC', 'learning_rate': 0.01, 'max_depth': 5, 'n_estimators': 700, 'random_state': 1965}
+2022-08-09 18:38:02,214:	 INFO:	:Executing command: from <module 'sklearn.model_selection' from '/home/pk/Desktop/MachineLearning/project/Credit_card_default/venv/lib/python3.7/site-packages/sklearn/model_selection/__init__.py'> import GridSearchCV
+2022-08-09 18:38:02,216:	 INFO:	:Executing:$ GridSearchCV(estimator=SVC(),
+             param_grid={'C': [0.4, 0.1], 'coef0': [0.0, 0.001], 'gamma': [1.0],
+                         'kernel': ['rbf', 'sigmoid'], 'probability': [True],
+                         'random_state': [1965]}).cv=2
+2022-08-09 18:38:02,217:	 INFO:	:Executing:$ GridSearchCV(cv=2, estimator=SVC(),
+             param_grid={'C': [0.4, 0.1], 'coef0': [0.0, 0.001], 'gamma': [1.0],
+                         'kernel': ['rbf', 'sigmoid'], 'probability': [True],
+                         'random_state': [1965]}).verbose=3
+2022-08-09 18:38:02,218:	 INFO:	:Executing:$ GridSearchCV(cv=2, estimator=SVC(),
+             param_grid={'C': [0.4, 0.1], 'coef0': [0.0, 0.001], 'gamma': [1.0],
+                         'kernel': ['rbf', 'sigmoid'], 'probability': [True],
+                         'random_state': [1965]},
+             verbose=3).n_jobs=-1
+2022-08-09 18:38:02,220:	 INFO:	:Executing:$ GridSearchCV(cv=2, estimator=SVC(), n_jobs=-1,
+             param_grid={'C': [0.4, 0.1], 'coef0': [0.0, 0.001], 'gamma': [1.0],
+                         'kernel': ['rbf', 'sigmoid'], 'probability': [True],
+                         'random_state': [1965]},
+             verbose=3).scoring=roc_auc
+2022-08-09 18:38:02,220:	 INFO:	:>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> f"Training SVC Started." <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+2022-08-09 18:38:06,984:	 INFO:	:>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> f"Training SVC Finished" <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+2022-08-09 18:38:06,985:	 INFO:	:>>>>>>>>>>>>>>>>>>>> Best model: >>>>>>>>>>>>>>>>>>>>
+2022-08-09 18:38:06,985:	 INFO:	:SVC(C=0.1, gamma=1.0, probability=True, random_state=1965)
+2022-08-09 18:38:06,985:	 INFO:	:>>>>>>>>>>>>>>>>>>>> Best Score: >>>>>>>>>>>>>>>>>>>>
+2022-08-09 18:38:06,985:	 INFO:	:0.7210811450086108
+2022-08-09 18:38:06,985:	 INFO:	:>>>>>>>>>>>>>>>>>>>> Best Params: >>>>>>>>>>>>>>>>>>>>
+2022-08-09 18:38:06,985:	 INFO:	:{'C': 0.1, 'coef0': 0.0, 'gamma': 1.0, 'kernel': 'rbf', 'probability': True, 'random_state': 1965}
+2022-08-09 18:38:06,985:	 INFO:	:Executing command: from <module 'sklearn.model_selection' from '/home/pk/Desktop/MachineLearning/project/Credit_card_default/venv/lib/python3.7/site-packages/sklearn/model_selection/__init__.py'> import GridSearchCV
+2022-08-09 18:38:06,985:	 INFO:	:Executing:$ GridSearchCV(estimator=GaussianNB(),
+             param_grid={'var_smoothing': ['1e-09', '1e-08', '1e-07', '1e-06',
+                                           '1e-05', '1e-04', '1e-03', '1e-02',
+                                           '1e-01', 1.0]}).cv=2
+2022-08-09 18:38:06,986:	 INFO:	:Executing:$ GridSearchCV(cv=2, estimator=GaussianNB(),
+             param_grid={'var_smoothing': ['1e-09', '1e-08', '1e-07', '1e-06',
+                                           '1e-05', '1e-04', '1e-03', '1e-02',
+                                           '1e-01', 1.0]}).verbose=3
+2022-08-09 18:38:06,986:	 INFO:	:Executing:$ GridSearchCV(cv=2, estimator=GaussianNB(),
+             param_grid={'var_smoothing': ['1e-09', '1e-08', '1e-07', '1e-06',
+                                           '1e-05', '1e-04', '1e-03', '1e-02',
+                                           '1e-01', 1.0]},
+             verbose=3).n_jobs=-1
+2022-08-09 18:38:06,986:	 INFO:	:Executing:$ GridSearchCV(cv=2, estimator=GaussianNB(), n_jobs=-1,
+             param_grid={'var_smoothing': ['1e-09', '1e-08', '1e-07', '1e-06',
+                                           '1e-05', '1e-04', '1e-03', '1e-02',
+                                           '1e-01', 1.0]},
+             verbose=3).scoring=roc_auc
+2022-08-09 18:38:06,986:	 INFO:	:>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> f"Training GaussianNB Started." <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+2022-08-09 18:38:07,203:	 INFO:	:>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> f"Training GaussianNB Finished" <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+2022-08-09 18:38:07,204:	 INFO:	:>>>>>>>>>>>>>>>>>>>> Best model: >>>>>>>>>>>>>>>>>>>>
+2022-08-09 18:38:07,204:	 INFO:	:GaussianNB(var_smoothing=1.0)
+2022-08-09 18:38:07,205:	 INFO:	:>>>>>>>>>>>>>>>>>>>> Best Score: >>>>>>>>>>>>>>>>>>>>
+2022-08-09 18:38:07,206:	 INFO:	:0.7580319577223602
+2022-08-09 18:38:07,206:	 INFO:	:>>>>>>>>>>>>>>>>>>>> Best Params: >>>>>>>>>>>>>>>>>>>>
+2022-08-09 18:38:07,206:	 INFO:	:{'var_smoothing': 1.0}
+2022-08-09 18:38:07,209:	 INFO:	:Acceptable model found:GridSearchedBestModel(model_serial_number='model_1', model=RandomForestClassifier(), best_model=RandomForestClassifier(criterion='entropy', max_depth=8, max_features='log2',
+                       n_estimators=500, random_state=1965), best_parameters={'criterion': 'entropy', 'max_depth': 8, 'max_features': 'log2', 'n_estimators': 500, 'random_state': 1965}, best_score=0.788871824033257)
+2022-08-09 18:38:07,220:	 INFO:	:Acceptable model found:GridSearchedBestModel(model_serial_number='model_2', model=XGBClassifier(base_score=None, booster=None, callbacks=None,
+              colsample_bylevel=None, colsample_bynode=None,
+              colsample_bytree=None, early_stopping_rounds=None,
+              enable_categorical=False, eval_metric=None, gamma=None,
+              gpu_id=None, grow_policy=None, importance_type=None,
+              interaction_constraints=None, learning_rate=None, max_bin=None,
+              max_cat_to_onehot=None, max_delta_step=None, max_depth=None,
+              max_leaves=None, min_child_weight=None, missing=nan,
+              monotone_constraints=None, n_estimators=100, n_jobs=None,
+              num_parallel_tree=None, predictor=None, random_state=None,
+              reg_alpha=None, reg_lambda=None, ...), best_model=XGBClassifier(base_score=0.5, booster='gbtree', callbacks=None,
+              colsample_bylevel=1, colsample_bynode=1, colsample_bytree=1,
+              early_stopping_rounds=None, enable_categorical=False,
+              eval_metric='auc', gamma=0.1, gpu_id=-1, grow_policy='depthwise',
+              importance_type=None, interaction_constraints='',
+              learning_rate=0.01, max_bin=256, max_cat_to_onehot=4,
+              max_delta_step=0, max_depth=3, max_leaves=0, min_child_weight=1,
+              missing=nan, monotone_constraints='()', n_estimators=700,
+              n_jobs=0, num_parallel_tree=1, predictor='auto',
+              random_state=1965, reg_alpha=0, reg_lambda=1, ...), best_parameters={'booster': 'gbtree', 'eval_metric': 'auc', 'gamma': 0.1, 'learning_rate': 0.01, 'max_depth': 3, 'n_estimators': 700, 'random_state': 1965}, best_score=0.7917802748629816)
+2022-08-09 18:38:07,221:	 INFO:	:Acceptable model found:GridSearchedBestModel(model_serial_number='model_4', model=<catboost.core.CatBoostClassifier object at 0x7f53a89d72b0>, best_model=<catboost.core.CatBoostClassifier object at 0x7f53a86ff8d0>, best_parameters={'eval_metric': 'AUC', 'learning_rate': 0.01, 'max_depth': 5, 'n_estimators': 700, 'random_state': 1965}, best_score=0.7941905507142129)
+2022-08-09 18:38:07,221:	 INFO:	:Best model: GridSearchedBestModel(model_serial_number='model_4', model=<catboost.core.CatBoostClassifier object at 0x7f53a89d72b0>, best_model=<catboost.core.CatBoostClassifier object at 0x7f53a86ff8d0>, best_parameters={'eval_metric': 'AUC', 'learning_rate': 0.01, 'max_depth': 5, 'n_estimators': 700, 'random_state': 1965}, best_score=0.7941905507142129)
+2022-08-09 18:38:07,233:	 INFO:	:evaluating RandomForestClassifier model
+2022-08-09 18:38:07,233:	 INFO:	:predicting RandomForestClassifier model
+2022-08-09 18:38:07,499:	 INFO:	:RandomForestClassifier model report
+2022-08-09 18:38:07,504:	 INFO:	:Plotting RandomForestClassifier model report
+2022-08-09 18:38:07,505:	 INFO:	:{'experiment_id': None, 'model_name': 'RandomForestClassifier', 'model_object': RandomForestClassifier(criterion='entropy', max_depth=8, max_features='log2',
+                       n_estimators=500, random_state=1965), 'train_precision': 0.7786259541984732, 'test_precision': 0.7325581395348837, 'train_recall': 0.38345864661654133, 'test_recall': 0.39622641509433965, 'train_f1': 0.5138539042821159, 'test_f1': 0.5142857142857142, 'train_accuracy': 0.8512332990750257, 'test_accuracy': 0.87782340862423, 'accuracy_diff': 0.026590109549204377, 'model_accuracy': 0.8645283538496278, 'model_index': 0}
+2022-08-09 18:38:07,505:	 INFO:	:Plotting the model report
+2022-08-09 18:38:07,783:	 INFO:	:ROC AUC Score for RandomForestClassifier is 0.793594937685689
+2022-08-09 18:38:08,445:	 INFO:	:Model report saved at /home/pk/Desktop/MachineLearning/project/Credit_card_default/CCdefault/app_artifact/stage03_model_training/model_report/20220809182513/cluster_0.0/model_report/2022-08-09-18-38-07/RandomForestClassifier
+2022-08-09 18:38:08,445:	 INFO:	:********** Best model RandomForestClassifier **********
+2022-08-09 18:38:08,445:	 INFO:	:Acceptable model score 0.8645283538496278. 
+2022-08-09 18:38:08,445:	 INFO:	:evaluating XGBClassifier model
+2022-08-09 18:38:08,445:	 INFO:	:predicting XGBClassifier model
+2022-08-09 18:38:08,554:	 INFO:	:XGBClassifier model report
+2022-08-09 18:38:08,565:	 INFO:	:Plotting XGBClassifier model report
+2022-08-09 18:38:08,567:	 INFO:	:{'experiment_id': None, 'model_name': 'XGBClassifier', 'model_object': XGBClassifier(base_score=0.5, booster='gbtree', callbacks=None,
+              colsample_bylevel=1, colsample_bynode=1, colsample_bytree=1,
+              early_stopping_rounds=None, enable_categorical=False,
+              eval_metric='auc', gamma=0.1, gpu_id=-1, grow_policy='depthwise',
+              importance_type=None, interaction_constraints='',
+              learning_rate=0.01, max_bin=256, max_cat_to_onehot=4,
+              max_delta_step=0, max_depth=3, max_leaves=0, min_child_weight=1,
+              missing=nan, monotone_constraints='()', n_estimators=700,
+              n_jobs=0, num_parallel_tree=1, predictor='auto',
+              random_state=1965, reg_alpha=0, reg_lambda=1, ...), 'train_precision': 0.7080979284369114, 'test_precision': 0.6548672566371682, 'train_recall': 0.47117794486215536, 'test_recall': 0.46540880503144655, 'train_f1': 0.565838976674191, 'test_f1': 0.5441176470588235, 'train_accuracy': 0.8517471736896197, 'test_accuracy': 0.8726899383983573, 'accuracy_diff': 0.02094276470873757, 'model_accuracy': 0.8622185560439886, 'model_index': 1}
+2022-08-09 18:38:08,567:	 INFO:	:Plotting the model report
+2022-08-09 18:38:08,693:	 INFO:	:ROC AUC Score for XGBClassifier is 0.8041748659181234
+2022-08-09 18:38:09,262:	 INFO:	:Model report saved at /home/pk/Desktop/MachineLearning/project/Credit_card_default/CCdefault/app_artifact/stage03_model_training/model_report/20220809182513/cluster_0.0/model_report/2022-08-09-18-38-07/XGBClassifier
+2022-08-09 18:38:09,263:	 INFO:	:evaluating LogisticRegression model
+2022-08-09 18:38:09,263:	 INFO:	:predicting LogisticRegression model
+2022-08-09 18:38:09,264:	 INFO:	:LogisticRegression model report
+2022-08-09 18:38:09,273:	 INFO:	:Plotting LogisticRegression model report
+2022-08-09 18:38:09,274:	 INFO:	:{'experiment_id': None, 'model_name': 'LogisticRegression', 'model_object': LogisticRegression(C=0.9, random_state=1965, solver='liblinear'), 'train_precision': 0.6835205992509363, 'test_precision': 0.6517857142857143, 'train_recall': 0.4573934837092732, 'test_recall': 0.4591194968553459, 'train_f1': 0.5480480480480481, 'test_f1': 0.5387453874538746, 'train_accuracy': 0.8453237410071942, 'test_accuracy': 0.8716632443531828, 'accuracy_diff': 0.026339503345988557, 'model_accuracy': 0.8584934926801885, 'model_index': 2}
+2022-08-09 18:38:09,274:	 INFO:	:Plotting the model report
+2022-08-09 18:38:09,409:	 INFO:	:ROC AUC Score for LogisticRegression is 0.7957556815989505
+2022-08-09 18:38:10,107:	 INFO:	:Model report saved at /home/pk/Desktop/MachineLearning/project/Credit_card_default/CCdefault/app_artifact/stage03_model_training/model_report/20220809182513/cluster_0.0/model_report/2022-08-09-18-38-07/LogisticRegression
+2022-08-09 18:38:10,108:	 INFO:	:evaluating CatBoostClassifier model
+2022-08-09 18:38:10,108:	 INFO:	:predicting CatBoostClassifier model
+2022-08-09 18:38:10,187:	 INFO:	:CatBoostClassifier model report
+2022-08-09 18:38:10,193:	 INFO:	:Plotting CatBoostClassifier model report
+2022-08-09 18:38:10,193:	 INFO:	:{'experiment_id': None, 'model_name': 'CatBoostClassifier', 'model_object': <catboost.core.CatBoostClassifier object at 0x7f53a86ff8d0>, 'train_precision': 0.7411545623836127, 'test_precision': 0.6545454545454545, 'train_recall': 0.49874686716791977, 'test_recall': 0.4528301886792453, 'train_f1': 0.59625468164794, 'test_f1': 0.5353159851301115, 'train_accuracy': 0.8615107913669064, 'test_accuracy': 0.8716632443531828, 'accuracy_diff': 0.010152452986276317, 'model_accuracy': 0.8665870178600446, 'model_index': 3}
+2022-08-09 18:38:10,193:	 INFO:	:Plotting the model report
+2022-08-09 18:38:10,273:	 INFO:	:ROC AUC Score for CatBoostClassifier is 0.805486746151175
+2022-08-09 18:38:10,936:	 INFO:	:Model report saved at /home/pk/Desktop/MachineLearning/project/Credit_card_default/CCdefault/app_artifact/stage03_model_training/model_report/20220809182513/cluster_0.0/model_report/2022-08-09-18-38-07/CatBoostClassifier
+2022-08-09 18:38:10,936:	 INFO:	:********** Best model CatBoostClassifier **********
+2022-08-09 18:38:10,936:	 INFO:	:Acceptable model score 0.8665870178600446. 
+2022-08-09 18:38:10,936:	 INFO:	:evaluating SVC model
+2022-08-09 18:38:10,936:	 INFO:	:predicting SVC model
+2022-08-09 18:38:11,642:	 INFO:	:SVC model report
+2022-08-09 18:38:11,647:	 INFO:	:Plotting SVC model report
+2022-08-09 18:38:11,648:	 INFO:	:{'experiment_id': None, 'model_name': 'SVC', 'model_object': SVC(C=0.1, gamma=1.0, probability=True, random_state=1965), 'train_precision': 0.0, 'test_precision': 0.0, 'train_recall': 0.0, 'test_recall': 0.0, 'train_f1': 0.0, 'test_f1': 0.0, 'train_accuracy': 0.7949640287769785, 'test_accuracy': 0.8367556468172485, 'accuracy_diff': 0.041791618040269984, 'model_accuracy': 0.8158598377971135, 'model_index': 4}
+2022-08-09 18:38:11,648:	 INFO:	:Plotting the model report
+2022-08-09 18:38:12,004:	 INFO:	:ROC AUC Score for SVC is 0.7204923409345216
+2022-08-09 18:38:12,695:	 INFO:	:Model report saved at /home/pk/Desktop/MachineLearning/project/Credit_card_default/CCdefault/app_artifact/stage03_model_training/model_report/20220809182513/cluster_0.0/model_report/2022-08-09-18-38-07/SVC
+2022-08-09 18:38:12,695:	 INFO:	:evaluating GaussianNB model
+2022-08-09 18:38:12,695:	 INFO:	:predicting GaussianNB model
+2022-08-09 18:38:12,699:	 INFO:	:GaussianNB model report
+2022-08-09 18:38:12,705:	 INFO:	:Plotting GaussianNB model report
+2022-08-09 18:38:12,705:	 INFO:	:{'experiment_id': None, 'model_name': 'GaussianNB', 'model_object': GaussianNB(var_smoothing=1.0), 'train_precision': 0.6127167630057804, 'test_precision': 0.6476190476190476, 'train_recall': 0.39849624060150374, 'test_recall': 0.4276729559748428, 'train_f1': 0.4829157175398633, 'test_f1': 0.5151515151515151, 'train_accuracy': 0.8250256937307296, 'test_accuracy': 0.8685831622176592, 'accuracy_diff': 0.04355746848692954, 'model_accuracy': 0.8468044279741944, 'model_index': 5}
+2022-08-09 18:38:12,705:	 INFO:	:Plotting the model report
+2022-08-09 18:38:13,131:	 INFO:	:ROC AUC Score for GaussianNB is 0.7632133348767218
+2022-08-09 18:38:13,739:	 INFO:	:Model report saved at /home/pk/Desktop/MachineLearning/project/Credit_card_default/CCdefault/app_artifact/stage03_model_training/model_report/20220809182513/cluster_0.0/model_report/2022-08-09-18-38-07/GaussianNB
+2022-08-09 18:38:13,739:	 INFO:	:Acceptable model  name CatBoostClassifier. 
+2022-08-09 18:38:13,739:	 INFO:	:Acceptable model score 0.8468044279741944. 
+2022-08-09 18:38:13,739:	 INFO:	:best model artifact MetricInfoArtifact()
+2022-08-09 18:38:13,750:	 INFO:	:Started Initializing model from config file
+2022-08-09 18:38:13,750:	 INFO:	:Executing command: from <module 'sklearn.ensemble' from '/home/pk/Desktop/MachineLearning/project/Credit_card_default/venv/lib/python3.7/site-packages/sklearn/ensemble/__init__.py'> import RandomForestClassifier
+2022-08-09 18:38:13,750:	 INFO:	:Executing command: from <module 'xgboost' from '/home/pk/Desktop/MachineLearning/project/Credit_card_default/venv/lib/python3.7/site-packages/xgboost/__init__.py'> import XGBClassifier
+2022-08-09 18:38:13,750:	 INFO:	:Executing command: from <module 'sklearn.linear_model' from '/home/pk/Desktop/MachineLearning/project/Credit_card_default/venv/lib/python3.7/site-packages/sklearn/linear_model/__init__.py'> import LogisticRegression
+2022-08-09 18:38:13,750:	 INFO:	:Executing command: from <module 'catboost' from '/home/pk/Desktop/MachineLearning/project/Credit_card_default/venv/lib/python3.7/site-packages/catboost/__init__.py'> import CatBoostClassifier
+2022-08-09 18:38:13,750:	 INFO:	:Executing command: from <module 'sklearn.svm' from '/home/pk/Desktop/MachineLearning/project/Credit_card_default/venv/lib/python3.7/site-packages/sklearn/svm/__init__.py'> import SVC
+2022-08-09 18:38:13,750:	 INFO:	:Executing command: from <module 'sklearn.naive_bayes' from '/home/pk/Desktop/MachineLearning/project/Credit_card_default/venv/lib/python3.7/site-packages/sklearn/naive_bayes.py'> import GaussianNB
+2022-08-09 18:38:13,751:	 INFO:	:Initialized model: [InitializedModelDetail(model_serial_number='model_1', model=RandomForestClassifier(), param_grid_search={'n_estimators': [500, 600], 'criterion': ['gini', 'entropy'], 'max_depth': [6, 7, 8], 'max_features': ['auto', 'log2', 'sqrt'], 'random_state': [1965]}, model_name='sklearn.ensemble.RandomForestClassifier'), InitializedModelDetail(model_serial_number='model_2', model=XGBClassifier(base_score=None, booster=None, callbacks=None,
+              colsample_bylevel=None, colsample_bynode=None,
+              colsample_bytree=None, early_stopping_rounds=None,
+              enable_categorical=False, eval_metric=None, gamma=None,
+              gpu_id=None, grow_policy=None, importance_type=None,
+              interaction_constraints=None, learning_rate=None, max_bin=None,
+              max_cat_to_onehot=None, max_delta_step=None, max_depth=None,
+              max_leaves=None, min_child_weight=None, missing=nan,
+              monotone_constraints=None, n_estimators=100, n_jobs=None,
+              num_parallel_tree=None, predictor=None, random_state=None,
+              reg_alpha=None, reg_lambda=None, ...), param_grid_search={'n_estimators': [500, 700], 'max_depth': [3, 5, 7, 9], 'learning_rate': [0.01, 0.1], 'eval_metric': ['auc'], 'booster': ['gbtree', 'gblinear'], 'gamma': [0.0, 0.1], 'random_state': [1965]}, model_name='xgboost.XGBClassifier'), InitializedModelDetail(model_serial_number='model_3', model=LogisticRegression(), param_grid_search={'C': [0.9, 1.0], 'solver': ['liblinear', 'newton-cg', 'lbfgs', 'saga'], 'random_state': [1965]}, model_name='sklearn.linear_model.LogisticRegression'), InitializedModelDetail(model_serial_number='model_4', model=<catboost.core.CatBoostClassifier object at 0x7f53a876e320>, param_grid_search={'n_estimators': [500, 700], 'max_depth': [3, 5, 7, 9], 'learning_rate': [0.01, 0.1], 'eval_metric': ['AUC'], 'random_state': [1965]}, model_name='catboost.CatBoostClassifier'), InitializedModelDetail(model_serial_number='model_5', model=SVC(), param_grid_search={'C': [0.4, 0.1], 'kernel': ['rbf', 'sigmoid'], 'gamma': [1.0], 'coef0': [0.0, 0.001], 'probability': [True], 'random_state': [1965]}, model_name='sklearn.svm.SVC'), InitializedModelDetail(model_serial_number='model_6', model=GaussianNB(), param_grid_search={'var_smoothing': ['1e-09', '1e-08', '1e-07', '1e-06', '1e-05', '1e-04', '1e-03', '1e-02', '1e-01', 1.0]}, model_name='sklearn.naive_bayes.GaussianNB')]
+2022-08-09 18:38:13,751:	 INFO:	:Executing command: from <module 'sklearn.model_selection' from '/home/pk/Desktop/MachineLearning/project/Credit_card_default/venv/lib/python3.7/site-packages/sklearn/model_selection/__init__.py'> import GridSearchCV
+2022-08-09 18:38:13,751:	 INFO:	:Executing:$ GridSearchCV(estimator=RandomForestClassifier(),
+             param_grid={'criterion': ['gini', 'entropy'],
+                         'max_depth': [6, 7, 8],
+                         'max_features': ['auto', 'log2', 'sqrt'],
+                         'n_estimators': [500, 600], 'random_state': [1965]}).cv=2
+2022-08-09 18:38:13,752:	 INFO:	:Executing:$ GridSearchCV(cv=2, estimator=RandomForestClassifier(),
+             param_grid={'criterion': ['gini', 'entropy'],
+                         'max_depth': [6, 7, 8],
+                         'max_features': ['auto', 'log2', 'sqrt'],
+                         'n_estimators': [500, 600], 'random_state': [1965]}).verbose=3
+2022-08-09 18:38:13,752:	 INFO:	:Executing:$ GridSearchCV(cv=2, estimator=RandomForestClassifier(),
+             param_grid={'criterion': ['gini', 'entropy'],
+                         'max_depth': [6, 7, 8],
+                         'max_features': ['auto', 'log2', 'sqrt'],
+                         'n_estimators': [500, 600], 'random_state': [1965]},
+             verbose=3).n_jobs=-1
+2022-08-09 18:38:13,753:	 INFO:	:Executing:$ GridSearchCV(cv=2, estimator=RandomForestClassifier(), n_jobs=-1,
+             param_grid={'criterion': ['gini', 'entropy'],
+                         'max_depth': [6, 7, 8],
+                         'max_features': ['auto', 'log2', 'sqrt'],
+                         'n_estimators': [500, 600], 'random_state': [1965]},
+             verbose=3).scoring=roc_auc
+2022-08-09 18:38:13,753:	 INFO:	:>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> f"Training RandomForestClassifier Started." <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+2022-08-09 18:38:27,172:	 INFO:	:>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> f"Training RandomForestClassifier Finished" <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+2022-08-09 18:38:27,173:	 INFO:	:>>>>>>>>>>>>>>>>>>>> Best model: >>>>>>>>>>>>>>>>>>>>
+2022-08-09 18:38:27,173:	 INFO:	:RandomForestClassifier(criterion='entropy', max_depth=7, n_estimators=600,
+                       random_state=1965)
+2022-08-09 18:38:27,173:	 INFO:	:>>>>>>>>>>>>>>>>>>>> Best Score: >>>>>>>>>>>>>>>>>>>>
+2022-08-09 18:38:27,173:	 INFO:	:0.7465712983121606
+2022-08-09 18:38:27,173:	 INFO:	:>>>>>>>>>>>>>>>>>>>> Best Params: >>>>>>>>>>>>>>>>>>>>
+2022-08-09 18:38:27,173:	 INFO:	:{'criterion': 'entropy', 'max_depth': 7, 'max_features': 'auto', 'n_estimators': 600, 'random_state': 1965}
+2022-08-09 18:38:27,173:	 INFO:	:Executing command: from <module 'sklearn.model_selection' from '/home/pk/Desktop/MachineLearning/project/Credit_card_default/venv/lib/python3.7/site-packages/sklearn/model_selection/__init__.py'> import GridSearchCV
+2022-08-09 18:38:27,175:	 INFO:	:Executing:$ GridSearchCV(estimator=XGBClassifier(base_score=None, booster=None,
+                                     callbacks=None, colsample_bylevel=None,
+                                     colsample_bynode=None,
+                                     colsample_bytree=None,
+                                     early_stopping_rounds=None,
+                                     enable_categorical=False, eval_metric=None,
+                                     gamma=None, gpu_id=None, grow_policy=None,
+                                     importance_type=None,
+                                     interaction_constraints=None,
+                                     learning_rate=None, max_bin=None,
+                                     max_cat_to_...
+                                     max_leaves=None, min_child_weight=None,
+                                     missing=nan, monotone_constraints=None,
+                                     n_estimators=100, n_jobs=None,
+                                     num_parallel_tree=None, predictor=None,
+                                     random_state=None, reg_alpha=None,
+                                     reg_lambda=None, ...),
+             param_grid={'booster': ['gbtree', 'gblinear'],
+                         'eval_metric': ['auc'], 'gamma': [0.0, 0.1],
+                         'learning_rate': [0.01, 0.1],
+                         'max_depth': [3, 5, 7, 9], 'n_estimators': [500, 700],
+                         'random_state': [1965]}).cv=2
+2022-08-09 18:38:27,176:	 INFO:	:Executing:$ GridSearchCV(cv=2,
+             estimator=XGBClassifier(base_score=None, booster=None,
+                                     callbacks=None, colsample_bylevel=None,
+                                     colsample_bynode=None,
+                                     colsample_bytree=None,
+                                     early_stopping_rounds=None,
+                                     enable_categorical=False, eval_metric=None,
+                                     gamma=None, gpu_id=None, grow_policy=None,
+                                     importance_type=None,
+                                     interaction_constraints=None,
+                                     learning_rate=None, max_bin=None,
+                                     max_ca...
+                                     max_leaves=None, min_child_weight=None,
+                                     missing=nan, monotone_constraints=None,
+                                     n_estimators=100, n_jobs=None,
+                                     num_parallel_tree=None, predictor=None,
+                                     random_state=None, reg_alpha=None,
+                                     reg_lambda=None, ...),
+             param_grid={'booster': ['gbtree', 'gblinear'],
+                         'eval_metric': ['auc'], 'gamma': [0.0, 0.1],
+                         'learning_rate': [0.01, 0.1],
+                         'max_depth': [3, 5, 7, 9], 'n_estimators': [500, 700],
+                         'random_state': [1965]}).verbose=3
+2022-08-09 18:38:27,177:	 INFO:	:Executing:$ GridSearchCV(cv=2,
+             estimator=XGBClassifier(base_score=None, booster=None,
+                                     callbacks=None, colsample_bylevel=None,
+                                     colsample_bynode=None,
+                                     colsample_bytree=None,
+                                     early_stopping_rounds=None,
+                                     enable_categorical=False, eval_metric=None,
+                                     gamma=None, gpu_id=None, grow_policy=None,
+                                     importance_type=None,
+                                     interaction_constraints=None,
+                                     learning_rate=None, max_bin=None,
+                                     max_ca...
+                                     missing=nan, monotone_constraints=None,
+                                     n_estimators=100, n_jobs=None,
+                                     num_parallel_tree=None, predictor=None,
+                                     random_state=None, reg_alpha=None,
+                                     reg_lambda=None, ...),
+             param_grid={'booster': ['gbtree', 'gblinear'],
+                         'eval_metric': ['auc'], 'gamma': [0.0, 0.1],
+                         'learning_rate': [0.01, 0.1],
+                         'max_depth': [3, 5, 7, 9], 'n_estimators': [500, 700],
+                         'random_state': [1965]},
+             verbose=3).n_jobs=-1
+2022-08-09 18:38:27,178:	 INFO:	:Executing:$ GridSearchCV(cv=2,
+             estimator=XGBClassifier(base_score=None, booster=None,
+                                     callbacks=None, colsample_bylevel=None,
+                                     colsample_bynode=None,
+                                     colsample_bytree=None,
+                                     early_stopping_rounds=None,
+                                     enable_categorical=False, eval_metric=None,
+                                     gamma=None, gpu_id=None, grow_policy=None,
+                                     importance_type=None,
+                                     interaction_constraints=None,
+                                     learning_rate=None, max_bin=None,
+                                     max_ca...
+                                     missing=nan, monotone_constraints=None,
+                                     n_estimators=100, n_jobs=None,
+                                     num_parallel_tree=None, predictor=None,
+                                     random_state=None, reg_alpha=None,
+                                     reg_lambda=None, ...),
+             n_jobs=-1,
+             param_grid={'booster': ['gbtree', 'gblinear'],
+                         'eval_metric': ['auc'], 'gamma': [0.0, 0.1],
+                         'learning_rate': [0.01, 0.1],
+                         'max_depth': [3, 5, 7, 9], 'n_estimators': [500, 700],
+                         'random_state': [1965]},
+             verbose=3).scoring=roc_auc
+2022-08-09 18:38:27,178:	 INFO:	:>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> f"Training XGBClassifier Started." <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+2022-08-09 18:39:46,141:	 INFO:	:>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> f"Training XGBClassifier Finished" <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+2022-08-09 18:39:46,141:	 INFO:	:>>>>>>>>>>>>>>>>>>>> Best model: >>>>>>>>>>>>>>>>>>>>
+2022-08-09 18:39:46,141:	 INFO:	:XGBClassifier(base_score=0.5, booster='gbtree', callbacks=None,
+              colsample_bylevel=1, colsample_bynode=1, colsample_bytree=1,
+              early_stopping_rounds=None, enable_categorical=False,
+              eval_metric='auc', gamma=0.0, gpu_id=-1, grow_policy='depthwise',
+              importance_type=None, interaction_constraints='',
+              learning_rate=0.01, max_bin=256, max_cat_to_onehot=4,
+              max_delta_step=0, max_depth=3, max_leaves=0, min_child_weight=1,
+              missing=nan, monotone_constraints='()', n_estimators=500,
+              n_jobs=0, num_parallel_tree=1, predictor='auto',
+              random_state=1965, reg_alpha=0, reg_lambda=1, ...)
+2022-08-09 18:39:46,144:	 INFO:	:>>>>>>>>>>>>>>>>>>>> Best Score: >>>>>>>>>>>>>>>>>>>>
+2022-08-09 18:39:46,144:	 INFO:	:0.7476351785800125
+2022-08-09 18:39:46,144:	 INFO:	:>>>>>>>>>>>>>>>>>>>> Best Params: >>>>>>>>>>>>>>>>>>>>
+2022-08-09 18:39:46,144:	 INFO:	:{'booster': 'gbtree', 'eval_metric': 'auc', 'gamma': 0.0, 'learning_rate': 0.01, 'max_depth': 3, 'n_estimators': 500, 'random_state': 1965}
+2022-08-09 18:39:46,144:	 INFO:	:Executing command: from <module 'sklearn.model_selection' from '/home/pk/Desktop/MachineLearning/project/Credit_card_default/venv/lib/python3.7/site-packages/sklearn/model_selection/__init__.py'> import GridSearchCV
+2022-08-09 18:39:46,145:	 INFO:	:Executing:$ GridSearchCV(estimator=LogisticRegression(),
+             param_grid={'C': [0.9, 1.0], 'random_state': [1965],
+                         'solver': ['liblinear', 'newton-cg', 'lbfgs', 'saga']}).cv=2
+2022-08-09 18:39:46,146:	 INFO:	:Executing:$ GridSearchCV(cv=2, estimator=LogisticRegression(),
+             param_grid={'C': [0.9, 1.0], 'random_state': [1965],
+                         'solver': ['liblinear', 'newton-cg', 'lbfgs', 'saga']}).verbose=3
+2022-08-09 18:39:46,146:	 INFO:	:Executing:$ GridSearchCV(cv=2, estimator=LogisticRegression(),
+             param_grid={'C': [0.9, 1.0], 'random_state': [1965],
+                         'solver': ['liblinear', 'newton-cg', 'lbfgs', 'saga']},
+             verbose=3).n_jobs=-1
+2022-08-09 18:39:46,147:	 INFO:	:Executing:$ GridSearchCV(cv=2, estimator=LogisticRegression(), n_jobs=-1,
+             param_grid={'C': [0.9, 1.0], 'random_state': [1965],
+                         'solver': ['liblinear', 'newton-cg', 'lbfgs', 'saga']},
+             verbose=3).scoring=roc_auc
+2022-08-09 18:39:46,147:	 INFO:	:>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> f"Training LogisticRegression Started." <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+2022-08-09 18:39:46,902:	 INFO:	:>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> f"Training LogisticRegression Finished" <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+2022-08-09 18:39:46,904:	 INFO:	:>>>>>>>>>>>>>>>>>>>> Best model: >>>>>>>>>>>>>>>>>>>>
+2022-08-09 18:39:46,904:	 INFO:	:LogisticRegression(C=0.9, random_state=1965, solver='newton-cg')
+2022-08-09 18:39:46,905:	 INFO:	:>>>>>>>>>>>>>>>>>>>> Best Score: >>>>>>>>>>>>>>>>>>>>
+2022-08-09 18:39:46,905:	 INFO:	:0.7427385023430478
+2022-08-09 18:39:46,905:	 INFO:	:>>>>>>>>>>>>>>>>>>>> Best Params: >>>>>>>>>>>>>>>>>>>>
+2022-08-09 18:39:46,905:	 INFO:	:{'C': 0.9, 'random_state': 1965, 'solver': 'newton-cg'}
+2022-08-09 18:39:46,905:	 INFO:	:Executing command: from <module 'sklearn.model_selection' from '/home/pk/Desktop/MachineLearning/project/Credit_card_default/venv/lib/python3.7/site-packages/sklearn/model_selection/__init__.py'> import GridSearchCV
+2022-08-09 18:39:46,906:	 INFO:	:Executing:$ GridSearchCV(estimator=<catboost.core.CatBoostClassifier object at 0x7f53a876e320>,
+             param_grid={'eval_metric': ['AUC'], 'learning_rate': [0.01, 0.1],
+                         'max_depth': [3, 5, 7, 9], 'n_estimators': [500, 700],
+                         'random_state': [1965]}).cv=2
+2022-08-09 18:39:46,907:	 INFO:	:Executing:$ GridSearchCV(cv=2,
+             estimator=<catboost.core.CatBoostClassifier object at 0x7f53a876e320>,
+             param_grid={'eval_metric': ['AUC'], 'learning_rate': [0.01, 0.1],
+                         'max_depth': [3, 5, 7, 9], 'n_estimators': [500, 700],
+                         'random_state': [1965]}).verbose=3
+2022-08-09 18:39:46,907:	 INFO:	:Executing:$ GridSearchCV(cv=2,
+             estimator=<catboost.core.CatBoostClassifier object at 0x7f53a876e320>,
+             param_grid={'eval_metric': ['AUC'], 'learning_rate': [0.01, 0.1],
+                         'max_depth': [3, 5, 7, 9], 'n_estimators': [500, 700],
+                         'random_state': [1965]},
+             verbose=3).n_jobs=-1
+2022-08-09 18:39:46,908:	 INFO:	:Executing:$ GridSearchCV(cv=2,
+             estimator=<catboost.core.CatBoostClassifier object at 0x7f53a876e320>,
+             n_jobs=-1,
+             param_grid={'eval_metric': ['AUC'], 'learning_rate': [0.01, 0.1],
+                         'max_depth': [3, 5, 7, 9], 'n_estimators': [500, 700],
+                         'random_state': [1965]},
+             verbose=3).scoring=roc_auc
+2022-08-09 18:39:46,909:	 INFO:	:>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> f"Training CatBoostClassifier Started." <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+2022-08-09 18:40:25,282:	 INFO:	:>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> f"Training CatBoostClassifier Finished" <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+2022-08-09 18:40:25,282:	 INFO:	:>>>>>>>>>>>>>>>>>>>> Best model: >>>>>>>>>>>>>>>>>>>>
+2022-08-09 18:40:25,282:	 INFO:	:<catboost.core.CatBoostClassifier object at 0x7f53a7f39e80>
+2022-08-09 18:40:25,283:	 INFO:	:>>>>>>>>>>>>>>>>>>>> Best Score: >>>>>>>>>>>>>>>>>>>>
+2022-08-09 18:40:25,283:	 INFO:	:0.7507844189139388
+2022-08-09 18:40:25,283:	 INFO:	:>>>>>>>>>>>>>>>>>>>> Best Params: >>>>>>>>>>>>>>>>>>>>
+2022-08-09 18:40:25,283:	 INFO:	:{'eval_metric': 'AUC', 'learning_rate': 0.01, 'max_depth': 5, 'n_estimators': 500, 'random_state': 1965}
+2022-08-09 18:40:25,283:	 INFO:	:Executing command: from <module 'sklearn.model_selection' from '/home/pk/Desktop/MachineLearning/project/Credit_card_default/venv/lib/python3.7/site-packages/sklearn/model_selection/__init__.py'> import GridSearchCV
+2022-08-09 18:40:25,284:	 INFO:	:Executing:$ GridSearchCV(estimator=SVC(),
+             param_grid={'C': [0.4, 0.1], 'coef0': [0.0, 0.001], 'gamma': [1.0],
+                         'kernel': ['rbf', 'sigmoid'], 'probability': [True],
+                         'random_state': [1965]}).cv=2
+2022-08-09 18:40:25,285:	 INFO:	:Executing:$ GridSearchCV(cv=2, estimator=SVC(),
+             param_grid={'C': [0.4, 0.1], 'coef0': [0.0, 0.001], 'gamma': [1.0],
+                         'kernel': ['rbf', 'sigmoid'], 'probability': [True],
+                         'random_state': [1965]}).verbose=3
+2022-08-09 18:40:25,286:	 INFO:	:Executing:$ GridSearchCV(cv=2, estimator=SVC(),
+             param_grid={'C': [0.4, 0.1], 'coef0': [0.0, 0.001], 'gamma': [1.0],
+                         'kernel': ['rbf', 'sigmoid'], 'probability': [True],
+                         'random_state': [1965]},
+             verbose=3).n_jobs=-1
+2022-08-09 18:40:25,286:	 INFO:	:Executing:$ GridSearchCV(cv=2, estimator=SVC(), n_jobs=-1,
+             param_grid={'C': [0.4, 0.1], 'coef0': [0.0, 0.001], 'gamma': [1.0],
+                         'kernel': ['rbf', 'sigmoid'], 'probability': [True],
+                         'random_state': [1965]},
+             verbose=3).scoring=roc_auc
+2022-08-09 18:40:25,287:	 INFO:	:>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> f"Training SVC Started." <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+2022-08-09 18:40:54,657:	 INFO:	:>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> f"Training SVC Finished" <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+2022-08-09 18:40:54,657:	 INFO:	:>>>>>>>>>>>>>>>>>>>> Best model: >>>>>>>>>>>>>>>>>>>>
+2022-08-09 18:40:54,657:	 INFO:	:SVC(C=0.1, gamma=1.0, probability=True, random_state=1965)
+2022-08-09 18:40:54,657:	 INFO:	:>>>>>>>>>>>>>>>>>>>> Best Score: >>>>>>>>>>>>>>>>>>>>
+2022-08-09 18:40:54,657:	 INFO:	:0.6471805222148903
+2022-08-09 18:40:54,657:	 INFO:	:>>>>>>>>>>>>>>>>>>>> Best Params: >>>>>>>>>>>>>>>>>>>>
+2022-08-09 18:40:54,657:	 INFO:	:{'C': 0.1, 'coef0': 0.0, 'gamma': 1.0, 'kernel': 'rbf', 'probability': True, 'random_state': 1965}
+2022-08-09 18:40:54,657:	 INFO:	:Executing command: from <module 'sklearn.model_selection' from '/home/pk/Desktop/MachineLearning/project/Credit_card_default/venv/lib/python3.7/site-packages/sklearn/model_selection/__init__.py'> import GridSearchCV
+2022-08-09 18:40:54,658:	 INFO:	:Executing:$ GridSearchCV(estimator=GaussianNB(),
+             param_grid={'var_smoothing': ['1e-09', '1e-08', '1e-07', '1e-06',
+                                           '1e-05', '1e-04', '1e-03', '1e-02',
+                                           '1e-01', 1.0]}).cv=2
+2022-08-09 18:40:54,658:	 INFO:	:Executing:$ GridSearchCV(cv=2, estimator=GaussianNB(),
+             param_grid={'var_smoothing': ['1e-09', '1e-08', '1e-07', '1e-06',
+                                           '1e-05', '1e-04', '1e-03', '1e-02',
+                                           '1e-01', 1.0]}).verbose=3
+2022-08-09 18:40:54,658:	 INFO:	:Executing:$ GridSearchCV(cv=2, estimator=GaussianNB(),
+             param_grid={'var_smoothing': ['1e-09', '1e-08', '1e-07', '1e-06',
+                                           '1e-05', '1e-04', '1e-03', '1e-02',
+                                           '1e-01', 1.0]},
+             verbose=3).n_jobs=-1
+2022-08-09 18:40:54,659:	 INFO:	:Executing:$ GridSearchCV(cv=2, estimator=GaussianNB(), n_jobs=-1,
+             param_grid={'var_smoothing': ['1e-09', '1e-08', '1e-07', '1e-06',
+                                           '1e-05', '1e-04', '1e-03', '1e-02',
+                                           '1e-01', 1.0]},
+             verbose=3).scoring=roc_auc
+2022-08-09 18:40:54,659:	 INFO:	:>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> f"Training GaussianNB Started." <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+2022-08-09 18:40:54,838:	 INFO:	:>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> f"Training GaussianNB Finished" <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+2022-08-09 18:40:54,839:	 INFO:	:>>>>>>>>>>>>>>>>>>>> Best model: >>>>>>>>>>>>>>>>>>>>
+2022-08-09 18:40:54,839:	 INFO:	:GaussianNB(var_smoothing=1.0)
+2022-08-09 18:40:54,840:	 INFO:	:>>>>>>>>>>>>>>>>>>>> Best Score: >>>>>>>>>>>>>>>>>>>>
+2022-08-09 18:40:54,840:	 INFO:	:0.7360558090252135
+2022-08-09 18:40:54,840:	 INFO:	:>>>>>>>>>>>>>>>>>>>> Best Params: >>>>>>>>>>>>>>>>>>>>
+2022-08-09 18:40:54,841:	 INFO:	:{'var_smoothing': 1.0}
+2022-08-09 18:40:54,843:	 INFO:	:Acceptable model found:GridSearchedBestModel(model_serial_number='model_1', model=RandomForestClassifier(), best_model=RandomForestClassifier(criterion='entropy', max_depth=7, n_estimators=600,
+                       random_state=1965), best_parameters={'criterion': 'entropy', 'max_depth': 7, 'max_features': 'auto', 'n_estimators': 600, 'random_state': 1965}, best_score=0.7465712983121606)
+2022-08-09 18:40:54,855:	 INFO:	:Acceptable model found:GridSearchedBestModel(model_serial_number='model_2', model=XGBClassifier(base_score=None, booster=None, callbacks=None,
+              colsample_bylevel=None, colsample_bynode=None,
+              colsample_bytree=None, early_stopping_rounds=None,
+              enable_categorical=False, eval_metric=None, gamma=None,
+              gpu_id=None, grow_policy=None, importance_type=None,
+              interaction_constraints=None, learning_rate=None, max_bin=None,
+              max_cat_to_onehot=None, max_delta_step=None, max_depth=None,
+              max_leaves=None, min_child_weight=None, missing=nan,
+              monotone_constraints=None, n_estimators=100, n_jobs=None,
+              num_parallel_tree=None, predictor=None, random_state=None,
+              reg_alpha=None, reg_lambda=None, ...), best_model=XGBClassifier(base_score=0.5, booster='gbtree', callbacks=None,
+              colsample_bylevel=1, colsample_bynode=1, colsample_bytree=1,
+              early_stopping_rounds=None, enable_categorical=False,
+              eval_metric='auc', gamma=0.0, gpu_id=-1, grow_policy='depthwise',
+              importance_type=None, interaction_constraints='',
+              learning_rate=0.01, max_bin=256, max_cat_to_onehot=4,
+              max_delta_step=0, max_depth=3, max_leaves=0, min_child_weight=1,
+              missing=nan, monotone_constraints='()', n_estimators=500,
+              n_jobs=0, num_parallel_tree=1, predictor='auto',
+              random_state=1965, reg_alpha=0, reg_lambda=1, ...), best_parameters={'booster': 'gbtree', 'eval_metric': 'auc', 'gamma': 0.0, 'learning_rate': 0.01, 'max_depth': 3, 'n_estimators': 500, 'random_state': 1965}, best_score=0.7476351785800125)
+2022-08-09 18:40:54,855:	 INFO:	:Acceptable model found:GridSearchedBestModel(model_serial_number='model_4', model=<catboost.core.CatBoostClassifier object at 0x7f53a876e320>, best_model=<catboost.core.CatBoostClassifier object at 0x7f53a7f39e80>, best_parameters={'eval_metric': 'AUC', 'learning_rate': 0.01, 'max_depth': 5, 'n_estimators': 500, 'random_state': 1965}, best_score=0.7507844189139388)
+2022-08-09 18:40:54,855:	 INFO:	:Best model: GridSearchedBestModel(model_serial_number='model_4', model=<catboost.core.CatBoostClassifier object at 0x7f53a876e320>, best_model=<catboost.core.CatBoostClassifier object at 0x7f53a7f39e80>, best_parameters={'eval_metric': 'AUC', 'learning_rate': 0.01, 'max_depth': 5, 'n_estimators': 500, 'random_state': 1965}, best_score=0.7507844189139388)
+2022-08-09 18:40:54,881:	 INFO:	:evaluating RandomForestClassifier model
+2022-08-09 18:40:54,881:	 INFO:	:predicting RandomForestClassifier model
+2022-08-09 18:40:55,368:	 INFO:	:RandomForestClassifier model report
+2022-08-09 18:40:55,378:	 INFO:	:Plotting RandomForestClassifier model report
+2022-08-09 18:40:55,378:	 INFO:	:{'experiment_id': None, 'model_name': 'RandomForestClassifier', 'model_object': RandomForestClassifier(criterion='entropy', max_depth=7, n_estimators=600,
+                       random_state=1965), 'train_precision': 0.773109243697479, 'test_precision': 0.7080745341614907, 'train_recall': 0.2616609783845279, 'test_recall': 0.2550335570469799, 'train_f1': 0.39099022524436894, 'test_f1': 0.375, 'train_accuracy': 0.8210315973523167, 'test_accuracy': 0.8101898101898102, 'accuracy_diff': 0.0108417871625065, 'model_accuracy': 0.8156107037710634, 'model_index': 0}
+2022-08-09 18:40:55,378:	 INFO:	:Plotting the model report
+2022-08-09 18:40:55,556:	 INFO:	:ROC AUC Score for RandomForestClassifier is 0.771102814763662
+2022-08-09 18:40:57,737:	 INFO:	:Model report saved at /home/pk/Desktop/MachineLearning/project/Credit_card_default/CCdefault/app_artifact/stage03_model_training/model_report/20220809182513/cluster_1.0/model_report/2022-08-09-18-40-54/RandomForestClassifier
+2022-08-09 18:40:57,737:	 INFO:	:********** Best model RandomForestClassifier **********
+2022-08-09 18:40:57,737:	 INFO:	:Acceptable model score 0.8156107037710634. 
+2022-08-09 18:40:57,737:	 INFO:	:evaluating XGBClassifier model
+2022-08-09 18:40:57,737:	 INFO:	:predicting XGBClassifier model
+2022-08-09 18:40:57,905:	 INFO:	:XGBClassifier model report
+2022-08-09 18:40:57,917:	 INFO:	:Plotting XGBClassifier model report
+2022-08-09 18:40:57,919:	 INFO:	:{'experiment_id': None, 'model_name': 'XGBClassifier', 'model_object': XGBClassifier(base_score=0.5, booster='gbtree', callbacks=None,
+              colsample_bylevel=1, colsample_bynode=1, colsample_bytree=1,
+              early_stopping_rounds=None, enable_categorical=False,
+              eval_metric='auc', gamma=0.0, gpu_id=-1, grow_policy='depthwise',
+              importance_type=None, interaction_constraints='',
+              learning_rate=0.01, max_bin=256, max_cat_to_onehot=4,
+              max_delta_step=0, max_depth=3, max_leaves=0, min_child_weight=1,
+              missing=nan, monotone_constraints='()', n_estimators=500,
+              n_jobs=0, num_parallel_tree=1, predictor='auto',
+              random_state=1965, reg_alpha=0, reg_lambda=1, ...), 'train_precision': 0.7140939597315437, 'test_precision': 0.6813725490196079, 'train_recall': 0.3026166097838453, 'test_recall': 0.31096196868008946, 'train_f1': 0.42508989212944476, 'test_f1': 0.4270353302611367, 'train_accuracy': 0.8202822530286, 'test_accuracy': 0.8136863136863137, 'accuracy_diff': 0.0065959393422863055, 'model_accuracy': 0.8169842833574569, 'model_index': 1}
+2022-08-09 18:40:57,919:	 INFO:	:Plotting the model report
+2022-08-09 18:40:58,003:	 INFO:	:ROC AUC Score for XGBClassifier is 0.7720904637562311
+2022-08-09 18:40:59,235:	 INFO:	:Model report saved at /home/pk/Desktop/MachineLearning/project/Credit_card_default/CCdefault/app_artifact/stage03_model_training/model_report/20220809182513/cluster_1.0/model_report/2022-08-09-18-40-54/XGBClassifier
+2022-08-09 18:40:59,235:	 INFO:	:********** Best model XGBClassifier **********
+2022-08-09 18:40:59,235:	 INFO:	:Acceptable model score 0.8169842833574569. 
+2022-08-09 18:40:59,235:	 INFO:	:evaluating LogisticRegression model
+2022-08-09 18:40:59,235:	 INFO:	:predicting LogisticRegression model
+2022-08-09 18:40:59,237:	 INFO:	:LogisticRegression model report
+2022-08-09 18:40:59,251:	 INFO:	:Plotting LogisticRegression model report
+2022-08-09 18:40:59,252:	 INFO:	:{'experiment_id': None, 'model_name': 'LogisticRegression', 'model_object': LogisticRegression(C=0.9, random_state=1965, solver='newton-cg'), 'train_precision': 0.6816479400749064, 'test_precision': 0.6513761467889908, 'train_recall': 0.310580204778157, 'test_recall': 0.31767337807606266, 'train_f1': 0.42672919109026963, 'test_f1': 0.4270676691729324, 'train_accuracy': 0.8167853128512551, 'test_accuracy': 0.8096903096903096, 'accuracy_diff': 0.007095003160945468, 'model_accuracy': 0.8132378112707823, 'model_index': 2}
+2022-08-09 18:40:59,252:	 INFO:	:Plotting the model report
+2022-08-09 18:40:59,370:	 INFO:	:ROC AUC Score for LogisticRegression is 0.7656243481013113
+2022-08-09 18:41:00,935:	 INFO:	:Model report saved at /home/pk/Desktop/MachineLearning/project/Credit_card_default/CCdefault/app_artifact/stage03_model_training/model_report/20220809182513/cluster_1.0/model_report/2022-08-09-18-40-54/LogisticRegression
+2022-08-09 18:41:00,935:	 INFO:	:evaluating CatBoostClassifier model
+2022-08-09 18:41:00,935:	 INFO:	:predicting CatBoostClassifier model
+2022-08-09 18:41:01,096:	 INFO:	:CatBoostClassifier model report
+2022-08-09 18:41:01,106:	 INFO:	:Plotting CatBoostClassifier model report
+2022-08-09 18:41:01,106:	 INFO:	:{'experiment_id': None, 'model_name': 'CatBoostClassifier', 'model_object': <catboost.core.CatBoostClassifier object at 0x7f53a7f39e80>, 'train_precision': 0.7172503242542153, 'test_precision': 0.6831683168316832, 'train_recall': 0.31456200227531284, 'test_recall': 0.3087248322147651, 'train_f1': 0.4373270067220244, 'test_f1': 0.4252696456086287, 'train_accuracy': 0.8222805045585113, 'test_accuracy': 0.8136863136863137, 'accuracy_diff': 0.008594190872197593, 'model_accuracy': 0.8179834091224125, 'model_index': 3}
+2022-08-09 18:41:01,106:	 INFO:	:Plotting the model report
+2022-08-09 18:41:01,382:	 INFO:	:ROC AUC Score for CatBoostClassifier is 0.776697813936425
+2022-08-09 18:41:03,061:	 INFO:	:Model report saved at /home/pk/Desktop/MachineLearning/project/Credit_card_default/CCdefault/app_artifact/stage03_model_training/model_report/20220809182513/cluster_1.0/model_report/2022-08-09-18-40-54/CatBoostClassifier
+2022-08-09 18:41:03,061:	 INFO:	:********** Best model CatBoostClassifier **********
+2022-08-09 18:41:03,061:	 INFO:	:Acceptable model score 0.8179834091224125. 
+2022-08-09 18:41:03,061:	 INFO:	:evaluating SVC model
+2022-08-09 18:41:03,061:	 INFO:	:predicting SVC model
+2022-08-09 18:41:06,974:	 INFO:	:SVC model report
+2022-08-09 18:41:06,983:	 INFO:	:Plotting SVC model report
+2022-08-09 18:41:06,983:	 INFO:	:{'experiment_id': None, 'model_name': 'SVC', 'model_object': SVC(C=0.1, gamma=1.0, probability=True, random_state=1965), 'train_precision': 1.0, 'test_precision': 1.0, 'train_recall': 0.006257110352673493, 'test_recall': 0.006711409395973154, 'train_f1': 0.012436404748445451, 'test_f1': 0.013333333333333332, 'train_accuracy': 0.7818159110778069, 'test_accuracy': 0.7782217782217782, 'accuracy_diff': 0.00359413285602872, 'model_accuracy': 0.7800188446497925, 'model_index': 4}
+2022-08-09 18:41:06,983:	 INFO:	:Plotting the model report
+2022-08-09 18:41:07,319:	 INFO:	:ROC AUC Score for SVC is 0.6670694950977218
+2022-08-09 18:41:09,105:	 INFO:	:Model report saved at /home/pk/Desktop/MachineLearning/project/Credit_card_default/CCdefault/app_artifact/stage03_model_training/model_report/20220809182513/cluster_1.0/model_report/2022-08-09-18-40-54/SVC
+2022-08-09 18:41:09,105:	 INFO:	:evaluating GaussianNB model
+2022-08-09 18:41:09,105:	 INFO:	:predicting GaussianNB model
+2022-08-09 18:41:09,113:	 INFO:	:GaussianNB model report
+2022-08-09 18:41:09,123:	 INFO:	:Plotting GaussianNB model report
+2022-08-09 18:41:09,123:	 INFO:	:{'experiment_id': None, 'model_name': 'GaussianNB', 'model_object': GaussianNB(var_smoothing=1.0), 'train_precision': 0.5371000680735194, 'test_precision': 0.5269922879177378, 'train_recall': 0.44880546075085326, 'test_recall': 0.45861297539149887, 'train_f1': 0.4889990703439727, 'test_f1': 0.49043062200956933, 'train_accuracy': 0.7940552016985138, 'test_accuracy': 0.7872127872127872, 'accuracy_diff': 0.0068424144857266445, 'model_accuracy': 0.7906339944556505, 'model_index': 5}
+2022-08-09 18:41:09,123:	 INFO:	:Plotting the model report
+2022-08-09 18:41:09,497:	 INFO:	:ROC AUC Score for GaussianNB is 0.743663005243963
+2022-08-09 18:41:11,132:	 INFO:	:Model report saved at /home/pk/Desktop/MachineLearning/project/Credit_card_default/CCdefault/app_artifact/stage03_model_training/model_report/20220809182513/cluster_1.0/model_report/2022-08-09-18-40-54/GaussianNB
+2022-08-09 18:41:11,132:	 INFO:	:Acceptable model  name CatBoostClassifier. 
+2022-08-09 18:41:11,132:	 INFO:	:Acceptable model score 0.7906339944556505. 
+2022-08-09 18:41:11,132:	 INFO:	:best model artifact MetricInfoArtifact()
+2022-08-09 18:41:11,140:	 INFO:	:Started Initializing model from config file
+2022-08-09 18:41:11,140:	 INFO:	:Executing command: from <module 'sklearn.ensemble' from '/home/pk/Desktop/MachineLearning/project/Credit_card_default/venv/lib/python3.7/site-packages/sklearn/ensemble/__init__.py'> import RandomForestClassifier
+2022-08-09 18:41:11,140:	 INFO:	:Executing command: from <module 'xgboost' from '/home/pk/Desktop/MachineLearning/project/Credit_card_default/venv/lib/python3.7/site-packages/xgboost/__init__.py'> import XGBClassifier
+2022-08-09 18:41:11,140:	 INFO:	:Executing command: from <module 'sklearn.linear_model' from '/home/pk/Desktop/MachineLearning/project/Credit_card_default/venv/lib/python3.7/site-packages/sklearn/linear_model/__init__.py'> import LogisticRegression
+2022-08-09 18:41:11,140:	 INFO:	:Executing command: from <module 'catboost' from '/home/pk/Desktop/MachineLearning/project/Credit_card_default/venv/lib/python3.7/site-packages/catboost/__init__.py'> import CatBoostClassifier
+2022-08-09 18:41:11,140:	 INFO:	:Executing command: from <module 'sklearn.svm' from '/home/pk/Desktop/MachineLearning/project/Credit_card_default/venv/lib/python3.7/site-packages/sklearn/svm/__init__.py'> import SVC
+2022-08-09 18:41:11,140:	 INFO:	:Executing command: from <module 'sklearn.naive_bayes' from '/home/pk/Desktop/MachineLearning/project/Credit_card_default/venv/lib/python3.7/site-packages/sklearn/naive_bayes.py'> import GaussianNB
+2022-08-09 18:41:11,141:	 INFO:	:Initialized model: [InitializedModelDetail(model_serial_number='model_1', model=RandomForestClassifier(), param_grid_search={'n_estimators': [500, 600], 'criterion': ['gini', 'entropy'], 'max_depth': [6, 7, 8], 'max_features': ['auto', 'log2', 'sqrt'], 'random_state': [1965]}, model_name='sklearn.ensemble.RandomForestClassifier'), InitializedModelDetail(model_serial_number='model_2', model=XGBClassifier(base_score=None, booster=None, callbacks=None,
+              colsample_bylevel=None, colsample_bynode=None,
+              colsample_bytree=None, early_stopping_rounds=None,
+              enable_categorical=False, eval_metric=None, gamma=None,
+              gpu_id=None, grow_policy=None, importance_type=None,
+              interaction_constraints=None, learning_rate=None, max_bin=None,
+              max_cat_to_onehot=None, max_delta_step=None, max_depth=None,
+              max_leaves=None, min_child_weight=None, missing=nan,
+              monotone_constraints=None, n_estimators=100, n_jobs=None,
+              num_parallel_tree=None, predictor=None, random_state=None,
+              reg_alpha=None, reg_lambda=None, ...), param_grid_search={'n_estimators': [500, 700], 'max_depth': [3, 5, 7, 9], 'learning_rate': [0.01, 0.1], 'eval_metric': ['auc'], 'booster': ['gbtree', 'gblinear'], 'gamma': [0.0, 0.1], 'random_state': [1965]}, model_name='xgboost.XGBClassifier'), InitializedModelDetail(model_serial_number='model_3', model=LogisticRegression(), param_grid_search={'C': [0.9, 1.0], 'solver': ['liblinear', 'newton-cg', 'lbfgs', 'saga'], 'random_state': [1965]}, model_name='sklearn.linear_model.LogisticRegression'), InitializedModelDetail(model_serial_number='model_4', model=<catboost.core.CatBoostClassifier object at 0x7f53a7f5c8d0>, param_grid_search={'n_estimators': [500, 700], 'max_depth': [3, 5, 7, 9], 'learning_rate': [0.01, 0.1], 'eval_metric': ['AUC'], 'random_state': [1965]}, model_name='catboost.CatBoostClassifier'), InitializedModelDetail(model_serial_number='model_5', model=SVC(), param_grid_search={'C': [0.4, 0.1], 'kernel': ['rbf', 'sigmoid'], 'gamma': [1.0], 'coef0': [0.0, 0.001], 'probability': [True], 'random_state': [1965]}, model_name='sklearn.svm.SVC'), InitializedModelDetail(model_serial_number='model_6', model=GaussianNB(), param_grid_search={'var_smoothing': ['1e-09', '1e-08', '1e-07', '1e-06', '1e-05', '1e-04', '1e-03', '1e-02', '1e-01', 1.0]}, model_name='sklearn.naive_bayes.GaussianNB')]
+2022-08-09 18:41:11,141:	 INFO:	:Executing command: from <module 'sklearn.model_selection' from '/home/pk/Desktop/MachineLearning/project/Credit_card_default/venv/lib/python3.7/site-packages/sklearn/model_selection/__init__.py'> import GridSearchCV
+2022-08-09 18:41:11,142:	 INFO:	:Executing:$ GridSearchCV(estimator=RandomForestClassifier(),
+             param_grid={'criterion': ['gini', 'entropy'],
+                         'max_depth': [6, 7, 8],
+                         'max_features': ['auto', 'log2', 'sqrt'],
+                         'n_estimators': [500, 600], 'random_state': [1965]}).cv=2
+2022-08-09 18:41:11,142:	 INFO:	:Executing:$ GridSearchCV(cv=2, estimator=RandomForestClassifier(),
+             param_grid={'criterion': ['gini', 'entropy'],
+                         'max_depth': [6, 7, 8],
+                         'max_features': ['auto', 'log2', 'sqrt'],
+                         'n_estimators': [500, 600], 'random_state': [1965]}).verbose=3
+2022-08-09 18:41:11,142:	 INFO:	:Executing:$ GridSearchCV(cv=2, estimator=RandomForestClassifier(),
+             param_grid={'criterion': ['gini', 'entropy'],
+                         'max_depth': [6, 7, 8],
+                         'max_features': ['auto', 'log2', 'sqrt'],
+                         'n_estimators': [500, 600], 'random_state': [1965]},
+             verbose=3).n_jobs=-1
+2022-08-09 18:41:11,143:	 INFO:	:Executing:$ GridSearchCV(cv=2, estimator=RandomForestClassifier(), n_jobs=-1,
+             param_grid={'criterion': ['gini', 'entropy'],
+                         'max_depth': [6, 7, 8],
+                         'max_features': ['auto', 'log2', 'sqrt'],
+                         'n_estimators': [500, 600], 'random_state': [1965]},
+             verbose=3).scoring=roc_auc
+2022-08-09 18:41:11,143:	 INFO:	:>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> f"Training RandomForestClassifier Started." <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+2022-08-09 18:41:17,569:	 INFO:	:>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> f"Training RandomForestClassifier Finished" <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+2022-08-09 18:41:17,569:	 INFO:	:>>>>>>>>>>>>>>>>>>>> Best model: >>>>>>>>>>>>>>>>>>>>
+2022-08-09 18:41:17,569:	 INFO:	:RandomForestClassifier(criterion='entropy', max_depth=6, max_features='log2',
+                       n_estimators=600, random_state=1965)
+2022-08-09 18:41:17,570:	 INFO:	:>>>>>>>>>>>>>>>>>>>> Best Score: >>>>>>>>>>>>>>>>>>>>
+2022-08-09 18:41:17,570:	 INFO:	:0.6886807275616359
+2022-08-09 18:41:17,570:	 INFO:	:>>>>>>>>>>>>>>>>>>>> Best Params: >>>>>>>>>>>>>>>>>>>>
+2022-08-09 18:41:17,570:	 INFO:	:{'criterion': 'entropy', 'max_depth': 6, 'max_features': 'log2', 'n_estimators': 600, 'random_state': 1965}
+2022-08-09 18:41:17,570:	 INFO:	:Executing command: from <module 'sklearn.model_selection' from '/home/pk/Desktop/MachineLearning/project/Credit_card_default/venv/lib/python3.7/site-packages/sklearn/model_selection/__init__.py'> import GridSearchCV
+2022-08-09 18:41:17,571:	 INFO:	:Executing:$ GridSearchCV(estimator=XGBClassifier(base_score=None, booster=None,
+                                     callbacks=None, colsample_bylevel=None,
+                                     colsample_bynode=None,
+                                     colsample_bytree=None,
+                                     early_stopping_rounds=None,
+                                     enable_categorical=False, eval_metric=None,
+                                     gamma=None, gpu_id=None, grow_policy=None,
+                                     importance_type=None,
+                                     interaction_constraints=None,
+                                     learning_rate=None, max_bin=None,
+                                     max_cat_to_...
+                                     max_leaves=None, min_child_weight=None,
+                                     missing=nan, monotone_constraints=None,
+                                     n_estimators=100, n_jobs=None,
+                                     num_parallel_tree=None, predictor=None,
+                                     random_state=None, reg_alpha=None,
+                                     reg_lambda=None, ...),
+             param_grid={'booster': ['gbtree', 'gblinear'],
+                         'eval_metric': ['auc'], 'gamma': [0.0, 0.1],
+                         'learning_rate': [0.01, 0.1],
+                         'max_depth': [3, 5, 7, 9], 'n_estimators': [500, 700],
+                         'random_state': [1965]}).cv=2
+2022-08-09 18:41:17,573:	 INFO:	:Executing:$ GridSearchCV(cv=2,
+             estimator=XGBClassifier(base_score=None, booster=None,
+                                     callbacks=None, colsample_bylevel=None,
+                                     colsample_bynode=None,
+                                     colsample_bytree=None,
+                                     early_stopping_rounds=None,
+                                     enable_categorical=False, eval_metric=None,
+                                     gamma=None, gpu_id=None, grow_policy=None,
+                                     importance_type=None,
+                                     interaction_constraints=None,
+                                     learning_rate=None, max_bin=None,
+                                     max_ca...
+                                     max_leaves=None, min_child_weight=None,
+                                     missing=nan, monotone_constraints=None,
+                                     n_estimators=100, n_jobs=None,
+                                     num_parallel_tree=None, predictor=None,
+                                     random_state=None, reg_alpha=None,
+                                     reg_lambda=None, ...),
+             param_grid={'booster': ['gbtree', 'gblinear'],
+                         'eval_metric': ['auc'], 'gamma': [0.0, 0.1],
+                         'learning_rate': [0.01, 0.1],
+                         'max_depth': [3, 5, 7, 9], 'n_estimators': [500, 700],
+                         'random_state': [1965]}).verbose=3
+2022-08-09 18:41:17,574:	 INFO:	:Executing:$ GridSearchCV(cv=2,
+             estimator=XGBClassifier(base_score=None, booster=None,
+                                     callbacks=None, colsample_bylevel=None,
+                                     colsample_bynode=None,
+                                     colsample_bytree=None,
+                                     early_stopping_rounds=None,
+                                     enable_categorical=False, eval_metric=None,
+                                     gamma=None, gpu_id=None, grow_policy=None,
+                                     importance_type=None,
+                                     interaction_constraints=None,
+                                     learning_rate=None, max_bin=None,
+                                     max_ca...
+                                     missing=nan, monotone_constraints=None,
+                                     n_estimators=100, n_jobs=None,
+                                     num_parallel_tree=None, predictor=None,
+                                     random_state=None, reg_alpha=None,
+                                     reg_lambda=None, ...),
+             param_grid={'booster': ['gbtree', 'gblinear'],
+                         'eval_metric': ['auc'], 'gamma': [0.0, 0.1],
+                         'learning_rate': [0.01, 0.1],
+                         'max_depth': [3, 5, 7, 9], 'n_estimators': [500, 700],
+                         'random_state': [1965]},
+             verbose=3).n_jobs=-1
+2022-08-09 18:41:17,575:	 INFO:	:Executing:$ GridSearchCV(cv=2,
+             estimator=XGBClassifier(base_score=None, booster=None,
+                                     callbacks=None, colsample_bylevel=None,
+                                     colsample_bynode=None,
+                                     colsample_bytree=None,
+                                     early_stopping_rounds=None,
+                                     enable_categorical=False, eval_metric=None,
+                                     gamma=None, gpu_id=None, grow_policy=None,
+                                     importance_type=None,
+                                     interaction_constraints=None,
+                                     learning_rate=None, max_bin=None,
+                                     max_ca...
+                                     missing=nan, monotone_constraints=None,
+                                     n_estimators=100, n_jobs=None,
+                                     num_parallel_tree=None, predictor=None,
+                                     random_state=None, reg_alpha=None,
+                                     reg_lambda=None, ...),
+             n_jobs=-1,
+             param_grid={'booster': ['gbtree', 'gblinear'],
+                         'eval_metric': ['auc'], 'gamma': [0.0, 0.1],
+                         'learning_rate': [0.01, 0.1],
+                         'max_depth': [3, 5, 7, 9], 'n_estimators': [500, 700],
+                         'random_state': [1965]},
+             verbose=3).scoring=roc_auc
+2022-08-09 18:41:17,575:	 INFO:	:>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> f"Training XGBClassifier Started." <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+2022-08-09 18:41:40,562:	 INFO:	:>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> f"Training XGBClassifier Finished" <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+2022-08-09 18:41:40,563:	 INFO:	:>>>>>>>>>>>>>>>>>>>> Best model: >>>>>>>>>>>>>>>>>>>>
+2022-08-09 18:41:40,563:	 INFO:	:XGBClassifier(base_score=0.5, booster='gbtree', callbacks=None,
+              colsample_bylevel=1, colsample_bynode=1, colsample_bytree=1,
+              early_stopping_rounds=None, enable_categorical=False,
+              eval_metric='auc', gamma=0.0, gpu_id=-1, grow_policy='depthwise',
+              importance_type=None, interaction_constraints='',
+              learning_rate=0.01, max_bin=256, max_cat_to_onehot=4,
+              max_delta_step=0, max_depth=3, max_leaves=0, min_child_weight=1,
+              missing=nan, monotone_constraints='()', n_estimators=700,
+              n_jobs=0, num_parallel_tree=1, predictor='auto',
+              random_state=1965, reg_alpha=0, reg_lambda=1, ...)
+2022-08-09 18:41:40,566:	 INFO:	:>>>>>>>>>>>>>>>>>>>> Best Score: >>>>>>>>>>>>>>>>>>>>
+2022-08-09 18:41:40,567:	 INFO:	:0.6864271164381177
+2022-08-09 18:41:40,567:	 INFO:	:>>>>>>>>>>>>>>>>>>>> Best Params: >>>>>>>>>>>>>>>>>>>>
+2022-08-09 18:41:40,567:	 INFO:	:{'booster': 'gbtree', 'eval_metric': 'auc', 'gamma': 0.0, 'learning_rate': 0.01, 'max_depth': 3, 'n_estimators': 700, 'random_state': 1965}
+2022-08-09 18:41:40,567:	 INFO:	:Executing command: from <module 'sklearn.model_selection' from '/home/pk/Desktop/MachineLearning/project/Credit_card_default/venv/lib/python3.7/site-packages/sklearn/model_selection/__init__.py'> import GridSearchCV
+2022-08-09 18:41:40,567:	 INFO:	:Executing:$ GridSearchCV(estimator=LogisticRegression(),
+             param_grid={'C': [0.9, 1.0], 'random_state': [1965],
+                         'solver': ['liblinear', 'newton-cg', 'lbfgs', 'saga']}).cv=2
+2022-08-09 18:41:40,568:	 INFO:	:Executing:$ GridSearchCV(cv=2, estimator=LogisticRegression(),
+             param_grid={'C': [0.9, 1.0], 'random_state': [1965],
+                         'solver': ['liblinear', 'newton-cg', 'lbfgs', 'saga']}).verbose=3
+2022-08-09 18:41:40,568:	 INFO:	:Executing:$ GridSearchCV(cv=2, estimator=LogisticRegression(),
+             param_grid={'C': [0.9, 1.0], 'random_state': [1965],
+                         'solver': ['liblinear', 'newton-cg', 'lbfgs', 'saga']},
+             verbose=3).n_jobs=-1
+2022-08-09 18:41:40,569:	 INFO:	:Executing:$ GridSearchCV(cv=2, estimator=LogisticRegression(), n_jobs=-1,
+             param_grid={'C': [0.9, 1.0], 'random_state': [1965],
+                         'solver': ['liblinear', 'newton-cg', 'lbfgs', 'saga']},
+             verbose=3).scoring=roc_auc
+2022-08-09 18:41:40,569:	 INFO:	:>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> f"Training LogisticRegression Started." <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+2022-08-09 18:41:41,133:	 INFO:	:>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> f"Training LogisticRegression Finished" <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+2022-08-09 18:41:41,133:	 INFO:	:>>>>>>>>>>>>>>>>>>>> Best model: >>>>>>>>>>>>>>>>>>>>
+2022-08-09 18:41:41,133:	 INFO:	:LogisticRegression(C=0.9, random_state=1965, solver='saga')
+2022-08-09 18:41:41,133:	 INFO:	:>>>>>>>>>>>>>>>>>>>> Best Score: >>>>>>>>>>>>>>>>>>>>
+2022-08-09 18:41:41,133:	 INFO:	:0.6825016813121081
+2022-08-09 18:41:41,133:	 INFO:	:>>>>>>>>>>>>>>>>>>>> Best Params: >>>>>>>>>>>>>>>>>>>>
+2022-08-09 18:41:41,133:	 INFO:	:{'C': 0.9, 'random_state': 1965, 'solver': 'saga'}
+2022-08-09 18:41:41,133:	 INFO:	:Executing command: from <module 'sklearn.model_selection' from '/home/pk/Desktop/MachineLearning/project/Credit_card_default/venv/lib/python3.7/site-packages/sklearn/model_selection/__init__.py'> import GridSearchCV
+2022-08-09 18:41:41,134:	 INFO:	:Executing:$ GridSearchCV(estimator=<catboost.core.CatBoostClassifier object at 0x7f53a7f5c8d0>,
+             param_grid={'eval_metric': ['AUC'], 'learning_rate': [0.01, 0.1],
+                         'max_depth': [3, 5, 7, 9], 'n_estimators': [500, 700],
+                         'random_state': [1965]}).cv=2
+2022-08-09 18:41:41,134:	 INFO:	:Executing:$ GridSearchCV(cv=2,
+             estimator=<catboost.core.CatBoostClassifier object at 0x7f53a7f5c8d0>,
+             param_grid={'eval_metric': ['AUC'], 'learning_rate': [0.01, 0.1],
+                         'max_depth': [3, 5, 7, 9], 'n_estimators': [500, 700],
+                         'random_state': [1965]}).verbose=3
+2022-08-09 18:41:41,134:	 INFO:	:Executing:$ GridSearchCV(cv=2,
+             estimator=<catboost.core.CatBoostClassifier object at 0x7f53a7f5c8d0>,
+             param_grid={'eval_metric': ['AUC'], 'learning_rate': [0.01, 0.1],
+                         'max_depth': [3, 5, 7, 9], 'n_estimators': [500, 700],
+                         'random_state': [1965]},
+             verbose=3).n_jobs=-1
+2022-08-09 18:41:41,134:	 INFO:	:Executing:$ GridSearchCV(cv=2,
+             estimator=<catboost.core.CatBoostClassifier object at 0x7f53a7f5c8d0>,
+             n_jobs=-1,
+             param_grid={'eval_metric': ['AUC'], 'learning_rate': [0.01, 0.1],
+                         'max_depth': [3, 5, 7, 9], 'n_estimators': [500, 700],
+                         'random_state': [1965]},
+             verbose=3).scoring=roc_auc
+2022-08-09 18:41:41,134:	 INFO:	:>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> f"Training CatBoostClassifier Started." <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+2022-08-09 18:42:05,757:	 INFO:	:>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> f"Training CatBoostClassifier Finished" <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+2022-08-09 18:42:05,758:	 INFO:	:>>>>>>>>>>>>>>>>>>>> Best model: >>>>>>>>>>>>>>>>>>>>
+2022-08-09 18:42:05,758:	 INFO:	:<catboost.core.CatBoostClassifier object at 0x7f53a75dc860>
+2022-08-09 18:42:05,758:	 INFO:	:>>>>>>>>>>>>>>>>>>>> Best Score: >>>>>>>>>>>>>>>>>>>>
+2022-08-09 18:42:05,758:	 INFO:	:0.6915882097736556
+2022-08-09 18:42:05,758:	 INFO:	:>>>>>>>>>>>>>>>>>>>> Best Params: >>>>>>>>>>>>>>>>>>>>
+2022-08-09 18:42:05,758:	 INFO:	:{'eval_metric': 'AUC', 'learning_rate': 0.01, 'max_depth': 5, 'n_estimators': 500, 'random_state': 1965}
+2022-08-09 18:42:05,758:	 INFO:	:Executing command: from <module 'sklearn.model_selection' from '/home/pk/Desktop/MachineLearning/project/Credit_card_default/venv/lib/python3.7/site-packages/sklearn/model_selection/__init__.py'> import GridSearchCV
+2022-08-09 18:42:05,759:	 INFO:	:Executing:$ GridSearchCV(estimator=SVC(),
+             param_grid={'C': [0.4, 0.1], 'coef0': [0.0, 0.001], 'gamma': [1.0],
+                         'kernel': ['rbf', 'sigmoid'], 'probability': [True],
+                         'random_state': [1965]}).cv=2
+2022-08-09 18:42:05,759:	 INFO:	:Executing:$ GridSearchCV(cv=2, estimator=SVC(),
+             param_grid={'C': [0.4, 0.1], 'coef0': [0.0, 0.001], 'gamma': [1.0],
+                         'kernel': ['rbf', 'sigmoid'], 'probability': [True],
+                         'random_state': [1965]}).verbose=3
+2022-08-09 18:42:05,760:	 INFO:	:Executing:$ GridSearchCV(cv=2, estimator=SVC(),
+             param_grid={'C': [0.4, 0.1], 'coef0': [0.0, 0.001], 'gamma': [1.0],
+                         'kernel': ['rbf', 'sigmoid'], 'probability': [True],
+                         'random_state': [1965]},
+             verbose=3).n_jobs=-1
+2022-08-09 18:42:05,761:	 INFO:	:Executing:$ GridSearchCV(cv=2, estimator=SVC(), n_jobs=-1,
+             param_grid={'C': [0.4, 0.1], 'coef0': [0.0, 0.001], 'gamma': [1.0],
+                         'kernel': ['rbf', 'sigmoid'], 'probability': [True],
+                         'random_state': [1965]},
+             verbose=3).scoring=roc_auc
+2022-08-09 18:42:05,761:	 INFO:	:>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> f"Training SVC Started." <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+2022-08-09 18:42:08,099:	 INFO:	:>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> f"Training SVC Finished" <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+2022-08-09 18:42:08,099:	 INFO:	:>>>>>>>>>>>>>>>>>>>> Best model: >>>>>>>>>>>>>>>>>>>>
+2022-08-09 18:42:08,099:	 INFO:	:SVC(C=0.4, gamma=1.0, probability=True, random_state=1965)
+2022-08-09 18:42:08,099:	 INFO:	:>>>>>>>>>>>>>>>>>>>> Best Score: >>>>>>>>>>>>>>>>>>>>
+2022-08-09 18:42:08,099:	 INFO:	:0.5520756098404154
+2022-08-09 18:42:08,099:	 INFO:	:>>>>>>>>>>>>>>>>>>>> Best Params: >>>>>>>>>>>>>>>>>>>>
+2022-08-09 18:42:08,099:	 INFO:	:{'C': 0.4, 'coef0': 0.0, 'gamma': 1.0, 'kernel': 'rbf', 'probability': True, 'random_state': 1965}
+2022-08-09 18:42:08,099:	 INFO:	:Executing command: from <module 'sklearn.model_selection' from '/home/pk/Desktop/MachineLearning/project/Credit_card_default/venv/lib/python3.7/site-packages/sklearn/model_selection/__init__.py'> import GridSearchCV
+2022-08-09 18:42:08,100:	 INFO:	:Executing:$ GridSearchCV(estimator=GaussianNB(),
+             param_grid={'var_smoothing': ['1e-09', '1e-08', '1e-07', '1e-06',
+                                           '1e-05', '1e-04', '1e-03', '1e-02',
+                                           '1e-01', 1.0]}).cv=2
+2022-08-09 18:42:08,100:	 INFO:	:Executing:$ GridSearchCV(cv=2, estimator=GaussianNB(),
+             param_grid={'var_smoothing': ['1e-09', '1e-08', '1e-07', '1e-06',
+                                           '1e-05', '1e-04', '1e-03', '1e-02',
+                                           '1e-01', 1.0]}).verbose=3
+2022-08-09 18:42:08,100:	 INFO:	:Executing:$ GridSearchCV(cv=2, estimator=GaussianNB(),
+             param_grid={'var_smoothing': ['1e-09', '1e-08', '1e-07', '1e-06',
+                                           '1e-05', '1e-04', '1e-03', '1e-02',
+                                           '1e-01', 1.0]},
+             verbose=3).n_jobs=-1
+2022-08-09 18:42:08,100:	 INFO:	:Executing:$ GridSearchCV(cv=2, estimator=GaussianNB(), n_jobs=-1,
+             param_grid={'var_smoothing': ['1e-09', '1e-08', '1e-07', '1e-06',
+                                           '1e-05', '1e-04', '1e-03', '1e-02',
+                                           '1e-01', 1.0]},
+             verbose=3).scoring=roc_auc
+2022-08-09 18:42:08,100:	 INFO:	:>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> f"Training GaussianNB Started." <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+2022-08-09 18:42:08,243:	 INFO:	:>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> f"Training GaussianNB Finished" <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+2022-08-09 18:42:08,244:	 INFO:	:>>>>>>>>>>>>>>>>>>>> Best model: >>>>>>>>>>>>>>>>>>>>
+2022-08-09 18:42:08,244:	 INFO:	:GaussianNB(var_smoothing=1.0)
+2022-08-09 18:42:08,245:	 INFO:	:>>>>>>>>>>>>>>>>>>>> Best Score: >>>>>>>>>>>>>>>>>>>>
+2022-08-09 18:42:08,245:	 INFO:	:0.6600574247666762
+2022-08-09 18:42:08,246:	 INFO:	:>>>>>>>>>>>>>>>>>>>> Best Params: >>>>>>>>>>>>>>>>>>>>
+2022-08-09 18:42:08,246:	 INFO:	:{'var_smoothing': 1.0}
+2022-08-09 18:42:08,248:	 INFO:	:Acceptable model found:GridSearchedBestModel(model_serial_number='model_1', model=RandomForestClassifier(), best_model=RandomForestClassifier(criterion='entropy', max_depth=6, max_features='log2',
+                       n_estimators=600, random_state=1965), best_parameters={'criterion': 'entropy', 'max_depth': 6, 'max_features': 'log2', 'n_estimators': 600, 'random_state': 1965}, best_score=0.6886807275616359)
+2022-08-09 18:42:08,249:	 INFO:	:Acceptable model found:GridSearchedBestModel(model_serial_number='model_4', model=<catboost.core.CatBoostClassifier object at 0x7f53a7f5c8d0>, best_model=<catboost.core.CatBoostClassifier object at 0x7f53a75dc860>, best_parameters={'eval_metric': 'AUC', 'learning_rate': 0.01, 'max_depth': 5, 'n_estimators': 500, 'random_state': 1965}, best_score=0.6915882097736556)
+2022-08-09 18:42:08,249:	 INFO:	:Best model: GridSearchedBestModel(model_serial_number='model_4', model=<catboost.core.CatBoostClassifier object at 0x7f53a7f5c8d0>, best_model=<catboost.core.CatBoostClassifier object at 0x7f53a75dc860>, best_parameters={'eval_metric': 'AUC', 'learning_rate': 0.01, 'max_depth': 5, 'n_estimators': 500, 'random_state': 1965}, best_score=0.6915882097736556)
+2022-08-09 18:42:08,264:	 INFO:	:evaluating RandomForestClassifier model
+2022-08-09 18:42:08,264:	 INFO:	:predicting RandomForestClassifier model
+2022-08-09 18:42:08,633:	 INFO:	:RandomForestClassifier model report
+2022-08-09 18:42:08,637:	 INFO:	:Plotting RandomForestClassifier model report
+2022-08-09 18:42:08,637:	 INFO:	:{'experiment_id': None, 'model_name': 'RandomForestClassifier', 'model_object': RandomForestClassifier(criterion='entropy', max_depth=6, max_features='log2',
+                       n_estimators=600, random_state=1965), 'train_precision': 0.95, 'test_precision': 0.5, 'train_recall': 0.03350970017636684, 'test_recall': 0.0196078431372549, 'train_f1': 0.06473594548551957, 'test_f1': 0.03773584905660377, 'train_accuracy': 0.7731404958677686, 'test_accuracy': 0.7471074380165289, 'accuracy_diff': 0.02603305785123966, 'model_accuracy': 0.7601239669421487, 'model_index': 0}
+2022-08-09 18:42:08,637:	 INFO:	:Plotting the model report
+2022-08-09 18:42:09,035:	 INFO:	:ROC AUC Score for RandomForestClassifier is 0.6520403146509341
+2022-08-09 18:42:09,815:	 INFO:	:Model report saved at /home/pk/Desktop/MachineLearning/project/Credit_card_default/CCdefault/app_artifact/stage03_model_training/model_report/20220809182513/cluster_2.0/model_report/2022-08-09-18-42-08/RandomForestClassifier
+2022-08-09 18:42:09,816:	 INFO:	:********** Best model RandomForestClassifier **********
+2022-08-09 18:42:09,816:	 INFO:	:Acceptable model score 0.7601239669421487. 
+2022-08-09 18:42:09,816:	 INFO:	:evaluating XGBClassifier model
+2022-08-09 18:42:09,816:	 INFO:	:predicting XGBClassifier model
+2022-08-09 18:42:09,902:	 INFO:	:XGBClassifier model report
+2022-08-09 18:42:09,907:	 INFO:	:Plotting XGBClassifier model report
+2022-08-09 18:42:09,909:	 INFO:	:{'experiment_id': None, 'model_name': 'XGBClassifier', 'model_object': XGBClassifier(base_score=0.5, booster='gbtree', callbacks=None,
+              colsample_bylevel=1, colsample_bynode=1, colsample_bytree=1,
+              early_stopping_rounds=None, enable_categorical=False,
+              eval_metric='auc', gamma=0.0, gpu_id=-1, grow_policy='depthwise',
+              importance_type=None, interaction_constraints='',
+              learning_rate=0.01, max_bin=256, max_cat_to_onehot=4,
+              max_delta_step=0, max_depth=3, max_leaves=0, min_child_weight=1,
+              missing=nan, monotone_constraints='()', n_estimators=700,
+              n_jobs=0, num_parallel_tree=1, predictor='auto',
+              random_state=1965, reg_alpha=0, reg_lambda=1, ...), 'train_precision': 0.8431372549019608, 'test_precision': 0.52, 'train_recall': 0.15167548500881833, 'test_recall': 0.08496732026143791, 'train_f1': 0.2571001494768311, 'test_f1': 0.14606741573033707, 'train_accuracy': 0.7946280991735537, 'test_accuracy': 0.7487603305785124, 'accuracy_diff': 0.04586776859504127, 'model_accuracy': 0.7716942148760331, 'model_index': 1}
+2022-08-09 18:42:09,909:	 INFO:	:Plotting the model report
+2022-08-09 18:42:10,010:	 INFO:	:ROC AUC Score for XGBClassifier is 0.6506015385505235
+2022-08-09 18:42:10,720:	 INFO:	:Model report saved at /home/pk/Desktop/MachineLearning/project/Credit_card_default/CCdefault/app_artifact/stage03_model_training/model_report/20220809182513/cluster_2.0/model_report/2022-08-09-18-42-08/XGBClassifier
+2022-08-09 18:42:10,720:	 INFO:	:********** Best model XGBClassifier **********
+2022-08-09 18:42:10,720:	 INFO:	:Acceptable model score 0.7716942148760331. 
+2022-08-09 18:42:10,720:	 INFO:	:evaluating LogisticRegression model
+2022-08-09 18:42:10,720:	 INFO:	:predicting LogisticRegression model
+2022-08-09 18:42:10,722:	 INFO:	:LogisticRegression model report
+2022-08-09 18:42:10,729:	 INFO:	:Plotting LogisticRegression model report
+2022-08-09 18:42:10,729:	 INFO:	:{'experiment_id': None, 'model_name': 'LogisticRegression', 'model_object': LogisticRegression(C=0.9, random_state=1965, solver='saga'), 'train_precision': 0.7021276595744681, 'test_precision': 0.5757575757575758, 'train_recall': 0.1746031746031746, 'test_recall': 0.12418300653594772, 'train_f1': 0.2796610169491525, 'test_f1': 0.20430107526881722, 'train_accuracy': 0.7892561983471075, 'test_accuracy': 0.7553719008264462, 'accuracy_diff': 0.033884297520661244, 'model_accuracy': 0.7723140495867769, 'model_index': 2}
+2022-08-09 18:42:10,729:	 INFO:	:Plotting the model report
+2022-08-09 18:42:10,864:	 INFO:	:ROC AUC Score for LogisticRegression is 0.6507750592862513
+2022-08-09 18:42:11,624:	 INFO:	:Model report saved at /home/pk/Desktop/MachineLearning/project/Credit_card_default/CCdefault/app_artifact/stage03_model_training/model_report/20220809182513/cluster_2.0/model_report/2022-08-09-18-42-08/LogisticRegression
+2022-08-09 18:42:11,624:	 INFO:	:********** Best model LogisticRegression **********
+2022-08-09 18:42:11,624:	 INFO:	:Acceptable model score 0.7723140495867769. 
+2022-08-09 18:42:11,625:	 INFO:	:evaluating CatBoostClassifier model
+2022-08-09 18:42:11,625:	 INFO:	:predicting CatBoostClassifier model
+2022-08-09 18:42:11,679:	 INFO:	:CatBoostClassifier model report
+2022-08-09 18:42:11,684:	 INFO:	:Plotting CatBoostClassifier model report
+2022-08-09 18:42:11,684:	 INFO:	:{'experiment_id': None, 'model_name': 'CatBoostClassifier', 'model_object': <catboost.core.CatBoostClassifier object at 0x7f53a75dc860>, 'train_precision': 0.875, 'test_precision': 0.625, 'train_recall': 0.14814814814814814, 'test_recall': 0.09803921568627451, 'train_f1': 0.25339366515837103, 'test_f1': 0.1694915254237288, 'train_accuracy': 0.7954545454545454, 'test_accuracy': 0.7570247933884298, 'accuracy_diff': 0.03842975206611565, 'model_accuracy': 0.7762396694214876, 'model_index': 3}
+2022-08-09 18:42:11,684:	 INFO:	:Plotting the model report
+2022-08-09 18:42:11,857:	 INFO:	:ROC AUC Score for CatBoostClassifier is 0.6566386141477241
+2022-08-09 18:42:12,694:	 INFO:	:Model report saved at /home/pk/Desktop/MachineLearning/project/Credit_card_default/CCdefault/app_artifact/stage03_model_training/model_report/20220809182513/cluster_2.0/model_report/2022-08-09-18-42-08/CatBoostClassifier
+2022-08-09 18:42:12,694:	 INFO:	:********** Best model CatBoostClassifier **********
+2022-08-09 18:42:12,695:	 INFO:	:Acceptable model score 0.7762396694214876. 
+2022-08-09 18:42:12,695:	 INFO:	:evaluating SVC model
+2022-08-09 18:42:12,695:	 INFO:	:predicting SVC model
+2022-08-09 18:42:13,143:	 INFO:	:SVC model report
+2022-08-09 18:42:13,147:	 INFO:	:Plotting SVC model report
+2022-08-09 18:42:13,147:	 INFO:	:{'experiment_id': None, 'model_name': 'SVC', 'model_object': SVC(C=0.4, gamma=1.0, probability=True, random_state=1965), 'train_precision': 0.8648648648648649, 'test_precision': 0.16666666666666666, 'train_recall': 0.0564373897707231, 'test_recall': 0.006535947712418301, 'train_f1': 0.10596026490066225, 'test_f1': 0.012578616352201257, 'train_accuracy': 0.7768595041322314, 'test_accuracy': 0.740495867768595, 'accuracy_diff': 0.036363636363636376, 'model_accuracy': 0.7586776859504132, 'model_index': 4}
+2022-08-09 18:42:13,147:	 INFO:	:Plotting the model report
+2022-08-09 18:42:13,429:	 INFO:	:ROC AUC Score for SVC is 0.487007634912372
+2022-08-09 18:42:14,136:	 INFO:	:Model report saved at /home/pk/Desktop/MachineLearning/project/Credit_card_default/CCdefault/app_artifact/stage03_model_training/model_report/20220809182513/cluster_2.0/model_report/2022-08-09-18-42-08/SVC
+2022-08-09 18:42:14,136:	 INFO:	:evaluating GaussianNB model
+2022-08-09 18:42:14,136:	 INFO:	:predicting GaussianNB model
+2022-08-09 18:42:14,140:	 INFO:	:GaussianNB model report
+2022-08-09 18:42:14,144:	 INFO:	:Plotting GaussianNB model report
+2022-08-09 18:42:14,144:	 INFO:	:{'experiment_id': None, 'model_name': 'GaussianNB', 'model_object': GaussianNB(var_smoothing=1.0), 'train_precision': 0.391008174386921, 'test_precision': 0.36809815950920244, 'train_recall': 0.5061728395061729, 'test_recall': 0.39215686274509803, 'train_f1': 0.44119907763259036, 'test_f1': 0.3797468354430379, 'train_accuracy': 0.6995867768595041, 'test_accuracy': 0.6760330578512397, 'accuracy_diff': 0.023553719008264418, 'model_accuracy': 0.6878099173553719, 'model_index': 5}
+2022-08-09 18:42:14,144:	 INFO:	:Plotting the model report
+2022-08-09 18:42:14,323:	 INFO:	:ROC AUC Score for GaussianNB is 0.6334880559893573
+2022-08-09 18:42:15,037:	 INFO:	:Model report saved at /home/pk/Desktop/MachineLearning/project/Credit_card_default/CCdefault/app_artifact/stage03_model_training/model_report/20220809182513/cluster_2.0/model_report/2022-08-09-18-42-08/GaussianNB
+2022-08-09 18:42:15,037:	 INFO:	:Acceptable model  name CatBoostClassifier. 
+2022-08-09 18:42:15,037:	 INFO:	:Acceptable model score 0.6878099173553719. 
+2022-08-09 18:42:15,037:	 INFO:	:best model artifact MetricInfoArtifact()
+2022-08-09 18:42:15,048:	 INFO:	:Started Initializing model from config file
+2022-08-09 18:42:15,048:	 INFO:	:Executing command: from <module 'sklearn.ensemble' from '/home/pk/Desktop/MachineLearning/project/Credit_card_default/venv/lib/python3.7/site-packages/sklearn/ensemble/__init__.py'> import RandomForestClassifier
+2022-08-09 18:42:15,048:	 INFO:	:Executing command: from <module 'xgboost' from '/home/pk/Desktop/MachineLearning/project/Credit_card_default/venv/lib/python3.7/site-packages/xgboost/__init__.py'> import XGBClassifier
+2022-08-09 18:42:15,048:	 INFO:	:Executing command: from <module 'sklearn.linear_model' from '/home/pk/Desktop/MachineLearning/project/Credit_card_default/venv/lib/python3.7/site-packages/sklearn/linear_model/__init__.py'> import LogisticRegression
+2022-08-09 18:42:15,048:	 INFO:	:Executing command: from <module 'catboost' from '/home/pk/Desktop/MachineLearning/project/Credit_card_default/venv/lib/python3.7/site-packages/catboost/__init__.py'> import CatBoostClassifier
+2022-08-09 18:42:15,048:	 INFO:	:Executing command: from <module 'sklearn.svm' from '/home/pk/Desktop/MachineLearning/project/Credit_card_default/venv/lib/python3.7/site-packages/sklearn/svm/__init__.py'> import SVC
+2022-08-09 18:42:15,048:	 INFO:	:Executing command: from <module 'sklearn.naive_bayes' from '/home/pk/Desktop/MachineLearning/project/Credit_card_default/venv/lib/python3.7/site-packages/sklearn/naive_bayes.py'> import GaussianNB
+2022-08-09 18:42:15,049:	 INFO:	:Initialized model: [InitializedModelDetail(model_serial_number='model_1', model=RandomForestClassifier(), param_grid_search={'n_estimators': [500, 600], 'criterion': ['gini', 'entropy'], 'max_depth': [6, 7, 8], 'max_features': ['auto', 'log2', 'sqrt'], 'random_state': [1965]}, model_name='sklearn.ensemble.RandomForestClassifier'), InitializedModelDetail(model_serial_number='model_2', model=XGBClassifier(base_score=None, booster=None, callbacks=None,
+              colsample_bylevel=None, colsample_bynode=None,
+              colsample_bytree=None, early_stopping_rounds=None,
+              enable_categorical=False, eval_metric=None, gamma=None,
+              gpu_id=None, grow_policy=None, importance_type=None,
+              interaction_constraints=None, learning_rate=None, max_bin=None,
+              max_cat_to_onehot=None, max_delta_step=None, max_depth=None,
+              max_leaves=None, min_child_weight=None, missing=nan,
+              monotone_constraints=None, n_estimators=100, n_jobs=None,
+              num_parallel_tree=None, predictor=None, random_state=None,
+              reg_alpha=None, reg_lambda=None, ...), param_grid_search={'n_estimators': [500, 700], 'max_depth': [3, 5, 7, 9], 'learning_rate': [0.01, 0.1], 'eval_metric': ['auc'], 'booster': ['gbtree', 'gblinear'], 'gamma': [0.0, 0.1], 'random_state': [1965]}, model_name='xgboost.XGBClassifier'), InitializedModelDetail(model_serial_number='model_3', model=LogisticRegression(), param_grid_search={'C': [0.9, 1.0], 'solver': ['liblinear', 'newton-cg', 'lbfgs', 'saga'], 'random_state': [1965]}, model_name='sklearn.linear_model.LogisticRegression'), InitializedModelDetail(model_serial_number='model_4', model=<catboost.core.CatBoostClassifier object at 0x7f53a7726080>, param_grid_search={'n_estimators': [500, 700], 'max_depth': [3, 5, 7, 9], 'learning_rate': [0.01, 0.1], 'eval_metric': ['AUC'], 'random_state': [1965]}, model_name='catboost.CatBoostClassifier'), InitializedModelDetail(model_serial_number='model_5', model=SVC(), param_grid_search={'C': [0.4, 0.1], 'kernel': ['rbf', 'sigmoid'], 'gamma': [1.0], 'coef0': [0.0, 0.001], 'probability': [True], 'random_state': [1965]}, model_name='sklearn.svm.SVC'), InitializedModelDetail(model_serial_number='model_6', model=GaussianNB(), param_grid_search={'var_smoothing': ['1e-09', '1e-08', '1e-07', '1e-06', '1e-05', '1e-04', '1e-03', '1e-02', '1e-01', 1.0]}, model_name='sklearn.naive_bayes.GaussianNB')]
+2022-08-09 18:42:15,049:	 INFO:	:Executing command: from <module 'sklearn.model_selection' from '/home/pk/Desktop/MachineLearning/project/Credit_card_default/venv/lib/python3.7/site-packages/sklearn/model_selection/__init__.py'> import GridSearchCV
+2022-08-09 18:42:15,050:	 INFO:	:Executing:$ GridSearchCV(estimator=RandomForestClassifier(),
+             param_grid={'criterion': ['gini', 'entropy'],
+                         'max_depth': [6, 7, 8],
+                         'max_features': ['auto', 'log2', 'sqrt'],
+                         'n_estimators': [500, 600], 'random_state': [1965]}).cv=2
+2022-08-09 18:42:15,050:	 INFO:	:Executing:$ GridSearchCV(cv=2, estimator=RandomForestClassifier(),
+             param_grid={'criterion': ['gini', 'entropy'],
+                         'max_depth': [6, 7, 8],
+                         'max_features': ['auto', 'log2', 'sqrt'],
+                         'n_estimators': [500, 600], 'random_state': [1965]}).verbose=3
+2022-08-09 18:42:15,050:	 INFO:	:Executing:$ GridSearchCV(cv=2, estimator=RandomForestClassifier(),
+             param_grid={'criterion': ['gini', 'entropy'],
+                         'max_depth': [6, 7, 8],
+                         'max_features': ['auto', 'log2', 'sqrt'],
+                         'n_estimators': [500, 600], 'random_state': [1965]},
+             verbose=3).n_jobs=-1
+2022-08-09 18:42:15,051:	 INFO:	:Executing:$ GridSearchCV(cv=2, estimator=RandomForestClassifier(), n_jobs=-1,
+             param_grid={'criterion': ['gini', 'entropy'],
+                         'max_depth': [6, 7, 8],
+                         'max_features': ['auto', 'log2', 'sqrt'],
+                         'n_estimators': [500, 600], 'random_state': [1965]},
+             verbose=3).scoring=roc_auc
+2022-08-09 18:42:15,051:	 INFO:	:>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> f"Training RandomForestClassifier Started." <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+2022-08-09 18:42:23,579:	 INFO:	:>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> f"Training RandomForestClassifier Finished" <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+2022-08-09 18:42:23,579:	 INFO:	:>>>>>>>>>>>>>>>>>>>> Best model: >>>>>>>>>>>>>>>>>>>>
+2022-08-09 18:42:23,579:	 INFO:	:RandomForestClassifier(criterion='entropy', max_depth=7, n_estimators=500,
+                       random_state=1965)
+2022-08-09 18:42:23,579:	 INFO:	:>>>>>>>>>>>>>>>>>>>> Best Score: >>>>>>>>>>>>>>>>>>>>
+2022-08-09 18:42:23,579:	 INFO:	:0.8101756543323821
+2022-08-09 18:42:23,579:	 INFO:	:>>>>>>>>>>>>>>>>>>>> Best Params: >>>>>>>>>>>>>>>>>>>>
+2022-08-09 18:42:23,579:	 INFO:	:{'criterion': 'entropy', 'max_depth': 7, 'max_features': 'auto', 'n_estimators': 500, 'random_state': 1965}
+2022-08-09 18:42:23,579:	 INFO:	:Executing command: from <module 'sklearn.model_selection' from '/home/pk/Desktop/MachineLearning/project/Credit_card_default/venv/lib/python3.7/site-packages/sklearn/model_selection/__init__.py'> import GridSearchCV
+2022-08-09 18:42:23,581:	 INFO:	:Executing:$ GridSearchCV(estimator=XGBClassifier(base_score=None, booster=None,
+                                     callbacks=None, colsample_bylevel=None,
+                                     colsample_bynode=None,
+                                     colsample_bytree=None,
+                                     early_stopping_rounds=None,
+                                     enable_categorical=False, eval_metric=None,
+                                     gamma=None, gpu_id=None, grow_policy=None,
+                                     importance_type=None,
+                                     interaction_constraints=None,
+                                     learning_rate=None, max_bin=None,
+                                     max_cat_to_...
+                                     max_leaves=None, min_child_weight=None,
+                                     missing=nan, monotone_constraints=None,
+                                     n_estimators=100, n_jobs=None,
+                                     num_parallel_tree=None, predictor=None,
+                                     random_state=None, reg_alpha=None,
+                                     reg_lambda=None, ...),
+             param_grid={'booster': ['gbtree', 'gblinear'],
+                         'eval_metric': ['auc'], 'gamma': [0.0, 0.1],
+                         'learning_rate': [0.01, 0.1],
+                         'max_depth': [3, 5, 7, 9], 'n_estimators': [500, 700],
+                         'random_state': [1965]}).cv=2
+2022-08-09 18:42:23,582:	 INFO:	:Executing:$ GridSearchCV(cv=2,
+             estimator=XGBClassifier(base_score=None, booster=None,
+                                     callbacks=None, colsample_bylevel=None,
+                                     colsample_bynode=None,
+                                     colsample_bytree=None,
+                                     early_stopping_rounds=None,
+                                     enable_categorical=False, eval_metric=None,
+                                     gamma=None, gpu_id=None, grow_policy=None,
+                                     importance_type=None,
+                                     interaction_constraints=None,
+                                     learning_rate=None, max_bin=None,
+                                     max_ca...
+                                     max_leaves=None, min_child_weight=None,
+                                     missing=nan, monotone_constraints=None,
+                                     n_estimators=100, n_jobs=None,
+                                     num_parallel_tree=None, predictor=None,
+                                     random_state=None, reg_alpha=None,
+                                     reg_lambda=None, ...),
+             param_grid={'booster': ['gbtree', 'gblinear'],
+                         'eval_metric': ['auc'], 'gamma': [0.0, 0.1],
+                         'learning_rate': [0.01, 0.1],
+                         'max_depth': [3, 5, 7, 9], 'n_estimators': [500, 700],
+                         'random_state': [1965]}).verbose=3
+2022-08-09 18:42:23,583:	 INFO:	:Executing:$ GridSearchCV(cv=2,
+             estimator=XGBClassifier(base_score=None, booster=None,
+                                     callbacks=None, colsample_bylevel=None,
+                                     colsample_bynode=None,
+                                     colsample_bytree=None,
+                                     early_stopping_rounds=None,
+                                     enable_categorical=False, eval_metric=None,
+                                     gamma=None, gpu_id=None, grow_policy=None,
+                                     importance_type=None,
+                                     interaction_constraints=None,
+                                     learning_rate=None, max_bin=None,
+                                     max_ca...
+                                     missing=nan, monotone_constraints=None,
+                                     n_estimators=100, n_jobs=None,
+                                     num_parallel_tree=None, predictor=None,
+                                     random_state=None, reg_alpha=None,
+                                     reg_lambda=None, ...),
+             param_grid={'booster': ['gbtree', 'gblinear'],
+                         'eval_metric': ['auc'], 'gamma': [0.0, 0.1],
+                         'learning_rate': [0.01, 0.1],
+                         'max_depth': [3, 5, 7, 9], 'n_estimators': [500, 700],
+                         'random_state': [1965]},
+             verbose=3).n_jobs=-1
+2022-08-09 18:42:23,584:	 INFO:	:Executing:$ GridSearchCV(cv=2,
+             estimator=XGBClassifier(base_score=None, booster=None,
+                                     callbacks=None, colsample_bylevel=None,
+                                     colsample_bynode=None,
+                                     colsample_bytree=None,
+                                     early_stopping_rounds=None,
+                                     enable_categorical=False, eval_metric=None,
+                                     gamma=None, gpu_id=None, grow_policy=None,
+                                     importance_type=None,
+                                     interaction_constraints=None,
+                                     learning_rate=None, max_bin=None,
+                                     max_ca...
+                                     missing=nan, monotone_constraints=None,
+                                     n_estimators=100, n_jobs=None,
+                                     num_parallel_tree=None, predictor=None,
+                                     random_state=None, reg_alpha=None,
+                                     reg_lambda=None, ...),
+             n_jobs=-1,
+             param_grid={'booster': ['gbtree', 'gblinear'],
+                         'eval_metric': ['auc'], 'gamma': [0.0, 0.1],
+                         'learning_rate': [0.01, 0.1],
+                         'max_depth': [3, 5, 7, 9], 'n_estimators': [500, 700],
+                         'random_state': [1965]},
+             verbose=3).scoring=roc_auc
+2022-08-09 18:42:23,584:	 INFO:	:>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> f"Training XGBClassifier Started." <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+2022-08-09 18:43:14,395:	 INFO:	:>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> f"Training XGBClassifier Finished" <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+2022-08-09 18:43:14,395:	 INFO:	:>>>>>>>>>>>>>>>>>>>> Best model: >>>>>>>>>>>>>>>>>>>>
+2022-08-09 18:43:14,395:	 INFO:	:XGBClassifier(base_score=0.5, booster='gbtree', callbacks=None,
+              colsample_bylevel=1, colsample_bynode=1, colsample_bytree=1,
+              early_stopping_rounds=None, enable_categorical=False,
+              eval_metric='auc', gamma=0.0, gpu_id=-1, grow_policy='depthwise',
+              importance_type=None, interaction_constraints='',
+              learning_rate=0.01, max_bin=256, max_cat_to_onehot=4,
+              max_delta_step=0, max_depth=3, max_leaves=0, min_child_weight=1,
+              missing=nan, monotone_constraints='()', n_estimators=500,
+              n_jobs=0, num_parallel_tree=1, predictor='auto',
+              random_state=1965, reg_alpha=0, reg_lambda=1, ...)
+2022-08-09 18:43:14,399:	 INFO:	:>>>>>>>>>>>>>>>>>>>> Best Score: >>>>>>>>>>>>>>>>>>>>
+2022-08-09 18:43:14,399:	 INFO:	:0.8090302397647633
+2022-08-09 18:43:14,399:	 INFO:	:>>>>>>>>>>>>>>>>>>>> Best Params: >>>>>>>>>>>>>>>>>>>>
+2022-08-09 18:43:14,399:	 INFO:	:{'booster': 'gbtree', 'eval_metric': 'auc', 'gamma': 0.0, 'learning_rate': 0.01, 'max_depth': 3, 'n_estimators': 500, 'random_state': 1965}
+2022-08-09 18:43:14,399:	 INFO:	:Executing command: from <module 'sklearn.model_selection' from '/home/pk/Desktop/MachineLearning/project/Credit_card_default/venv/lib/python3.7/site-packages/sklearn/model_selection/__init__.py'> import GridSearchCV
+2022-08-09 18:43:14,400:	 INFO:	:Executing:$ GridSearchCV(estimator=LogisticRegression(),
+             param_grid={'C': [0.9, 1.0], 'random_state': [1965],
+                         'solver': ['liblinear', 'newton-cg', 'lbfgs', 'saga']}).cv=2
+2022-08-09 18:43:14,401:	 INFO:	:Executing:$ GridSearchCV(cv=2, estimator=LogisticRegression(),
+             param_grid={'C': [0.9, 1.0], 'random_state': [1965],
+                         'solver': ['liblinear', 'newton-cg', 'lbfgs', 'saga']}).verbose=3
+2022-08-09 18:43:14,401:	 INFO:	:Executing:$ GridSearchCV(cv=2, estimator=LogisticRegression(),
+             param_grid={'C': [0.9, 1.0], 'random_state': [1965],
+                         'solver': ['liblinear', 'newton-cg', 'lbfgs', 'saga']},
+             verbose=3).n_jobs=-1
+2022-08-09 18:43:14,402:	 INFO:	:Executing:$ GridSearchCV(cv=2, estimator=LogisticRegression(), n_jobs=-1,
+             param_grid={'C': [0.9, 1.0], 'random_state': [1965],
+                         'solver': ['liblinear', 'newton-cg', 'lbfgs', 'saga']},
+             verbose=3).scoring=roc_auc
+2022-08-09 18:43:14,402:	 INFO:	:>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> f"Training LogisticRegression Started." <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+2022-08-09 18:43:15,006:	 INFO:	:>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> f"Training LogisticRegression Finished" <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+2022-08-09 18:43:15,006:	 INFO:	:>>>>>>>>>>>>>>>>>>>> Best model: >>>>>>>>>>>>>>>>>>>>
+2022-08-09 18:43:15,006:	 INFO:	:LogisticRegression(random_state=1965)
+2022-08-09 18:43:15,007:	 INFO:	:>>>>>>>>>>>>>>>>>>>> Best Score: >>>>>>>>>>>>>>>>>>>>
+2022-08-09 18:43:15,007:	 INFO:	:0.8038422455318524
+2022-08-09 18:43:15,007:	 INFO:	:>>>>>>>>>>>>>>>>>>>> Best Params: >>>>>>>>>>>>>>>>>>>>
+2022-08-09 18:43:15,007:	 INFO:	:{'C': 1.0, 'random_state': 1965, 'solver': 'lbfgs'}
+2022-08-09 18:43:15,007:	 INFO:	:Executing command: from <module 'sklearn.model_selection' from '/home/pk/Desktop/MachineLearning/project/Credit_card_default/venv/lib/python3.7/site-packages/sklearn/model_selection/__init__.py'> import GridSearchCV
+2022-08-09 18:43:15,008:	 INFO:	:Executing:$ GridSearchCV(estimator=<catboost.core.CatBoostClassifier object at 0x7f53a7726080>,
+             param_grid={'eval_metric': ['AUC'], 'learning_rate': [0.01, 0.1],
+                         'max_depth': [3, 5, 7, 9], 'n_estimators': [500, 700],
+                         'random_state': [1965]}).cv=2
+2022-08-09 18:43:15,009:	 INFO:	:Executing:$ GridSearchCV(cv=2,
+             estimator=<catboost.core.CatBoostClassifier object at 0x7f53a7726080>,
+             param_grid={'eval_metric': ['AUC'], 'learning_rate': [0.01, 0.1],
+                         'max_depth': [3, 5, 7, 9], 'n_estimators': [500, 700],
+                         'random_state': [1965]}).verbose=3
+2022-08-09 18:43:15,009:	 INFO:	:Executing:$ GridSearchCV(cv=2,
+             estimator=<catboost.core.CatBoostClassifier object at 0x7f53a7726080>,
+             param_grid={'eval_metric': ['AUC'], 'learning_rate': [0.01, 0.1],
+                         'max_depth': [3, 5, 7, 9], 'n_estimators': [500, 700],
+                         'random_state': [1965]},
+             verbose=3).n_jobs=-1
+2022-08-09 18:43:15,010:	 INFO:	:Executing:$ GridSearchCV(cv=2,
+             estimator=<catboost.core.CatBoostClassifier object at 0x7f53a7726080>,
+             n_jobs=-1,
+             param_grid={'eval_metric': ['AUC'], 'learning_rate': [0.01, 0.1],
+                         'max_depth': [3, 5, 7, 9], 'n_estimators': [500, 700],
+                         'random_state': [1965]},
+             verbose=3).scoring=roc_auc
+2022-08-09 18:43:15,010:	 INFO:	:>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> f"Training CatBoostClassifier Started." <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+2022-08-09 18:43:46,026:	 INFO:	:>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> f"Training CatBoostClassifier Finished" <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+2022-08-09 18:43:46,026:	 INFO:	:>>>>>>>>>>>>>>>>>>>> Best model: >>>>>>>>>>>>>>>>>>>>
+2022-08-09 18:43:46,026:	 INFO:	:<catboost.core.CatBoostClassifier object at 0x7f53a5675ba8>
+2022-08-09 18:43:46,026:	 INFO:	:>>>>>>>>>>>>>>>>>>>> Best Score: >>>>>>>>>>>>>>>>>>>>
+2022-08-09 18:43:46,026:	 INFO:	:0.8101771688038402
+2022-08-09 18:43:46,026:	 INFO:	:>>>>>>>>>>>>>>>>>>>> Best Params: >>>>>>>>>>>>>>>>>>>>
+2022-08-09 18:43:46,026:	 INFO:	:{'eval_metric': 'AUC', 'learning_rate': 0.01, 'max_depth': 5, 'n_estimators': 500, 'random_state': 1965}
+2022-08-09 18:43:46,027:	 INFO:	:Executing command: from <module 'sklearn.model_selection' from '/home/pk/Desktop/MachineLearning/project/Credit_card_default/venv/lib/python3.7/site-packages/sklearn/model_selection/__init__.py'> import GridSearchCV
+2022-08-09 18:43:46,027:	 INFO:	:Executing:$ GridSearchCV(estimator=SVC(),
+             param_grid={'C': [0.4, 0.1], 'coef0': [0.0, 0.001], 'gamma': [1.0],
+                         'kernel': ['rbf', 'sigmoid'], 'probability': [True],
+                         'random_state': [1965]}).cv=2
+2022-08-09 18:43:46,028:	 INFO:	:Executing:$ GridSearchCV(cv=2, estimator=SVC(),
+             param_grid={'C': [0.4, 0.1], 'coef0': [0.0, 0.001], 'gamma': [1.0],
+                         'kernel': ['rbf', 'sigmoid'], 'probability': [True],
+                         'random_state': [1965]}).verbose=3
+2022-08-09 18:43:46,028:	 INFO:	:Executing:$ GridSearchCV(cv=2, estimator=SVC(),
+             param_grid={'C': [0.4, 0.1], 'coef0': [0.0, 0.001], 'gamma': [1.0],
+                         'kernel': ['rbf', 'sigmoid'], 'probability': [True],
+                         'random_state': [1965]},
+             verbose=3).n_jobs=-1
+2022-08-09 18:43:46,029:	 INFO:	:Executing:$ GridSearchCV(cv=2, estimator=SVC(), n_jobs=-1,
+             param_grid={'C': [0.4, 0.1], 'coef0': [0.0, 0.001], 'gamma': [1.0],
+                         'kernel': ['rbf', 'sigmoid'], 'probability': [True],
+                         'random_state': [1965]},
+             verbose=3).scoring=roc_auc
+2022-08-09 18:43:46,029:	 INFO:	:>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> f"Training SVC Started." <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+2022-08-09 18:43:54,372:	 INFO:	:>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> f"Training SVC Finished" <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+2022-08-09 18:43:54,372:	 INFO:	:>>>>>>>>>>>>>>>>>>>> Best model: >>>>>>>>>>>>>>>>>>>>
+2022-08-09 18:43:54,372:	 INFO:	:SVC(C=0.1, gamma=1.0, probability=True, random_state=1965)
+2022-08-09 18:43:54,372:	 INFO:	:>>>>>>>>>>>>>>>>>>>> Best Score: >>>>>>>>>>>>>>>>>>>>
+2022-08-09 18:43:54,372:	 INFO:	:0.7279118450585885
+2022-08-09 18:43:54,372:	 INFO:	:>>>>>>>>>>>>>>>>>>>> Best Params: >>>>>>>>>>>>>>>>>>>>
+2022-08-09 18:43:54,372:	 INFO:	:{'C': 0.1, 'coef0': 0.0, 'gamma': 1.0, 'kernel': 'rbf', 'probability': True, 'random_state': 1965}
+2022-08-09 18:43:54,372:	 INFO:	:Executing command: from <module 'sklearn.model_selection' from '/home/pk/Desktop/MachineLearning/project/Credit_card_default/venv/lib/python3.7/site-packages/sklearn/model_selection/__init__.py'> import GridSearchCV
+2022-08-09 18:43:54,373:	 INFO:	:Executing:$ GridSearchCV(estimator=GaussianNB(),
+             param_grid={'var_smoothing': ['1e-09', '1e-08', '1e-07', '1e-06',
+                                           '1e-05', '1e-04', '1e-03', '1e-02',
+                                           '1e-01', 1.0]}).cv=2
+2022-08-09 18:43:54,373:	 INFO:	:Executing:$ GridSearchCV(cv=2, estimator=GaussianNB(),
+             param_grid={'var_smoothing': ['1e-09', '1e-08', '1e-07', '1e-06',
+                                           '1e-05', '1e-04', '1e-03', '1e-02',
+                                           '1e-01', 1.0]}).verbose=3
+2022-08-09 18:43:54,373:	 INFO:	:Executing:$ GridSearchCV(cv=2, estimator=GaussianNB(),
+             param_grid={'var_smoothing': ['1e-09', '1e-08', '1e-07', '1e-06',
+                                           '1e-05', '1e-04', '1e-03', '1e-02',
+                                           '1e-01', 1.0]},
+             verbose=3).n_jobs=-1
+2022-08-09 18:43:54,374:	 INFO:	:Executing:$ GridSearchCV(cv=2, estimator=GaussianNB(), n_jobs=-1,
+             param_grid={'var_smoothing': ['1e-09', '1e-08', '1e-07', '1e-06',
+                                           '1e-05', '1e-04', '1e-03', '1e-02',
+                                           '1e-01', 1.0]},
+             verbose=3).scoring=roc_auc
+2022-08-09 18:43:54,374:	 INFO:	:>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> f"Training GaussianNB Started." <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+2022-08-09 18:43:54,527:	 INFO:	:>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> f"Training GaussianNB Finished" <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+2022-08-09 18:43:54,527:	 INFO:	:>>>>>>>>>>>>>>>>>>>> Best model: >>>>>>>>>>>>>>>>>>>>
+2022-08-09 18:43:54,528:	 INFO:	:GaussianNB(var_smoothing=1.0)
+2022-08-09 18:43:54,529:	 INFO:	:>>>>>>>>>>>>>>>>>>>> Best Score: >>>>>>>>>>>>>>>>>>>>
+2022-08-09 18:43:54,529:	 INFO:	:0.7766104616837681
+2022-08-09 18:43:54,529:	 INFO:	:>>>>>>>>>>>>>>>>>>>> Best Params: >>>>>>>>>>>>>>>>>>>>
+2022-08-09 18:43:54,530:	 INFO:	:{'var_smoothing': 1.0}
+2022-08-09 18:43:54,533:	 INFO:	:Acceptable model found:GridSearchedBestModel(model_serial_number='model_1', model=RandomForestClassifier(), best_model=RandomForestClassifier(criterion='entropy', max_depth=7, n_estimators=500,
+                       random_state=1965), best_parameters={'criterion': 'entropy', 'max_depth': 7, 'max_features': 'auto', 'n_estimators': 500, 'random_state': 1965}, best_score=0.8101756543323821)
+2022-08-09 18:43:54,533:	 INFO:	:Acceptable model found:GridSearchedBestModel(model_serial_number='model_4', model=<catboost.core.CatBoostClassifier object at 0x7f53a7726080>, best_model=<catboost.core.CatBoostClassifier object at 0x7f53a5675ba8>, best_parameters={'eval_metric': 'AUC', 'learning_rate': 0.01, 'max_depth': 5, 'n_estimators': 500, 'random_state': 1965}, best_score=0.8101771688038402)
+2022-08-09 18:43:54,533:	 INFO:	:Best model: GridSearchedBestModel(model_serial_number='model_4', model=<catboost.core.CatBoostClassifier object at 0x7f53a7726080>, best_model=<catboost.core.CatBoostClassifier object at 0x7f53a5675ba8>, best_parameters={'eval_metric': 'AUC', 'learning_rate': 0.01, 'max_depth': 5, 'n_estimators': 500, 'random_state': 1965}, best_score=0.8101771688038402)
+2022-08-09 18:43:54,549:	 INFO:	:evaluating RandomForestClassifier model
+2022-08-09 18:43:54,549:	 INFO:	:predicting RandomForestClassifier model
+2022-08-09 18:43:54,878:	 INFO:	:RandomForestClassifier model report
+2022-08-09 18:43:54,884:	 INFO:	:Plotting RandomForestClassifier model report
+2022-08-09 18:43:54,885:	 INFO:	:{'experiment_id': None, 'model_name': 'RandomForestClassifier', 'model_object': RandomForestClassifier(criterion='entropy', max_depth=7, n_estimators=500,
+                       random_state=1965), 'train_precision': 0.7558139534883721, 'test_precision': 0.685, 'train_recall': 0.5154185022026432, 'test_recall': 0.4691780821917808, 'train_f1': 0.6128863279203771, 'test_f1': 0.556910569105691, 'train_accuracy': 0.8485655737704918, 'test_accuracy': 0.8213114754098361, 'accuracy_diff': 0.027254098360655732, 'model_accuracy': 0.8349385245901639, 'model_index': 0}
+2022-08-09 18:43:54,885:	 INFO:	:Plotting the model report
+2022-08-09 18:43:55,304:	 INFO:	:ROC AUC Score for RandomForestClassifier is 0.8146625531412376
+2022-08-09 18:43:56,357:	 INFO:	:Model report saved at /home/pk/Desktop/MachineLearning/project/Credit_card_default/CCdefault/app_artifact/stage03_model_training/model_report/20220809182513/cluster_3.0/model_report/2022-08-09-18-43-54/RandomForestClassifier
+2022-08-09 18:43:56,357:	 INFO:	:********** Best model RandomForestClassifier **********
+2022-08-09 18:43:56,357:	 INFO:	:Acceptable model score 0.8349385245901639. 
+2022-08-09 18:43:56,357:	 INFO:	:evaluating XGBClassifier model
+2022-08-09 18:43:56,357:	 INFO:	:predicting XGBClassifier model
+2022-08-09 18:43:56,500:	 INFO:	:XGBClassifier model report
+2022-08-09 18:43:56,508:	 INFO:	:Plotting XGBClassifier model report
+2022-08-09 18:43:56,510:	 INFO:	:{'experiment_id': None, 'model_name': 'XGBClassifier', 'model_object': XGBClassifier(base_score=0.5, booster='gbtree', callbacks=None,
+              colsample_bylevel=1, colsample_bynode=1, colsample_bytree=1,
+              early_stopping_rounds=None, enable_categorical=False,
+              eval_metric='auc', gamma=0.0, gpu_id=-1, grow_policy='depthwise',
+              importance_type=None, interaction_constraints='',
+              learning_rate=0.01, max_bin=256, max_cat_to_onehot=4,
+              max_delta_step=0, max_depth=3, max_leaves=0, min_child_weight=1,
+              missing=nan, monotone_constraints='()', n_estimators=500,
+              n_jobs=0, num_parallel_tree=1, predictor='auto',
+              random_state=1965, reg_alpha=0, reg_lambda=1, ...), 'train_precision': 0.7103960396039604, 'test_precision': 0.6699507389162561, 'train_recall': 0.505726872246696, 'test_recall': 0.4657534246575342, 'train_f1': 0.590838908903757, 'test_f1': 0.5494949494949495, 'train_accuracy': 0.8370901639344263, 'test_accuracy': 0.8172131147540984, 'accuracy_diff': 0.019877049180327844, 'model_accuracy': 0.8271516393442624, 'model_index': 1}
+2022-08-09 18:43:56,510:	 INFO:	:Plotting the model report
+2022-08-09 18:43:56,590:	 INFO:	:ROC AUC Score for XGBClassifier is 0.818157327586207
+2022-08-09 18:43:57,396:	 INFO:	:Model report saved at /home/pk/Desktop/MachineLearning/project/Credit_card_default/CCdefault/app_artifact/stage03_model_training/model_report/20220809182513/cluster_3.0/model_report/2022-08-09-18-43-54/XGBClassifier
+2022-08-09 18:43:57,397:	 INFO:	:evaluating LogisticRegression model
+2022-08-09 18:43:57,397:	 INFO:	:predicting LogisticRegression model
+2022-08-09 18:43:57,399:	 INFO:	:LogisticRegression model report
+2022-08-09 18:43:57,411:	 INFO:	:Plotting LogisticRegression model report
+2022-08-09 18:43:57,411:	 INFO:	:{'experiment_id': None, 'model_name': 'LogisticRegression', 'model_object': LogisticRegression(random_state=1965), 'train_precision': 0.7118012422360248, 'test_precision': 0.6534653465346535, 'train_recall': 0.5048458149779735, 'test_recall': 0.4520547945205479, 'train_f1': 0.590721649484536, 'test_f1': 0.5344129554655871, 'train_accuracy': 0.8372950819672131, 'test_accuracy': 0.8114754098360656, 'accuracy_diff': 0.025819672131147553, 'model_accuracy': 0.8243852459016394, 'model_index': 2}
+2022-08-09 18:43:57,411:	 INFO:	:Plotting the model report
+2022-08-09 18:43:57,540:	 INFO:	:ROC AUC Score for LogisticRegression is 0.8076951464336326
+2022-08-09 18:43:58,495:	 INFO:	:Model report saved at /home/pk/Desktop/MachineLearning/project/Credit_card_default/CCdefault/app_artifact/stage03_model_training/model_report/20220809182513/cluster_3.0/model_report/2022-08-09-18-43-54/LogisticRegression
+2022-08-09 18:43:58,495:	 INFO:	:evaluating CatBoostClassifier model
+2022-08-09 18:43:58,495:	 INFO:	:predicting CatBoostClassifier model
+2022-08-09 18:43:58,593:	 INFO:	:CatBoostClassifier model report
+2022-08-09 18:43:58,601:	 INFO:	:Plotting CatBoostClassifier model report
+2022-08-09 18:43:58,601:	 INFO:	:{'experiment_id': None, 'model_name': 'CatBoostClassifier', 'model_object': <catboost.core.CatBoostClassifier object at 0x7f53a5675ba8>, 'train_precision': 0.7169344870210136, 'test_precision': 0.6699507389162561, 'train_recall': 0.5110132158590308, 'test_recall': 0.4657534246575342, 'train_f1': 0.5967078189300412, 'test_f1': 0.5494949494949495, 'train_accuracy': 0.839344262295082, 'test_accuracy': 0.8172131147540984, 'accuracy_diff': 0.022131147540983553, 'model_accuracy': 0.8282786885245902, 'model_index': 3}
+2022-08-09 18:43:58,601:	 INFO:	:Plotting the model report
+2022-08-09 18:43:58,964:	 INFO:	:ROC AUC Score for CatBoostClassifier is 0.8216668634860651
+2022-08-09 18:43:59,881:	 INFO:	:Model report saved at /home/pk/Desktop/MachineLearning/project/Credit_card_default/CCdefault/app_artifact/stage03_model_training/model_report/20220809182513/cluster_3.0/model_report/2022-08-09-18-43-54/CatBoostClassifier
+2022-08-09 18:43:59,882:	 INFO:	:evaluating SVC model
+2022-08-09 18:43:59,882:	 INFO:	:predicting SVC model
+2022-08-09 18:44:01,130:	 INFO:	:SVC model report
+2022-08-09 18:44:01,137:	 INFO:	:Plotting SVC model report
+2022-08-09 18:44:01,137:	 INFO:	:{'experiment_id': None, 'model_name': 'SVC', 'model_object': SVC(C=0.1, gamma=1.0, probability=True, random_state=1965), 'train_precision': 0.0, 'test_precision': 0.0, 'train_recall': 0.0, 'test_recall': 0.0, 'train_f1': 0.0, 'test_f1': 0.0, 'train_accuracy': 0.7674180327868853, 'test_accuracy': 0.760655737704918, 'accuracy_diff': 0.00676229508196724, 'model_accuracy': 0.7640368852459016, 'model_index': 4}
+2022-08-09 18:44:01,137:	 INFO:	:Plotting the model report
+2022-08-09 18:44:01,453:	 INFO:	:ROC AUC Score for SVC is 0.7273153341993387
+2022-08-09 18:44:02,494:	 INFO:	:Model report saved at /home/pk/Desktop/MachineLearning/project/Credit_card_default/CCdefault/app_artifact/stage03_model_training/model_report/20220809182513/cluster_3.0/model_report/2022-08-09-18-43-54/SVC
+2022-08-09 18:44:02,494:	 INFO:	:evaluating GaussianNB model
+2022-08-09 18:44:02,494:	 INFO:	:predicting GaussianNB model
+2022-08-09 18:44:02,502:	 INFO:	:GaussianNB model report
+2022-08-09 18:44:02,508:	 INFO:	:Plotting GaussianNB model report
+2022-08-09 18:44:02,508:	 INFO:	:{'experiment_id': None, 'model_name': 'GaussianNB', 'model_object': GaussianNB(var_smoothing=1.0), 'train_precision': 0.5975336322869955, 'test_precision': 0.6017316017316018, 'train_recall': 0.46960352422907486, 'test_recall': 0.476027397260274, 'train_f1': 0.5259003453379378, 'test_f1': 0.5315487571701722, 'train_accuracy': 0.8030737704918033, 'test_accuracy': 0.7991803278688525, 'accuracy_diff': 0.0038934426229507713, 'model_accuracy': 0.801127049180328, 'model_index': 5}
+2022-08-09 18:44:02,508:	 INFO:	:Plotting the model report
+2022-08-09 18:44:02,823:	 INFO:	:ROC AUC Score for GaussianNB is 0.7749025743977326
+2022-08-09 18:44:03,916:	 INFO:	:Model report saved at /home/pk/Desktop/MachineLearning/project/Credit_card_default/CCdefault/app_artifact/stage03_model_training/model_report/20220809182513/cluster_3.0/model_report/2022-08-09-18-43-54/GaussianNB
+2022-08-09 18:44:03,917:	 INFO:	:Acceptable model  name RandomForestClassifier. 
+2022-08-09 18:44:03,917:	 INFO:	:Acceptable model score 0.801127049180328. 
+2022-08-09 18:44:03,917:	 INFO:	:best model artifact MetricInfoArtifact()
+2022-08-09 18:44:04,043:	 INFO:	:evaluating EstimatorModel model
+2022-08-09 18:44:04,043:	 INFO:	:predicting EstimatorModel model
+2022-08-09 18:46:17,147:	 INFO:	:AttributeError
+2022-08-09 18:46:17,148:	 INFO:	:EstimatorModel model report
+2022-08-09 18:46:17,169:	 INFO:	:Plotting EstimatorModel model report
+2022-08-09 18:46:17,169:	 INFO:	:{'experiment_id': None, 'model_name': 'EstimatorModel', 'model_object': dict(), 'train_precision': 0.7302873986735445, 'test_precision': 0.6613832853025937, 'train_recall': 0.37332831041627423, 'test_recall': 0.3458929917106255, 'train_f1': 0.49407952137604383, 'test_f1': 0.4542305789213262, 'train_accuracy': 0.830875, 'test_accuracy': 0.8161666666666667, 'accuracy_diff': 0.014708333333333323, 'model_accuracy': 0.8235208333333334, 'model_index': 0}
+2022-08-09 18:46:17,169:	 INFO:	:Plotting the model report
+2022-08-09 18:46:17,171:	 ERROR:	:Expected sequence or array-like, got <class 'int'>
+2022-08-09 18:46:17,538:	 ERROR:	:local variable 'roc_auc' referenced before assignment
+2022-08-09 18:46:17,747:	 INFO:	:Model report saved at /home/pk/Desktop/MachineLearning/project/Credit_card_default/CCdefault/app_artifact/stage03_model_training/model_report/20220809182513/cluster_custom_model/model_report/2022-08-09-18-44-04/EstimatorModel
+2022-08-09 18:46:17,747:	 INFO:	:********** Best model EstimatorModel **********
+2022-08-09 18:46:17,747:	 INFO:	:Acceptable model score 0.8235208333333334. 
+2022-08-09 18:46:17,747:	 INFO:	:evaluating BaseModel model
+2022-08-09 18:46:17,747:	 INFO:	:predicting BaseModel model
+2022-08-09 18:46:19,060:	 INFO:	:AttributeError
+2022-08-09 18:46:19,060:	 INFO:	:BaseModel model report
+2022-08-09 18:46:19,085:	 INFO:	:Plotting BaseModel model report
+2022-08-09 18:46:19,085:	 INFO:	:{'experiment_id': None, 'model_name': 'BaseModel', 'model_object': CatBoostClassifier(), 'train_precision': 0.7406616862326574, 'test_precision': 0.6652421652421653, 'train_recall': 0.392164249387832, 'test_recall': 0.3519216277317257, 'train_f1': 0.512807881773399, 'test_f1': 0.4603252833908329, 'train_accuracy': 0.8351666666666666, 'test_accuracy': 0.8175, 'accuracy_diff': 0.01766666666666661, 'model_accuracy': 0.8263333333333334, 'model_index': 1}
+2022-08-09 18:46:19,085:	 INFO:	:Plotting the model report
+2022-08-09 18:46:19,087:	 ERROR:	:Expected sequence or array-like, got <class 'int'>
+2022-08-09 18:46:19,181:	 ERROR:	:local variable 'roc_auc' referenced before assignment
+2022-08-09 18:46:19,397:	 INFO:	:Model report saved at /home/pk/Desktop/MachineLearning/project/Credit_card_default/CCdefault/app_artifact/stage03_model_training/model_report/20220809182513/cluster_custom_model/model_report/2022-08-09-18-44-04/BaseModel
+2022-08-09 18:46:19,397:	 INFO:	:********** Best model BaseModel **********
+2022-08-09 18:46:19,397:	 INFO:	:Acceptable model score 0.8263333333333334. 
+2022-08-09 18:46:19,397:	 INFO:	:Acceptable model  name BaseModel. 
+2022-08-09 18:46:19,397:	 INFO:	:Acceptable model score 0.8263333333333334. 
+2022-08-09 18:46:19,397:	 INFO:	:best model artifact MetricInfoArtifact()
+2022-08-09 18:46:19,593:	 INFO:	:evaluating EstimatorModel model
+2022-08-09 18:46:19,593:	 INFO:	:predicting EstimatorModel model

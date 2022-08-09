@@ -126,3 +126,41 @@
 2022-08-09 14:24:18,375:	 INFO:	:Memory usage of dataframe is 1.10 MB
 2022-08-09 14:24:18,381:	 INFO:	:Memory usage after optimization is: 0.36 MB
 2022-08-09 14:24:18,381:	 INFO:	:Decreased by 67.2%
+2022-08-09 18:22:47,142:	 INFO:	:get_the_last_experiment_file_name: /home/pk/Desktop/MachineLearning/project/Credit_card_default/CCdefault/app_artifact/stage00_data_ingestion/ingested_data/20220809182243/Train.csv
+2022-08-09 18:22:47,142:	 INFO:	:dir_name: /home/pk/Desktop/MachineLearning/project/Credit_card_default/CCdefault/app_artifact/stage00_data_ingestion/ingested_data/
+2022-08-09 18:22:47,142:	 INFO:	:get_the_last_experiment_file_name: /home/pk/Desktop/MachineLearning/project/Credit_card_default/CCdefault/app_artifact/stage00_data_ingestion/ingested_data/20220809182243/Test.csv
+2022-08-09 18:22:47,142:	 INFO:	:dir_name: /home/pk/Desktop/MachineLearning/project/Credit_card_default/CCdefault/app_artifact/stage00_data_ingestion/ingested_data/
+2022-08-09 18:22:47,142:	 INFO:	:get_the_last_experiment_file_name: /home/pk/Desktop/MachineLearning/project/Credit_card_default/CCdefault/app_artifact/stage00_data_ingestion/raw_data/20220809182243/UCI_Credit_Card.csv
+2022-08-09 18:22:47,142:	 INFO:	:dir_name: /home/pk/Desktop/MachineLearning/project/Credit_card_default/CCdefault/app_artifact/stage00_data_ingestion/raw_data/
+2022-08-09 18:22:47,357:	 INFO:	:get_the_last_experiment_file_name: /home/pk/Desktop/MachineLearning/project/Credit_card_default/CCdefault/app_artifact/stage01_data_validation/20220809182243/data_validated/Test.csv
+2022-08-09 18:22:47,357:	 INFO:	:dir_name: /home/pk/Desktop/MachineLearning/project/Credit_card_default/CCdefault/app_artifact/stage01_data_validation/
+2022-08-09 18:22:47,357:	 INFO:	:get_the_last_experiment_file_name: /home/pk/Desktop/MachineLearning/project/Credit_card_default/CCdefault/app_artifact/stage01_data_validation/20220809182243/data_validated/Train.csv
+2022-08-09 18:22:47,357:	 INFO:	:dir_name: /home/pk/Desktop/MachineLearning/project/Credit_card_default/CCdefault/app_artifact/stage01_data_validation/
+2022-08-09 18:25:17,535:	 INFO:	:get_the_last_experiment_file_name: /home/pk/Desktop/MachineLearning/project/Credit_card_default/CCdefault/app_artifact/stage00_data_ingestion/ingested_data/20220809182513/Train.csv
+2022-08-09 18:25:17,536:	 INFO:	:dir_name: /home/pk/Desktop/MachineLearning/project/Credit_card_default/CCdefault/app_artifact/stage00_data_ingestion/ingested_data/
+2022-08-09 18:25:17,536:	 INFO:	:get_the_last_experiment_file_name: /home/pk/Desktop/MachineLearning/project/Credit_card_default/CCdefault/app_artifact/stage00_data_ingestion/ingested_data/20220809182513/Test.csv
+2022-08-09 18:25:17,537:	 INFO:	:dir_name: /home/pk/Desktop/MachineLearning/project/Credit_card_default/CCdefault/app_artifact/stage00_data_ingestion/ingested_data/
+2022-08-09 18:25:17,537:	 INFO:	:get_the_last_experiment_file_name: /home/pk/Desktop/MachineLearning/project/Credit_card_default/CCdefault/app_artifact/stage00_data_ingestion/raw_data/20220809182513/UCI_Credit_Card.csv
+2022-08-09 18:25:17,537:	 INFO:	:dir_name: /home/pk/Desktop/MachineLearning/project/Credit_card_default/CCdefault/app_artifact/stage00_data_ingestion/raw_data/
+2022-08-09 18:25:17,847:	 INFO:	:get_the_last_experiment_file_name: /home/pk/Desktop/MachineLearning/project/Credit_card_default/CCdefault/app_artifact/stage01_data_validation/20220809182513/data_validated/Test.csv
+2022-08-09 18:25:17,847:	 INFO:	:dir_name: /home/pk/Desktop/MachineLearning/project/Credit_card_default/CCdefault/app_artifact/stage01_data_validation/
+2022-08-09 18:25:17,847:	 INFO:	:get_the_last_experiment_file_name: /home/pk/Desktop/MachineLearning/project/Credit_card_default/CCdefault/app_artifact/stage01_data_validation/20220809182513/data_validated/Train.csv
+2022-08-09 18:25:17,847:	 INFO:	:dir_name: /home/pk/Desktop/MachineLearning/project/Credit_card_default/CCdefault/app_artifact/stage01_data_validation/
+2022-08-09 18:25:18,234:	 INFO:	:Memory usage of dataframe is 4.39 MB
+2022-08-09 18:25:18,243:	 INFO:	:Memory usage after optimization is: 1.44 MB
+2022-08-09 18:25:18,244:	 INFO:	:Decreased by 67.2%
+2022-08-09 18:25:18,250:	 INFO:	:Memory usage of dataframe is 1.10 MB
+2022-08-09 18:25:18,257:	 INFO:	:Memory usage after optimization is: 0.36 MB
+2022-08-09 18:25:18,257:	 INFO:	:Decreased by 67.2%
+2022-08-09 18:44:04,027:	 INFO:	:Memory usage of dataframe is 4.58 MB
+2022-08-09 18:44:04,035:	 INFO:	:Memory usage after optimization is: 1.49 MB
+2022-08-09 18:44:04,035:	 INFO:	:Decreased by 67.5%
+2022-08-09 18:44:04,036:	 INFO:	:Memory usage of dataframe is 1.14 MB
+2022-08-09 18:44:04,041:	 INFO:	:Memory usage after optimization is: 0.37 MB
+2022-08-09 18:44:04,041:	 INFO:	:Decreased by 67.5%
+2022-08-09 18:46:19,542:	 INFO:	:Memory usage of dataframe is 4.39 MB
+2022-08-09 18:46:19,552:	 INFO:	:Memory usage after optimization is: 1.44 MB
+2022-08-09 18:46:19,552:	 INFO:	:Decreased by 67.2%
+2022-08-09 18:46:19,553:	 INFO:	:Memory usage of dataframe is 1.10 MB
+2022-08-09 18:46:19,559:	 INFO:	:Memory usage after optimization is: 0.36 MB
+2022-08-09 18:46:19,559:	 INFO:	:Decreased by 67.2%

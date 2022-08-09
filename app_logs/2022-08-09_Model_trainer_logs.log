@@ -288,3 +288,94 @@
 2022-08-09 14:24:18,107:	 INFO:	:Saving model at path: /home/pk/Desktop/MachineLearning/project/Credit_card_default/CCdefault/app_artifact/stage03_model_training/trained_model/20220809140111/model.pkl
 2022-08-09 14:24:18,304:	 INFO:	:Model Trainer Artifact: ModelTrainerArtifact(is_trained=True, message='Model Trained successfully', trained_model_file_path='/home/pk/Desktop/MachineLearning/project/Credit_card_default/CCdefault/app_artifact/stage03_model_training/trained_model/20220809140111/model.pkl', train_f1=0.449975111996018, test_f1=0.449975111996018, train_precision=0.7672910662824207, test_precision=0.6627565982404692, model_accuracy=0.8282291666666666)
 2022-08-09 14:24:18,307:	 INFO:	:>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>Model trainer log completed.<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< 
+2022-08-09 18:25:40,563:	 INFO:	:>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>Model trainer log started.<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< 
+2022-08-09 18:25:40,563:	 INFO:	:Loading transformed training dataset
+2022-08-09 18:25:40,571:	 INFO:	:>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>Base Model.<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< 
+2022-08-09 18:25:40,571:	 INFO:	:Expected accuracy: 0.3
+2022-08-09 18:25:40,571:	 INFO:	:Extracting model config file path
+2022-08-09 18:36:50,675:	 INFO:	:{'experiment_id': None, 'model_name': 'CatBoostClassifier', 'model_object': <catboost.core.CatBoostClassifier object at 0x7f53a81559e8>, 'train_precision': 0.7607334525939177, 'test_precision': 0.662608695652174, 'train_recall': 0.39957716701902746, 'test_recall': 0.36216730038022815, 'train_f1': 0.5239488680117048, 'test_f1': 0.46834665027658273, 'train_accuracy': 0.8390104166666666, 'test_accuracy': 0.8197916666666667, 'accuracy_diff': 0.01921874999999995, 'model_accuracy': 0.8294010416666666, 'model_index': 3}
+2022-08-09 18:36:50,683:	 INFO:	:>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>Base model done<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< 
+2022-08-09 18:36:50,683:	 INFO:	:>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>Training model for cluster 0.0>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+2022-08-09 18:36:50,685:	 INFO:	:Extracting model config file path
+2022-08-09 18:36:50,685:	 INFO:	:Initializing model factory class using above model config file: config/model.yaml
+2022-08-09 18:36:50,689:	 INFO:	:Expected accuracy: 0.3
+2022-08-09 18:36:50,689:	 INFO:	:Initiating operation model selection
+2022-08-09 18:38:07,221:	 INFO:	:Best model found on training dataset: GridSearchedBestModel(model_serial_number='model_4', model=<catboost.core.CatBoostClassifier object at 0x7f53a89d72b0>, best_model=<catboost.core.CatBoostClassifier object at 0x7f53a86ff8d0>, best_parameters={'eval_metric': 'AUC', 'learning_rate': 0.01, 'max_depth': 5, 'n_estimators': 700, 'random_state': 1965}, best_score=0.7941905507142129)
+2022-08-09 18:38:07,221:	 INFO:	:Extracting trained model list.
+2022-08-09 18:38:07,233:	 INFO:	:Model list: [RandomForestClassifier(criterion='entropy', max_depth=8, max_features='log2',
+                       n_estimators=500, random_state=1965), XGBClassifier(base_score=0.5, booster='gbtree', callbacks=None,
+              colsample_bylevel=1, colsample_bynode=1, colsample_bytree=1,
+              early_stopping_rounds=None, enable_categorical=False,
+              eval_metric='auc', gamma=0.1, gpu_id=-1, grow_policy='depthwise',
+              importance_type=None, interaction_constraints='',
+              learning_rate=0.01, max_bin=256, max_cat_to_onehot=4,
+              max_delta_step=0, max_depth=3, max_leaves=0, min_child_weight=1,
+              missing=nan, monotone_constraints='()', n_estimators=700,
+              n_jobs=0, num_parallel_tree=1, predictor='auto',
+              random_state=1965, reg_alpha=0, reg_lambda=1, ...), LogisticRegression(C=0.9, random_state=1965, solver='liblinear'), <catboost.core.CatBoostClassifier object at 0x7f53a86ff8d0>, SVC(C=0.1, gamma=1.0, probability=True, random_state=1965), GaussianNB(var_smoothing=1.0)] , 6
+2022-08-09 18:38:07,233:	 INFO:	:Evaluation all trained model on training and testing dataset both
+2022-08-09 18:38:13,739:	 INFO:	:Metric info: MetricInfoArtifact()
+2022-08-09 18:38:13,741:	 INFO:	:>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>Training model for cluster 1.0>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+2022-08-09 18:38:13,745:	 INFO:	:Extracting model config file path
+2022-08-09 18:38:13,745:	 INFO:	:Initializing model factory class using above model config file: config/model.yaml
+2022-08-09 18:38:13,750:	 INFO:	:Expected accuracy: 0.3
+2022-08-09 18:38:13,750:	 INFO:	:Initiating operation model selection
+2022-08-09 18:40:54,856:	 INFO:	:Best model found on training dataset: GridSearchedBestModel(model_serial_number='model_4', model=<catboost.core.CatBoostClassifier object at 0x7f53a876e320>, best_model=<catboost.core.CatBoostClassifier object at 0x7f53a7f39e80>, best_parameters={'eval_metric': 'AUC', 'learning_rate': 0.01, 'max_depth': 5, 'n_estimators': 500, 'random_state': 1965}, best_score=0.7507844189139388)
+2022-08-09 18:40:54,856:	 INFO:	:Extracting trained model list.
+2022-08-09 18:40:54,879:	 INFO:	:Model list: [RandomForestClassifier(criterion='entropy', max_depth=7, n_estimators=600,
+                       random_state=1965), XGBClassifier(base_score=0.5, booster='gbtree', callbacks=None,
+              colsample_bylevel=1, colsample_bynode=1, colsample_bytree=1,
+              early_stopping_rounds=None, enable_categorical=False,
+              eval_metric='auc', gamma=0.0, gpu_id=-1, grow_policy='depthwise',
+              importance_type=None, interaction_constraints='',
+              learning_rate=0.01, max_bin=256, max_cat_to_onehot=4,
+              max_delta_step=0, max_depth=3, max_leaves=0, min_child_weight=1,
+              missing=nan, monotone_constraints='()', n_estimators=500,
+              n_jobs=0, num_parallel_tree=1, predictor='auto',
+              random_state=1965, reg_alpha=0, reg_lambda=1, ...), LogisticRegression(C=0.9, random_state=1965, solver='newton-cg'), <catboost.core.CatBoostClassifier object at 0x7f53a7f39e80>, SVC(C=0.1, gamma=1.0, probability=True, random_state=1965), GaussianNB(var_smoothing=1.0)] , 6
+2022-08-09 18:40:54,880:	 INFO:	:Evaluation all trained model on training and testing dataset both
+2022-08-09 18:41:11,132:	 INFO:	:Metric info: MetricInfoArtifact()
+2022-08-09 18:41:11,134:	 INFO:	:>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>Training model for cluster 2.0>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+2022-08-09 18:41:11,135:	 INFO:	:Extracting model config file path
+2022-08-09 18:41:11,135:	 INFO:	:Initializing model factory class using above model config file: config/model.yaml
+2022-08-09 18:41:11,140:	 INFO:	:Expected accuracy: 0.3
+2022-08-09 18:41:11,140:	 INFO:	:Initiating operation model selection
+2022-08-09 18:42:08,249:	 INFO:	:Best model found on training dataset: GridSearchedBestModel(model_serial_number='model_4', model=<catboost.core.CatBoostClassifier object at 0x7f53a7f5c8d0>, best_model=<catboost.core.CatBoostClassifier object at 0x7f53a75dc860>, best_parameters={'eval_metric': 'AUC', 'learning_rate': 0.01, 'max_depth': 5, 'n_estimators': 500, 'random_state': 1965}, best_score=0.6915882097736556)
+2022-08-09 18:42:08,249:	 INFO:	:Extracting trained model list.
+2022-08-09 18:42:08,263:	 INFO:	:Model list: [RandomForestClassifier(criterion='entropy', max_depth=6, max_features='log2',
+                       n_estimators=600, random_state=1965), XGBClassifier(base_score=0.5, booster='gbtree', callbacks=None,
+              colsample_bylevel=1, colsample_bynode=1, colsample_bytree=1,
+              early_stopping_rounds=None, enable_categorical=False,
+              eval_metric='auc', gamma=0.0, gpu_id=-1, grow_policy='depthwise',
+              importance_type=None, interaction_constraints='',
+              learning_rate=0.01, max_bin=256, max_cat_to_onehot=4,
+              max_delta_step=0, max_depth=3, max_leaves=0, min_child_weight=1,
+              missing=nan, monotone_constraints='()', n_estimators=700,
+              n_jobs=0, num_parallel_tree=1, predictor='auto',
+              random_state=1965, reg_alpha=0, reg_lambda=1, ...), LogisticRegression(C=0.9, random_state=1965, solver='saga'), <catboost.core.CatBoostClassifier object at 0x7f53a75dc860>, SVC(C=0.4, gamma=1.0, probability=True, random_state=1965), GaussianNB(var_smoothing=1.0)] , 6
+2022-08-09 18:42:08,264:	 INFO:	:Evaluation all trained model on training and testing dataset both
+2022-08-09 18:42:15,037:	 INFO:	:Metric info: MetricInfoArtifact()
+2022-08-09 18:42:15,039:	 INFO:	:>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>Training model for cluster 3.0>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+2022-08-09 18:42:15,043:	 INFO:	:Extracting model config file path
+2022-08-09 18:42:15,043:	 INFO:	:Initializing model factory class using above model config file: config/model.yaml
+2022-08-09 18:42:15,048:	 INFO:	:Expected accuracy: 0.3
+2022-08-09 18:42:15,048:	 INFO:	:Initiating operation model selection
+2022-08-09 18:43:54,534:	 INFO:	:Best model found on training dataset: GridSearchedBestModel(model_serial_number='model_4', model=<catboost.core.CatBoostClassifier object at 0x7f53a7726080>, best_model=<catboost.core.CatBoostClassifier object at 0x7f53a5675ba8>, best_parameters={'eval_metric': 'AUC', 'learning_rate': 0.01, 'max_depth': 5, 'n_estimators': 500, 'random_state': 1965}, best_score=0.8101771688038402)
+2022-08-09 18:43:54,534:	 INFO:	:Extracting trained model list.
+2022-08-09 18:43:54,548:	 INFO:	:Model list: [RandomForestClassifier(criterion='entropy', max_depth=7, n_estimators=500,
+                       random_state=1965), XGBClassifier(base_score=0.5, booster='gbtree', callbacks=None,
+              colsample_bylevel=1, colsample_bynode=1, colsample_bytree=1,
+              early_stopping_rounds=None, enable_categorical=False,
+              eval_metric='auc', gamma=0.0, gpu_id=-1, grow_policy='depthwise',
+              importance_type=None, interaction_constraints='',
+              learning_rate=0.01, max_bin=256, max_cat_to_onehot=4,
+              max_delta_step=0, max_depth=3, max_leaves=0, min_child_weight=1,
+              missing=nan, monotone_constraints='()', n_estimators=500,
+              n_jobs=0, num_parallel_tree=1, predictor='auto',
+              random_state=1965, reg_alpha=0, reg_lambda=1, ...), LogisticRegression(random_state=1965), <catboost.core.CatBoostClassifier object at 0x7f53a5675ba8>, SVC(C=0.1, gamma=1.0, probability=True, random_state=1965), GaussianNB(var_smoothing=1.0)] , 6
+2022-08-09 18:43:54,549:	 INFO:	:Evaluation all trained model on training and testing dataset both
+2022-08-09 18:44:03,917:	 INFO:	:Metric info: MetricInfoArtifact()
+2022-08-09 18:44:03,984:	 INFO:	:Best found model on both training and testing dataset.
+2022-08-09 18:46:19,397:	 INFO:	:Saving model at path: /home/pk/Desktop/MachineLearning/project/Credit_card_default/CCdefault/app_artifact/stage03_model_training/trained_model/20220809182513/model.pkl
+2022-08-09 18:46:19,491:	 INFO:	:Model Trainer Artifact: ModelTrainerArtifact(is_trained=True, message='Model Trained successfully', trained_model_file_path='/home/pk/Desktop/MachineLearning/project/Credit_card_default/CCdefault/app_artifact/stage03_model_training/trained_model/20220809182513/model.pkl', train_f1=0.4603252833908329, test_f1=0.4603252833908329, train_precision=0.7406616862326574, test_precision=0.6652421652421653, model_accuracy=0.8263333333333334)
+2022-08-09 18:46:19,494:	 INFO:	:>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>Model trainer log completed.<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< 

@@ -47,3 +47,11 @@ Base best model
 clustered model
 
 <img src="CCdefault/app_artifact/stage03_model_training/model_report/20220809131614/cluster_custom_model/model_report/2022-08-09-13-33-13/EstimatorModel.png" alt="Alt text" title="Pca Best Model">
+
+
+**Catgeory model**
+
+Catboost 
+
+<img src="CCdefault/app_artifact/stage03_model_training/model_report/20220809182513/Base_model/model_report/2022-08-09-18-36-04/CatBoostClassifier.png" alt="Alt text" title="Pca Best Model">
+

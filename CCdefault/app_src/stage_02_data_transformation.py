@@ -24,37 +24,64 @@ class FeatureGenerator(BaseEstimator, TransformerMixin):
     """custom feature generator class to generate cluster class for the data
     scaler : StandardScaler clustering using kmeans++ and kneed"""
 
-    def __init__(self, scaler = StandardScaler()):
+    def __init__(self, pay_x_columns , Age_column ,bil_amt_columns , pay_amt_columns,limit_bin, encoder= OneHotEncoder(sparse=False)):
         try:
             self.cluster = None
-            self.scaler = scaler
             self.logger = App_Logger("Feature_generator")
+            self.pay_x = pay_x_columns
+            self.age = Age_column
+            self.bill_amt = bil_amt_columns
+            self.pay_amt_columns = pay_amt_columns
+            self.limit_bin = limit_bin
+            self.encoder = encoder
 
         except Exception as e:
             raise App_Exception(e, sys) from e
 
     def fit(self, X, y=None):
         data = X.copy()
+        data = pd.DataFrame()
+        pay_feature = lambda x: x if x < 4 else 4
+        for col in self.pay_x:
+            data[col] = X[col].apply(pay_feature)
+        data[self.age]= pd.cut(X[self.age],[20, 25, 30, 35, 40, 50, 60, 80])
+        for col in self.bill_amt:
+            data[col] = pd.cut(X[col],[-350000,-1,0,25000, 75000, 200000, 2000000])
+        for col in self.pay_amt_columns:
+            data[col] = pd.cut(X[col],[-1, 0, 25000, 50000, 100000, 2000000])
+        data[self.limit_bin] =pd.cut(X[self.limit_bin],[5000, 50000, 100000, 150000, 200000, 300000, 400000, 500000, 1100000])
+        [data[col].astype("category")for col in data.columns]
+        data_encoded = self.encoder.fit_transform(data)
         wcss=[]
         for i in range(1,11):
             kmeans=KMeans(n_clusters=i, init='k-means++',random_state=42)
-            kmeans.fit(data)
+            kmeans.fit(data_encoded)
             wcss.append(kmeans.inertia_) 
 
         kn = KneeLocator(range(1, 11), wcss, curve='convex', direction='decreasing')
         total_clusters=kn.knee
         self.logger.info(f"total cluster :{total_clusters}")
         self.cluster = KMeans(n_clusters=total_clusters, init='k-means++',random_state=42)
-        self.cluster.fit(data)
+        self.cluster.fit(data_encoded)
         return self
     
     def transform(self, X, y=None):
         try:
             self.logger.info("Transforming data")
-            data = X.copy()
-            cluster  = self.cluster.predict(data)
-            generated_feature = np.c_[
-                    X, cluster]
+            data = pd.DataFrame()
+            pay_feature = lambda x: x if x < 4 else 4
+            for col in self.pay_x:
+                data[col] = X[col].apply(pay_feature)
+            data[self.age]= pd.cut(X[self.age],[20, 25, 30, 35, 40, 50, 60, 80])
+            for col in self.bill_amt:
+                data[col] = pd.cut(X[col],[-350000,-1,0,25000, 75000, 200000, 2000000])
+            for col in self.pay_amt_columns:
+                data[col] = pd.cut(X[col],[-1, 0, 25000, 50000, 100000, 2000000])
+            data[self.limit_bin] =pd.cut(X[self.limit_bin],[5000, 50000, 100000, 150000, 200000, 300000, 400000, 500000, 1100000])
+            [data[col].astype("category")for col in data.columns]
+            data_encoded = self.encoder.transform(data)
+            cluster  = self.cluster.predict(data_encoded)
+            generated_feature = np.c_[data_encoded , cluster]
             return generated_feature
         except Exception as e:
             raise App_Exception(e, sys) from e
@@ -78,10 +105,14 @@ class DataTransformation:
     def get_data_transformer_object(self) -> ColumnTransformer:
         try:
             
-            preprocessing = Pipeline(steps=[
-                ('imputer', SimpleImputer(strategy="median")),
-                ('scaler', StandardScaler()),
-                ('feature_generator', FeatureGenerator())])
+            pay_x_columns = ['PAY_0', 'PAY_2', 'PAY_3', 'PAY_4', 'PAY_5', 'PAY_6']
+            bill_amt_columns = ['BILL_AMT1', 'BILL_AMT2', 'BILL_AMT3', 'BILL_AMT4', 'BILL_AMT5', 'BILL_AMT6']
+            pay_amt_columns = ['PAY_AMT1', 'PAY_AMT2', 'PAY_AMT3', 'PAY_AMT4', 'PAY_AMT5', 'PAY_AMT6']
+            Age_columns = "AGE"
+            limit_columns = 'LIMIT_BAL'
+            preprocessing = Pipeline(steps=[('feature_generator', FeatureGenerator(pay_amt_columns=pay_amt_columns, bil_amt_columns=bill_amt_columns,
+                                                                       pay_x_columns=pay_x_columns,Age_column= Age_columns,
+                                                                      limit_bin=limit_columns))])
             return preprocessing
 
         except Exception as e:
