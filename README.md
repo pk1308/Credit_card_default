@@ -27,11 +27,15 @@ MONGODB_CONNSTRING="mongodb+srv://USERNAME:PASSWORD@cluster0.wzb80.mongodb.net/m
 
 **Pca with Smote Best Model**
 
-<img src="CCdefault/app_artifact/stage03_model_training/model_report/20220809114247/cluster_custom_model/model_report/2022-08-09-12-10-13/BaseModel.png" alt="Alt text" title="Pca with Smote Best Model">
+<img src="CCdefault/app_artifact/stage03_model_training/model_report/20220809114247/Base_model/model_report/2022-08-09-11-55-48/SVC.png" alt="Alt text" title="Pca with Smote Best Model">
 
 
 **Smote Model is over fitted**
 
-<img src="CCCdefault/app_artifact/stage03_model_training/model_report/20220809121752/cluster_custom_model/model_report/2022-08-09-12-45-41/EstimatorModel.png" alt="Alt text" title="Smote Clustered model">
+Clustered Model 
 
-<img src="CCdefault/app_artifact/stage03_model_training/model_report/20220809121752/cluster_custom_model/model_report/2022-08-09-12-45-41/BaseModel.png " alt="Alt text" title="Smote Base model">
+<img src="CCdefault/app_artifact/stage03_model_training/model_report/20220809121752/cluster_custom_model/model_report/2022-08-09-12-45-41/EstimatorModel.png" alt="Alt text" title="Smote Best Model">
+
+Base best model 
+
+<img src="CCdefault/app_artifact/stage03_model_training/model_report/20220809121752/Base_model/model_report/2022-08-09-12-30-31/CatBoostClassifier.png" alt="Alt text" title="Smote Best Model">
